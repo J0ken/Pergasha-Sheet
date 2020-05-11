@@ -1606,7 +1606,7 @@
       /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo.png");/*Logo1*/ */
       background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_2.png");/*Logo2*/
       width: 150px;/*219.84px;*/
-      height: 70px;/*52*/
+      height: 80px;/*52*/
       display: block;
       background-size: 100%;
       margin: 0 auto; }
@@ -2014,8 +2014,8 @@
   grid-area: health;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "hp-max hp hp health wounds wounds"
- "hit-dice hit-dice death health wounds wounds";
+  grid-template-areas: "hp-max hp hp wounds wounds wounds"
+ "hit-dice hit-dice death wounds wounds wounds";
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 65px auto; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max {
