@@ -1077,7 +1077,8 @@
   background-size: auto;
   background-repeat: repeat;
   color: black;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif
+  /* font-family: "Times New Roman", Times, serif; */
   padding: 10px;
   margin-left: -45px;
   border: 1px solid black; }
@@ -1116,10 +1117,12 @@
   color: #7e2d40;
   font-size: 18px;
   text-align: left;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif
+  /* font-family: "Times New Roman", Times, serif; */
   font-variant: small-caps; }
 .sheet-rolltemplate-traits .sheet-header {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif
+  /* font-family: "Times New Roman", Times, serif; */
   font-size: 16px;
   text-transform: capitalize;
   font-variant: small-caps;
@@ -1602,11 +1605,11 @@
     padding: 15px 15px 6px;/*15-15-6px*/
     text-align: center; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo div {
-      /* background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");/*Original Logo*/
-      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo.png");/*Logo1*/
-      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_2.png");/*Logo2*/ 
-      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_3.png"); *//*Logo3*/
-      background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_4.png");
+      /*background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");*//*Original Logo*/
+      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo.png");*//*Logo1*/
+      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_2.png");*//*Logo2*/
+       background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_3.png");/*Logo3 Width 250 -- Height 52*/
+      /*background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_4.png");*//*Logo4 Width 275 -- Height 52*/
       width: 250px;/*219.84px;*/
       height: 52px;/*52*/
       display: block;
