@@ -1599,14 +1599,16 @@
           color: #cccccc; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo {
     grid-area: logo;
-    padding: 0px 15px 30px;/*15-15-6px*/
+    padding: 15px 15px 6px;/*15-15-6px*/
     text-align: center; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo div {
-      /* background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");/*Original Logo*/ */
-      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo.png");/*Logo1*/ */
-      background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_2.png");/*Logo2*/
-      width: 150px;/*219.84px;*/
-      height: 80px;/*52*/
+      /* background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");/*Original Logo*/
+      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo.png");/*Logo1*/
+      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_2.png");/*Logo2*/ 
+      /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_3.png"); *//*Logo3*/
+      background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_4.png");
+      width: 250px;/*219.84px;*/
+      height: 52px;/*52*/
       display: block;
       background-size: 100%;
       margin: 0 auto; }
