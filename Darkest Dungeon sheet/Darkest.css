@@ -416,6 +416,9 @@
       line-height: 14px; }
     .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-form-inline > .sheet-form-body {
       padding-bottom: 0; }
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features{
+  flex-grow: 1;
+}
 .charsheet .sheet-darkerdungeons .sheet-container-spell {
   display: flex;
   flex-direction: column;
@@ -3079,7 +3082,7 @@
       font-weight: inherit;
       height: 100%;
       left: 0;
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       text-align: center;
       text-transform: uppercase;

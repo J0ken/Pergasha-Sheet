@@ -1692,40 +1692,6 @@
 										<input type="text" name="attr_speed3" title="@{speed3}">
 									</div>
 								</div>
-								<!-- <div class="sheet-container-bar sheet-pc-fate">
-									<div class="sheet-container-header">Fate</div>
-									<div class="sheet-container-body">
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_1" title="@{fate_1}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_2" title="@{fate_2}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_3" title="@{fate_3}">
-											<span></span>
-										</div>
-									</div>
-								</div>
-								<div class="sheet-container-bar sheet-pc-inspiration">
-									<div class="sheet-container-header">Inspiration</div>
-									<div class="sheet-container-body">
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_inspiration_1" title="@{inspiration_1}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_inspiration_2" title="@{inspiration_2}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_inspiration_3" title="@{inspiration_3}">
-											<span></span>
-										</div>
-									</div>
-								</div> -->
 							</div>
 							<div class="sheet-grouping-pc-health-conditions">
 								<div class="sheet-container-well sheet-container-well-health">
@@ -2718,7 +2684,73 @@
 											</ul>
 										</div>
 									</div>
-									<div class="sheet-container-panel sheet-pc-effects">
+									<div class="sheet-container-panel sheet-pc-features">
+										<div class="sheet-container-panel sheet-pc-features">
+											<div class="sheet-container-header">Features & Traits</div>
+											<div class="sheet-container-body">
+												<fieldset class="repeating_traits">
+													<div class="sheet-fieldset-item">
+														<div class="sheet-checkbox-cog">
+															<input type="checkbox" name="attr_options-flag" checked="checked">
+															<span class="sheet-toggle-icon"></span>
+														</div>
+														<input type="checkbox" name="attr_options-flag" checked="checked" class="sheet-toggle" hidden>
+														<div class="sheet-toggle-checked">
+															<div class="sheet-form">
+																<div class="sheet-form-header">Edit Feature</div>
+																<div class="sheet-form-body">
+																	<div class="sheet-form-group">
+																		<label>Name:</label>
+																		<input type="text" name="attr_name">
+																	</div>
+																	<div class="sheet-form-group">
+																		<label>Source:</label>
+																		<select name="attr_source">
+																			<option selected="selected">Racial</option>
+																			<option>Class</option>
+																			<option>Feat</option>
+																			<option>Other</option>
+																		</select>
+																	</div>
+																	<div class="sheet-form-group">
+																		<label>Source Type:</label>
+																		<input type="text" name="attr_source_type">
+																	</div>
+																	<div class="sheet-form-group">
+																		<textarea name="attr_description"></textarea>
+																	</div>
+																	<div class="sheet-form-group">
+																		<label class="sheet-form-checkbox">
+																			<input type="checkbox" name="attr_hide_details" value="1">
+																			<span>Hide Details</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="sheet-toggle-unchecked">
+															<div class="sheet-pc-feature">
+																<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
+																	<div class="sheet-pc-feature-name">
+																		<span name="attr_name"></span>
+																	</div>
+																	<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																	<div class="sheet-pc-feature-details">
+																		<span class="sheet-pc-feature-source">
+																			<span name="attr_source"></span>
+																			<span name="attr_source_type"></span>
+																		</span>
+																		<span name="attr_description"></span>
+																	</div>
+																</button>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="sheet-container-panel sheet-pc-effects">
 										<div class="sheet-container-header">Effects & Conditions</div>
 										<div class="sheet-container-body">
 											<div class="sheet-container-body-header">
@@ -2760,7 +2792,7 @@
 												</div>
 											</fieldset>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -2953,57 +2985,6 @@
 								</div>
 							</div>
 							<div class="sheet-container-well sheet-container-well-memories">
-								<!-- <div class="sheet-container-bar sheet-pc-xp">
-									<div class="sheet-container-header">Experience</div>
-									<div class="sheet-container-body">
-										<input type="text" name="attr_experience" title="@{experience}">
-									</div>
-								</div>
-								<div class="sheet-container-bar sheet-pc-training">
-									<div class="sheet-container-header">Training</div>
-									<div class="sheet-container-body">
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_1" title="@{training_1}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_2" title="@{training_2}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_3" title="@{training_3}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_4" title="@{training_4}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_5" title="@{training_5}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_6" title="@{training_6}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_7" title="@{training_7}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_8" title="@{training_8}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_9" title="@{training_9}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_training_10" title="@{training_10}">
-											<span></span>
-										</div>
-									</div>
-								</div> -->
 								<div class="sheet-container-panel sheet-pc-memories">
 									<div class="sheet-container-header">Memories & Events</div>
 									<div class="sheet-container-body">
@@ -3098,7 +3079,6 @@
 																	<option selected="selected">Racial</option>
 																	<option>Class</option>
 																	<option>Feat</option>
-																	<option>Background</option>
 																	<option>Other</option>
 																</select>
 															</div>
@@ -3611,8 +3591,7 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-resource-class">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_class_resource_name" title="@{class_resource_name}" class="sheet-input-overlay">
-										<span name="attr_class_resource_name">Class Resource</span>
+										<input type="text" name="attr_class_resource_name" title="@{class_resource_name}" class="sheet-input-overlay" placeholder="Class Resource">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_class_resource" title="@{class_resource}">
@@ -3622,8 +3601,7 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-resource-other">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay">
-										<span name="attr_other_resource_name">Other Resource</span>
+										<input type="text" name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay" placeholder="Other Resource">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_other_resource" title="@{other_resource}">
