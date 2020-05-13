@@ -8,6 +8,7 @@
 -Change spell burnout to Psi Limit with a drop down option from 1 to 8
 -Remove Fate and Inspiration and add two boxes like the speed one with editable field and title
 -Change Background to Tribe/Clan ----> DONE
+-Fix the clicking output of Psionics Save DC
 -----------------
 # Psionics Page
 -Change spell burnout to Psi Limit with a drop down option from 1 to 8 (Make it reference the value on core page? Like attack and DC)
@@ -22,3 +23,7 @@
 -Remove Custom Classes ----> DONE
 -Remove Spell Slot Modifiers ----> DONE
 -Add Class options related to Pergasha's Archetype? (Use the existing hidden options such as Eldritch Knight as a guideline)
+
+# Code
+
+- Comment any reference to unused classes to reduce the load (Bard, Cleric, Druid, Paladin. Sorcerer, Warlock and Wizard)

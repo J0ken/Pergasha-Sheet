@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:wght@100&display=swap');
+
+
 .charsheet .sheet-darkerdungeons {
   background: white;
   color: black;
@@ -2005,18 +2007,56 @@
     grid-area: perception; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed {
     grid-area: speed; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 {
+      grid-area: speed2; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 {
+        grid-area: speed3; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-header,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-header {
+    position: relative;
+   }
+   /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-header input:hover,
+   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-header input:hover{
+     background: #e5fffb;
+     outline: none;
+    } */
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-header input,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-header input {
+    background: none;
+    display: run-in;
+    border: 0;
+    bottom: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-header input:focus,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-header input:focus {
+      height: 18px;
+      opacity: 1; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-header input:focus + span,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-header input:focus + span {
+        opacity: 0; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-body,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-body {
+  flex-direction: row; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed2 .sheet-container-body span,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-speed3 .sheet-container-body span {
+    align-items: center;
+    color: #dddddd;
+    display: flex;
+    font-size: 24px;
+    justify-content: center; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-xp {
     grid-area: xp;
     display: none; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-xp .sheet-container-body {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-xp .sheet-container-body {
       width: 152px; }
-  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-training {
-    grid-area: training;
-    display: none; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-fate {
-    grid-area: fate; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-inspiration {
-    grid-area: inspiration; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health {
   display: grid;
   grid-area: health;
@@ -2287,7 +2327,7 @@
       font-weight: inherit;
       height: 100%;
       left: 0;
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       text-align: center;
       text-transform: uppercase;
