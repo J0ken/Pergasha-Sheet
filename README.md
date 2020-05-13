@@ -4,14 +4,14 @@
 # Core Page
 -Change Wounds box into a Focus list with toggle
 -Change Effects and Conditions box into a features and traits list ----> DONE
--Add filler text to extra resources boxes (Class and other) to make the editable field obvious
--Change spell burnout to Psi Limit with a drop down option from 1 to 8
+-Add filler text to extra resources boxes (Class and other) to make the editable field obvious ----> DONE
+-Change spell burnout to Psi Limit with a drop down option from 2 to 8 ----> DONE
 -Remove Fate and Inspiration and add two boxes like the speed one with editable field and title ----> DONE
 -Change Background to Tribe/Clan ----> DONE
 -Fix the clicking output of Psionics Save DC
 -----------------
 # Psionics Page
--Change spell burnout to Psi Limit with a drop down option from 1 to 8 (Make it reference the value on core page? Like attack and DC)
+-Change spell burnout to Psi Limit with a drop down option from 1 to 8 (Make it reference the value on core page? Like attack and DC) ----> DONE
 -Psionics Nullifying Conditions box ----> DONE
 -Change spell box layout to fit psionics needs (Awaiting final layout choice)
 -Add Filters? (Maybe)

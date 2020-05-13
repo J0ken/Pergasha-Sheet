@@ -2286,7 +2286,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "spell-ability spell-dc spell-attack"
- "resource-class resource-other spell-burnout"
+ "resource-class resource-other psi-limit" /*spell-burnout*/
  "resources resources resources"
  "attacks attacks attacks";
   grid-template-columns: repeat(3, 1fr);
@@ -2357,7 +2357,7 @@
       font-size: 24px;
       justify-content: center; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-burnout {
-    grid-area: spell-burnout; }
+    grid-area: psi-limit; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-attacks {
     grid-area: attacks; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-attacks .sheet-pc-attack button {
@@ -3008,13 +3008,13 @@
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-treasure {
     grid-area: treasure; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-header,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-burnout .sheet-container-header {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-header {
   padding-left: 10px;
   padding-right: 10px; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-body select,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-body input,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-burnout .sheet-container-body select,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-burnout .sheet-container-body input {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-body select,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-body input {
   height: 39px; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell {
   display: flex;

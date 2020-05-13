@@ -2140,7 +2140,7 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
+										<button type="roll" name="Psionics_save" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
 									</div>
 									<div class="sheet-container-body">
 										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
@@ -2172,18 +2172,21 @@
 										<input type="text" name="attr_other_resource_max" title="@{other_resource_max}">
 									</div>
 								</div>
-								<div class="sheet-container-box sheet-pc-burnout">
+								<div class="sheet-container-box sheet-pc-psi-limit">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Spell Burnout}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}">Spell Burnout</button>
+										 <span type="text" name="Psi Limit">Psi Limit</span> <!--value="@{wtype}&{template:simple} {{rname=Psi Limit}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}" -->
 									</div>
 									<div class="sheet-container-body">
-										<select name="attr_spell_burnout" title="@{spell_burnout}">
+										<!-- <select name="attr_spell_burnout" title="@{spell_burnout}"> -->
+										<select name="attr_psi_limit"  title="@{psi_limit}" style="font-size: 25px">
 											<option value=""></option>
-											<option value="d12">d12</option>
-											<option value="d10">d10</option>
-											<option value="d8">d8</option>
-											<option value="d6">d6</option>
-											<option value="d4">d4</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
 										</select>
 									</div>
 								</div>
@@ -3577,7 +3580,7 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
+										<button type="roll" name="Psionics_save" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
 									</div>
 									<div class="sheet-container-body">
 										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
@@ -3609,18 +3612,21 @@
 										<input type="text" name="attr_other_resource_max" title="@{other_resource_max}">
 									</div>
 								</div>
-								<div class="sheet-container-box sheet-pc-burnout">
+								<div class="sheet-container-box sheet-pc-psi-limit">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Spell Burnout}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}">Spell Burnout</button>
+										 <span type="text" name="Psi Limit">Psi Limit</span> <!--value="@{wtype}&{template:simple} {{rname=Psi Limit}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}" -->
 									</div>
 									<div class="sheet-container-body">
-										<select name="attr_spell_burnout" title="@{spell_burnout}">
+										<!-- <select name="attr_spell_burnout" title="@{spell_burnout}"> -->
+										<select name="attr_psi_limit" title="@{psi_limit}" style="font-size: 25px">
 											<option value=""></option>
-											<option value="d12">d12</option>
-											<option value="d10">d10</option>
-											<option value="d8">d8</option>
-											<option value="d6">d6</option>
-											<option value="d4">d4</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
 										</select>
 									</div>
 								</div>
