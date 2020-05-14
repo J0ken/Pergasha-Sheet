@@ -2140,10 +2140,10 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="Psionics_save" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
+										<span type="text" name="Psionics_save" >Psionics Save DC</span>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<span name="attr_psionics_save_dc" title="@{psionics_save_dc}"></span>
 									</div>
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-attack">
@@ -2174,10 +2174,9 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-psi-limit">
 									<div class="sheet-container-header">
-										 <span type="text" name="Psi Limit">Psi Limit</span> <!--value="@{wtype}&{template:simple} {{rname=Psi Limit}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}" -->
+										 <span type="text" name="Psi Limit">Psi Limit</span>
 									</div>
 									<div class="sheet-container-body">
-										<!-- <select name="attr_spell_burnout" title="@{spell_burnout}"> -->
 										<select name="attr_psi_limit"  title="@{psi_limit}" style="font-size: 25px">
 											<option value=""></option>
 											<option value="2">2</option>
@@ -2357,7 +2356,7 @@
 																</select>
 																<label>vs DC:</label>
 																<select name="attr_savedc">
-																	<option value="(@{spell_save_dc})" selected="selected">SPELL</option>
+																	<option value="(@{psionics_save_dc})" selected="selected">SPELL</option>
 																	<option value="(@{strength_mod}+8+@{spell_dc_mod}+@{pb})">STR</option>
 																	<option value="(@{dexterity_mod}+8+@{spell_dc_mod}+@{pb})">DEX</option>
 																	<option value="(@{constitution_mod}+8+@{spell_dc_mod}+@{pb})">CON</option>
@@ -3580,10 +3579,10 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="Psionics_save" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Psionics Save DC</button>
+										<span type="text" name="Psionics_save" >Psionics Save DC</span>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<span name="attr_psionics_save_dc" title="@{psionics_save_dc}"></span>
 									</div>
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-attack">
@@ -3614,10 +3613,9 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-psi-limit">
 									<div class="sheet-container-header">
-										 <span type="text" name="Psi Limit">Psi Limit</span> <!--value="@{wtype}&{template:simple} {{rname=Psi Limit}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}" -->
+										 <span type="text" name="Psi Limit">Psi Limit</span>
 									</div>
 									<div class="sheet-container-body">
-										<!-- <select name="attr_spell_burnout" title="@{spell_burnout}"> -->
 										<select name="attr_psi_limit" title="@{psi_limit}" style="font-size: 25px">
 											<option value=""></option>
 											<option value="2">2</option>
@@ -6711,7 +6709,7 @@
 			<input type="hidden" name="attr_globalsavingthrowbonus" value="">
 			<input type="hidden" name="attr_death_save_bonus" value="0">
 			<input type="hidden" name="attr_initiative_bonus" value="0">
-			<input type="hidden" name="attr_spell_save_dc" value="0">
+			<input type="hidden" name="attr_psionics_save_dc" value="0">
 			<input type="hidden" name="attr_spell_attack_bonus" value="0">
 			<input type="hidden" name="attr_spell_attack_mod" value="0">
 			<input type="hidden" name="attr_npc_legendary_actions_desc" value="">
@@ -10799,7 +10797,7 @@
 					}
 
 					if (v["repeating_spell-" + lvl + "_" + spellid + "_spell_ability"] == "spell") {
-						update["repeating_attack_" + attackid + "_savedc"] = "(@{spell_save_dc})";
+						update["repeating_attack_" + attackid + "_savedc"] = "(@{psionics_save_dc})";
 					} else if (v["repeating_spell-" + lvl + "_" + spellid + "_spell_ability"]) {
 						update["repeating_attack_" + attackid + "_savedc"] = "(" + spellAbility + "+8+@{spell_dc_mod}+@{pb})";
 					}
@@ -10962,7 +10960,7 @@
 							getAttrs(attack_attribs, function(v) {
 								var attr_attack_ids = [];
 								_.each(idarray, function(id) {
-									if ((v["repeating_attack_" + id + "_atkattr_base"] && v["repeating_attack_" + id + "_atkattr_base"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmgattr"] && v["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmg2attr"] && v["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"] === "(@{spell_save_dc})" && v["spellcasting_ability"] && v["spellcasting_ability"].indexOf(update_id) > -1)) {
+									if ((v["repeating_attack_" + id + "_atkattr_base"] && v["repeating_attack_" + id + "_atkattr_base"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmgattr"] && v["repeating_attack_" + id + "_dmgattr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_dmg2attr"] && v["repeating_attack_" + id + "_dmg2attr"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"].indexOf(update_id) > -1) || (v["repeating_attack_" + id + "_savedc"] && v["repeating_attack_" + id + "_savedc"] === "(@{psionics_save_dc})" && v["spellcasting_ability"] && v["spellcasting_ability"].indexOf(update_id) > -1)) {
 										attr_attack_ids.push(id);
 									}
 								});
@@ -10976,7 +10974,7 @@
 			};
 
 			var do_update_attack = function(attack_array, source) {
-				var attack_attribs = ["level", "d20", "pb", "pb_type", "pbd_safe", "dtype", "globalmagicmod", "strength_mod", "dexterity_mod", "constitution_mod", "intelligence_mod", "wisdom_mod", "charisma_mod", "spellcasting_ability", "spell_save_dc", "spell_attack_mod", "spell_dc_mod", "global_damage_mod_roll", "global_damage_mod_crit"];
+				var attack_attribs = ["level", "d20", "pb", "pb_type", "pbd_safe", "dtype", "globalmagicmod", "strength_mod", "dexterity_mod", "constitution_mod", "intelligence_mod", "wisdom_mod", "charisma_mod", "spellcasting_ability", "psionics_save_dc", "spell_attack_mod", "spell_dc_mod", "global_damage_mod_roll", "global_damage_mod_crit"];
 				_.each(attack_array, function(attackid) {
 					attack_attribs.push("repeating_attack_" + attackid + "_atkflag");
 					attack_attribs.push("repeating_attack_" + attackid + "_atkname");
@@ -11085,8 +11083,8 @@
 								bonus = plus_minus + bonus_mod;
 							};
 						} else if (v["repeating_attack_" + attackid + "_saveflag"] && v["repeating_attack_" + attackid + "_saveflag"] != 0) {
-							if (!v["repeating_attack_" + attackid + "_savedc"] || (v["repeating_attack_" + attackid + "_savedc"] && v["repeating_attack_" + attackid + "_savedc"] === "(@{spell_save_dc})")) {
-								var tempdc = v["spell_save_dc"];
+							if (!v["repeating_attack_" + attackid + "_savedc"] || (v["repeating_attack_" + attackid + "_savedc"] && v["repeating_attack_" + attackid + "_savedc"] === "(@{psionics_save_dc})")) {
+								var tempdc = v["psionics_save_dc"];
 							} else if (v["repeating_attack_" + attackid + "_savedc"] && v["repeating_attack_" + attackid + "_savedc"] === "(@{saveflat})") {
 								var tempdc = isNaN(parseInt(v["repeating_attack_" + attackid + "_saveflat"])) === false ? parseInt(v["repeating_attack_" + attackid + "_saveflat"]) : "0";
 							} else {
@@ -12343,7 +12341,7 @@
 					};
 					if (!v["spellcasting_ability"] || (v["spellcasting_ability"] && v["spellcasting_ability"] === "0*")) {
 						update["spell_attack_bonus"] = "0";
-						update["spell_save_dc"] = "0";
+						update["psionics_save_dc"] = "0";
 						var callback = function() {
 							update_attacks("spells")
 						};
@@ -12393,7 +12391,7 @@
 							};
 							update["spell_attack_mod"] = spell_mod;
 							update["spell_attack_bonus"] = atk;
-							update["spell_save_dc"] = dc;
+							update["psionics_save_dc"] = dc;
 							var callback = function() {
 								update_attacks("spells")
 							};
