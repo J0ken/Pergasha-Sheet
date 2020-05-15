@@ -21,7 +21,9 @@
 -Add Filters? (Maybe)
 -----------------
 # Equipment Page
--Awaiting multiple GM decisions
+-Make quickdraw box (Above "Other" box), start at a base of three slots and can be extended. Or just starts at 0 and manually Add
+-Remove "Notches" and Quality from Equipment
+-See if Properties and Modifiers serve any purpose, if not, remove them
 -----------------
 # Options Page
 <!-- -Remove Custom Classes  -->
