@@ -3,6 +3,7 @@
 
 # Core Page
 -Change Wounds box into a Focus & Mastery list with toggle -- Make list of all the focuses into a select list
+-Change toggle color for mastery
 <!-- -Change Effects and Conditions box into a features and traits list
 -Add filler text to extra resources boxes (Class and other) to make the editable field obvious
 -Change spell burnout to Psi Limit with a drop down option from 2 to 8

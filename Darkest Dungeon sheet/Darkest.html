@@ -1774,99 +1774,6 @@
 											</div>
 										</div>
 									</div>
-									<!-- <div class="sheet-container-panel sheet-pc-health">
-										<div class="sheet-container-header">Health</div>
-										<div class="sheet-container-body">
-											<ul class="sheet-list-conditions">
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="0" title="@{condition_health}">
-														<span title="@{condition_health}">Robust</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="1" title="@{condition_health}">
-														<span title="@{condition_health}">Healthy</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="2" checked="checked" title="@{condition_health}">
-														<span title="@{condition_health}">Ok</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="3" title="@{condition_health}">
-														<span title="@{condition_health}">Hit</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="4" title="@{condition_health}">
-														<span title="@{condition_health}">Bloodied</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="5" title="@{condition_health}">
-														<span title="@{condition_health}">Hurt</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_condition_health" value="6" title="@{condition_health}">
-														<span title="@{condition_health}">Critical</span>
-													</label>
-												</li>
-											</ul>
-										</div>
-									</div> -->
-									<div class="sheet-container-panel sheet-pc-wounds">
-										<div class="sheet-container-header">Wounds & Injuries</div>
-										<div class="sheet-container-body">
-											<div class="sheet-container-body-header">
-												<span></span>
-												<span>Description</span>
-											</div>
-											<span name="attr_wounds_exhaustion_mod" class="sheet-calculated sheet-hidden">0</span>
-											<fieldset class="repeating_wounds">
-												<div class="sheet-fieldset-item">
-													<div class="sheet-checkbox-cog">
-														<input type="checkbox" name="attr_options-flag" checked="checked"><span></span>
-														<span class="sheet-toggle-icon"></span>
-													</div>
-													<input type="checkbox" name="attr_options-flag" checked="checked" class="sheet-toggle" hidden>
-													<div class="sheet-toggle-checked">
-														<div class="sheet-form">
-															<div class="sheet-form-header">Edit Wound/Injury</div>
-															<div class="sheet-form-body">
-																<div class="sheet-form-group">
-																	<input type="text" name="attr_wound_description">
-																</div>
-																<div class="sheet-form-group">
-																	<label class="sheet-form-checkbox">
-																		<input type="checkbox" name="attr_wound_untreated" value="1" checked="checked">
-																		<span>Is untreated</span>
-																	</label>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="sheet-toggle-unchecked">
-														<div class="sheet-pc-wound">
-															<div class="sheet-checkbox-image">
-																<input type="checkbox" name="attr_wound_untreated" value="1" checked="checked">
-																<span></span>
-															</div>
-															<span name="attr_wound_description"></span>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-									</div>
 								</div>
 								<input type="hidden" name="attr_show_survival_conditions" value="1" class="sheet-field-toggle">
 								<div class="sheet-container-well sheet-container-well-conditions">
@@ -2541,7 +2448,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="sheet-container-effects">
+							<div class="sheet-container-well-focuses">
 								<input type="hidden" name="attr_show_stress_flag" value="1" class="sheet-field-toggle">
 								<div class="sheet-container-well sheet-container-well-stress">
 									<div class="sheet-container-box sheet-pc-stress">
@@ -2635,59 +2542,55 @@
 										</div>
 									</div>
 								</div>
-								<div class="sheet-container-well sheet-container-well-effects">
-									<input type="hidden" name="attr_show_exhaustion_flag" value="1" class="sheet-field-toggle">
-									<div class="sheet-container-panel sheet-pc-exhaustion-details">
-										<div class="sheet-container-header">Exhaustion Effects</div>
+								<div class="sheet-container-well sheet-container-well-focuses">
+									<div class="sheet-container-panel sheet-pc-focuses">
+										<div class="sheet-container-header">Focuses</div>
 										<div class="sheet-container-body">
-											<ul>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="0" checked="true" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>0:</strong> None</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="1" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>1:</strong> Disadvantage on Ability Checks</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="2" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>2:</strong>Speed halved</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="3" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>3:</strong>Disadvantage on Attacks and Saves</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="4" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>4:</strong>Hit point maximum halved</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="5" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>5:</strong>Speed reduced to 0</span>
-													</label>
-												</li>
-												<li>
-													<label class="sheet-radio">
-														<input type="radio" name="attr_exhaustion_status" value="6" title="@{exhaustion_status}">
-														<span title="@{exhaustion_status}"><span class="sheet-pc-exhaustion-dot"></span><strong>6:</strong>Death</span>
-													</label>
-												</li>
-											</ul>
+											<div class="sheet-container-body-header">
+												<span></span>
+												<span>Description</span>
+											</div>
+											<span name="attr_wounds_exhaustion_mod" class="sheet-calculated sheet-hidden">0</span>
+											<fieldset class="repeating_wounds">
+												<div class="sheet-fieldset-item">
+													<div class="sheet-checkbox-cog">
+														<input type="checkbox" name="attr_options-flag" checked="checked"><span></span>
+														<span class="sheet-toggle-icon"></span>
+													</div>
+													<input type="checkbox" name="attr_options-flag" checked="checked" class="sheet-toggle" hidden>
+													<div class="sheet-toggle-checked">
+														<div class="sheet-form">
+															<div class="sheet-form-header">Edit Wound/Injury</div>
+															<div class="sheet-form-body">
+																<div class="sheet-form-group">
+																	<input type="text" name="attr_wound_description">
+																</div>
+																<div class="sheet-form-group">
+																	<label class="sheet-form-checkbox">
+																		<input type="checkbox" name="attr_wound_untreated" value="1" checked="checked">
+																		<span>Is untreated</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="sheet-toggle-unchecked">
+														<div class="sheet-pc-focus">
+															<div class="sheet-checkbox-image">
+																<input type="checkbox" name="attr_wound_untreated" value="1" checked="checked">
+																<span></span>
+															</div>
+															<span name="attr_wound_description"></span>
+														</div>
+													</div>
+												</div>
+											</fieldset>
 										</div>
 									</div>
+								</div>
+								</div>
+								<div class="sheet-container-well sheet-container-well-features">
 									<div class="sheet-container-panel sheet-pc-features">
-										<div class="sheet-container-panel sheet-pc-features">
 											<div class="sheet-container-header">Features & Traits</div>
 											<div class="sheet-container-body">
 												<fieldset class="repeating_traits">
@@ -2751,54 +2654,9 @@
 												</fieldset>
 											</div>
 										</div>
-									</div>
-									<!-- <div class="sheet-container-panel sheet-pc-effects">
-										<div class="sheet-container-header">Effects & Conditions</div>
-										<div class="sheet-container-body">
-											<div class="sheet-container-body-header">
-												<span></span>
-												<span>Description</span>
-											</div>
-											<fieldset class="repeating_effects-conditions">
-												<div class="sheet-fieldset-item">
-													<div class="sheet-checkbox-cog">
-														<input type="checkbox" name="attr_options-flag" checked="checked"><span></span>
-														<span class="sheet-toggle-icon"></span>
-													</div>
-													<input type="checkbox" name="attr_options-flag" checked="checked" class="sheet-toggle" hidden>
-													<div class="sheet-toggle-checked">
-														<div class="sheet-form">
-															<div class="sheet-form-header">Edit Effect</div>
-															<div class="sheet-form-body">
-																<div class="sheet-form-group">
-																	<input type="text" name="attr_description">
-																</div>
-																<div class="sheet-form-group">
-																	<label class="sheet-form-checkbox">
-																		<input type="checkbox" name="attr_active" value="1" checked="checked">
-																		<span>Active</span>
-																	</label>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="sheet-toggle-unchecked">
-														<div class="sheet-pc-effect">
-															<div class="sheet-checkbox-image">
-																<input type="checkbox" name="attr_active" value="1" checked="checked">
-																<span></span>
-															</div>
-															<span name="attr_description"></span>
-														</div>
-													</div>
-												</div>
-											</fieldset>
-										</div>
-									</div> -->
 								</div>
 							</div>
 						</div>
-					</div>
 					<div class="sheet-tab sheet-tab-features">
 						<input type="radio" name="attr_tab" value="features">
 						<span class="sheet-tab-label">Features</span>
@@ -6325,12 +6183,12 @@
 														<span>Show Death Save Failures Only</span>
 													</label>
 												</div>
-												<div class="sheet-form-group">
+												<!-- <div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_exhaustion_flag}">
 														<input type="checkbox" name="attr_show_exhaustion_flag" value="1" checked="checked">
 														<span>Show Exhaustion Table</span>
 													</label>
-												</div>
+												</div> -->
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_stress_flag}">
 														<input type="checkbox" name="attr_show_stress_flag" value="1" checked="checked">
