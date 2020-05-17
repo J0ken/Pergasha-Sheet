@@ -76,6 +76,28 @@
         width: 100%;
         border-radius: 100%;
         background: #353535; }
+/*TEST RADIO*/
+.charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=radio] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+  .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=radio]:hover ~ span,
+  .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=radio]:focus ~ span {
+    background: #e5fffb; }
+  .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=radio]:checked ~ span {
+    background: gainsboro; }
+    .charsheet .sheet-darkerdungeons .sheet-checkbox-image [type=radio]:checked ~ span::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      background: #353535; }
+/*TEST RADIO*/
   .charsheet .sheet-darkerdungeons .sheet-checkbox-image span {
     overflow: hidden;
     padding: 2px;
@@ -416,7 +438,7 @@
       line-height: 14px; }
     .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-form-inline > .sheet-form-body {
       padding-bottom: 0; }
-.charsheet .sheet-darkerdungeons .sheet-container-spell {
+.charsheet .sheet-darkerdungeons .sheet-container-psionics {
   display: flex;
   flex-direction: column;
   min-height: 65px;
@@ -424,7 +446,7 @@
   position: relative;
   z-index: 0;
   margin-top: 3px; }
-  .charsheet .sheet-darkerdungeons .sheet-container-spell::before {
+  .charsheet .sheet-darkerdungeons .sheet-container-psionics::before {
     border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
     border-style: solid;
     border-width: 15px 15px;
@@ -437,7 +459,7 @@
     top: 0;
     width: 100%;
     z-index: -1; }
-  .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header {
+  .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header {
     z-index: 2;
     border: 0;
     height: 52px;
@@ -448,7 +470,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: -18px; }
-    .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-level {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-level {
       font-size: 20px;
       font-weight: normal;
       display: inline-block;
@@ -456,19 +478,33 @@
       text-align: center;
       flex-shrink: 0;
       margin-right: 15px; }
-    .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-slots {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots {
       width: 100%;
       text-align: center;
       display: flex;
       overflow: hidden;
       padding-right: 15px; }
-      .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-slots.sheet-spells-slots-cantrip {
+      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-talent {
         justify-content: center;
         font-weight: normal;
         font-size: 9px;
         text-transform: uppercase;
         padding-right: 34px; }
-      .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-slots input {
+        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-psionics {
+          justify-content: center;
+          font-weight: normal;
+          font-size: 9px;
+          text-transform: uppercase;
+          padding-right: 34px; }
+
+          .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-psionics input {
+            text-align: center;
+            font-weight: bold;
+            font-size: 9px;
+            text-transform: uppercase;
+          }
+
+      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input {
         flex-grow: 0;
         width: 100%;
         text-align: right;
@@ -478,15 +514,15 @@
         margin-top: 1px;
         padding-top: 2px;
         min-width: 0; }
-        .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-slots input + * {
+        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input + * {
           color: #dddddd; }
-        .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header .sheet-spells-slots input ~ * {
+        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input ~ * {
           text-transform: none;
           font-size: 13px;
           line-height: 24px;
           margin-left: 3px;
           font-weight: normal; }
-    .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-header::before {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header::before {
       border-style: solid;
       box-sizing: border-box;
       content: '';
@@ -499,7 +535,7 @@
       z-index: -1;
       border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-spell-header.png") 155 82 155 82 fill stretch;
       border-width: 52px 28px 0; }
-  .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-body {
+  .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -507,7 +543,7 @@
     margin-bottom: 2px;
     overflow: hidden;
     padding: 5px 10px; }
-    .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-body .sheet-container-body-header {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body .sheet-container-body-header {
       text-transform: uppercase;
       display: flex;
       color: #bab8b8;
@@ -516,7 +552,7 @@
       line-height: 10px;
       margin-bottom: 2px;
       display: none; }
-      .charsheet .sheet-darkerdungeons .sheet-container-spell .sheet-container-body .sheet-container-body-header span {
+      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body .sheet-container-body-header span {
         width: 100%; }
 .charsheet .sheet-darkerdungeons .sheet-container-well {
   min-height: 65px;
@@ -1084,7 +1120,7 @@
   pointer-events: none; }
 .sheet-rolltemplate-spell .sheet-container {
   width: 263px;
-  background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5th%20Edition%20OGL%20by%20Roll20/images/spellbg.jpg) center center;
+  background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/DD5thEditionLegacy/images/spellbg.jpg) center center;
   background-size: auto;
   background-repeat: repeat;
   color: black;
@@ -1484,12 +1520,12 @@
         top: 0; }
         .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-spell-attributes {
           display: none; }
-        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-spells {
+        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics {
           margin-bottom: 0;
           border-radius: 0;
           grid-template-columns: 1fr;
           grid-auto-flow: inherit; }
-          .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-spells > .sheet-container-spell {
+          .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics > .sheet-container-psionics {
             min-height: 112px; }
 .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) ~ .sheet-toggle-npc-edit:checked ~ .sheet-section-pc .sheet-tab-content {
   display: none !important; }
@@ -2144,11 +2180,6 @@ grid-area: features; } */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 65px auto;
   }
-  /*
-  grid-template-areas: "hp-max hp hp wounds wounds wounds "
-  "hit-dice hit-dice death wounds wounds wounds";
-  grid-template-columns: repeat(6, 1fr);
-  */
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max {
     grid-area: hp-max; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max .sheet-container-body {
@@ -2213,27 +2244,6 @@ grid-area: features; } */
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-health {
     grid-area: health;
     max-height: 135px; }
-  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds {
-    grid-area: wounds; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-container-body-header span:first-of-type {
-      width: 15px;
-      flex-shrink: 0; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-pc-wound {
-      font-size: 11px;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      padding-right: 20px; }
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-pc-wound > span {
-        overflow: hidden;
-        text-overflow: ellipsis; }
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-pc-wound .sheet-checkbox-image {
-        width: 10px;
-        height: 10px;
-        margin-right: 5px;
-        flex-shrink: 0; }
-        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-wounds .sheet-pc-wound .sheet-checkbox-image span {
-          padding: 1px; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions {
   display: grid;
   grid-area: conditions;
@@ -2304,7 +2314,7 @@ grid-area: features; } */
  "afflictions afflictions afflictions";
   min-height: 85px;
   margin-bottom: 5px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress {
+  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress {
     grid-area: pc-stress; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-stress .sheet-pc-stress-levels {
     grid-area: levels; }
@@ -2359,7 +2369,7 @@ grid-area: features; } */
       line-height: 1.3;
       padding: 3px 0; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-exhaustion {
-  grid-area: exhaustion; }
+  grid-area: exhaustion; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks {
   display: grid;
   grid-area: attacks;
@@ -3119,7 +3129,8 @@ grid-area: features; } */
       padding: 1px; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-name {
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-components {
     font-size: 8px;
     margin-left: 5px; }
@@ -3133,11 +3144,11 @@ grid-area: features; } */
   display: grid;
   grid-column-gap: 5px;
   grid-template-columns: repeat(6, 1fr) 3fr; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-spell-symbols {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-psionics-nullifying-conditions {
     font-size: 11px;
     line-height: 1.3;
     text-align: center; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-spell-symbols ul {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-psionics-nullifying-conditions ul {
       list-style: none;
       margin: 0;
       padding: 0; }
@@ -3182,20 +3193,20 @@ grid-area: features; } */
       display: flex;
       font-size: 24px;
       justify-content: center; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spells {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics {
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   grid-auto-flow: column; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spells .sheet-spells-8-9 {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-spells-8-9 {
     display: grid;
     grid-row-gap: 10px;
     grid-template-rows: 1fr auto; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spells .sheet-spells-8-9 .sheet-container-spell {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-spells-8-9 .sheet-container-psionics {
       min-height: 112px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spells .sheet-container-spell {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-container-psionics {
     min-height: 218px; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;

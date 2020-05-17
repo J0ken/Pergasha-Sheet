@@ -14,16 +14,14 @@
 # Psionics Page
 <!-- -Change spell burnout to Psi Limit with a drop down option from 1 to 8 (Make it reference the value on core page? Like attack and DC) ---->
 <!-- -Psionics Nullifying Conditions box  -->
--Change spell box layout to fit psionics needs (Awaiting final layout choice) / Make a box per discipline
-  A- Make discipline boxes to be filled out
-  OR
-  B-Create all of the disciplines and add a checklist in the options (HARDER)
+-Psionics by cost
 -Add Filters? (Maybe)
 -----------------
 # Equipment Page
 -Make quickdraw box (Above "Other" box), start at a base of three slots and can be extended. Or just starts at 0 and manually Add
 -Remove "Notches" and Quality from Equipment
 -See if Properties and Modifiers serve any purpose, if not, remove them
+-Make base 4 barter section names unchangeable
 -----------------
 # Options Page
 <!-- -Remove Custom Classes  -->
@@ -32,4 +30,4 @@
 
 # Code
 
-- Comment any reference to unused classes to reduce the load (Bard, Cleric, Druid, Paladin. Sorcerer, Warlock and Wizard)
+<!-- - Comment any reference to unused classes to reduce the load (Bard, Cleric, Druid, Paladin. Sorcerer, Warlock and Wizard) -->
