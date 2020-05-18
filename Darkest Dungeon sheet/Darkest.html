@@ -961,32 +961,72 @@
 								</div>
 								<div class="sheet-form-group">
 									<label>Level:</label>
-									<input type="number" name="attr_base_level" value="1">
+									<select name="attr_base_level">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+									</select>
+									<!-- <input type="number" name="attr_base_level" value="1"> -->
 									<label>Race:</label>
-									<input type="text" name="attr_race">
+									<select name="attr_race">
+										<option value="Pergashan">Pergashan</option>
+										<option value="Touched Kin">Touched Kin</option>
+										<option value="Pergashan Lizardfolk">Pergashan Lizardfolk</option>
+									</select>
+									<!-- <input type="text" name="attr_race"> -->
 									<label>Subrace:</label>
-									<input type="text" name="attr_subrace">
+									<select name="attr_subrace">
+										<option value=""></option>
+										<option value="Cloud">Cloud</option>
+										<option value="Fire">Fire</option>
+										<option value="Gem">Gem</option>
+										<option value="Sand">Sand</option>
+										<option value="Storm">Storm</option>
+										<option value="Bone Elemental">Bone Elemental</option>
+										<option value="Metal Elemental">Metal Elemental</option>
+										<option value="Psi Elemental">Psicrystal Elemental</option>
+										<option value="Ettin">Ettin</option>
+										<option value="Harpy">Harpy</option>
+										<option value="Spiderling">Spiderling</option>
+										<option value="Troll">Troll</option>
+									</select>
+									<!-- <input type="text" name="attr_subrace"> -->
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="sheet-toggle-unchecked">
 						<div class="sheet-section-pc-header-details-panel">
-							<div>
+							<div class="sheet-section-pc-header-details-panel-left-section">
 								<label>Class & Level</label>
 								<input type="text" name="attr_class_display" class="sheet-class-display sheet-no_events" title="@{class_display}">
-								<!-- <input type="text" name="attr_class_display" title="@{class_display}"> -->
 							</div>
-							<div>
+							<div class="sheet-section-pc-header-details-panel-right-section">
 								<label>Tribe/Clan</label>
 								<input type="text" name="attr_background" title="@{background}">
 							</div>
-							<div>
+							<div class="sheet-section-pc-header-details-panel-left-section">
 								<label>Race</label>
 								<input type="text" name="attr_race_display" class="sheet-class-display sheet-no_events" title="@{race_display}">
-								<!-- <input type="text" name="attr_race_display" title="@{race_display}"> -->
 							</div>
-							<div>
+							<div class="sheet-section-pc-header-details-panel-right-section">
 								<label>Alignment</label>
 								<input type="text" name="attr_alignment" title="@{alignment}">
 							</div>
@@ -11634,10 +11674,11 @@
 			var update_race_display = function() {
 				getAttrs(["race", "subrace"], function(v) {
 					var final_race = "";
-					final_race = v.subrace ? v.subrace : v.race;
-					if (v.race.toLowerCase() === "dragonborn") {
+					if(v.subrace != ""){
+						final_race = v.subrace + " " + v.race;
+					}else{
 						final_race = v.race;
-					};
+					}
 					setAttrs({
 						race_display: final_race
 					});

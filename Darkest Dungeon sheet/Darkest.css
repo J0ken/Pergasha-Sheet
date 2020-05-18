@@ -1635,6 +1635,29 @@
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-details .sheet-section-pc-header-details-panel div {
         display: flex;
         flex-direction: column-reverse; }
+        /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-details .sheet-section-pc-header-details-panel .sheet-section-pc-header-details-panel-left-section {
+
+        } */
+
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-details .sheet-section-pc-header-details-panel .sheet-section-pc-header-details-panel-right-section input{
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          border-bottom: 1px solid black;
+          border-radius: 0;
+          height: 19px;
+          padding: 0;
+          width: 100%;
+          border-color: #cccccc;
+        }
+
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-details .sheet-section-pc-header-details-panel .sheet-section-pc-header-details-panel-right-section label{
+          font-size: 9px;
+          text-transform: uppercase;
+          font-weight: normal;
+          line-height: 1.5;
+          color: #cccccc;
+        }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-details .sheet-section-pc-header-details-panel div input {
           border-left: 0;
           border-right: 0;
@@ -1653,13 +1676,14 @@
           color: #cccccc; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo {
     grid-area: logo;
-    padding: 15px 15px 6px;/*15-15-6px*/
+    padding: 0px 5px 6px;/*15-15-6px*/
     text-align: center; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo div {
       /*background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-logo-gdd.png");*//*Original Logo*/
-       background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_3.png");/*Logo3 Width 250 -- Height 52*/
-      width: 250px;/*219.84px;*/
-      height: 52px;/*52*/
+       /* background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/pergasha_logo_3.png");Logo3 Width 250 -- Height 52*/
+       background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/dreadful_odysseys_sheet_logo2.png");
+      width: 273px;/*219.84px;*/
+      height: 70px;/*52*/
       display: block;
       background-size: 100%;
       margin: 0 auto; }
