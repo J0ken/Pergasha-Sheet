@@ -10,6 +10,8 @@
   overflow: visible;
   padding: 0; }
 
+  .sheet-no_events {
+    pointer-events: none; }
   .charsheet{
     font-family: 'Roboto', sans-serif;
   }
