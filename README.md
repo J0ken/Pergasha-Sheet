@@ -15,7 +15,8 @@
 <!-- -Change spell burnout to Psi Limit with a drop down option from 1 to 8 (Make it reference the value on core page? Like attack and DC) ---->
 <!-- -Psionics Nullifying Conditions box  -->
 -Psionics by cost
--Add Filters? (Maybe)
+<!-- -Remove the added concentration in spellcard output -->
+-Remove cantrip progression
 -----------------
 # Equipment Page
 -Make quickdraw box (Above "Other" box), start at a base of three slots and can be extended. Or just starts at 0 and manually Add
@@ -31,3 +32,12 @@
 # Code
 
 <!-- - Comment any reference to unused classes to reduce the load (Bard, Cleric, Druid, Paladin. Sorcerer, Warlock and Wizard) -->
+
+
+<!-- <div class="sheet-form-group">
+  <label>Talent Progression:</label>
+  <select name="attr_spell_damage_progression">
+    <option value="" selected="selected">&mdash;</option>
+    <option value="Cantrip Dice">CANTRIP DICE</option>
+  </select>
+</div> -->

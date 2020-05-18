@@ -405,6 +405,16 @@
     padding-top: 4px;
     text-align: center;
     text-transform: uppercase; }
+    .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-separator-extras{
+      border-top: 2px solid #202020;
+      border-bottom: 2px solid #202020;
+      color: #202020;
+      font-size: 8px;
+      font-weight: normal;
+      line-height: 14px;
+      padding: 5px;
+      text-align: center;
+      text-transform: uppercase; }
   .charsheet .sheet-darkerdungeons .sheet-container-panel .sheet-container-body {
     box-sizing: border-box;
     display: flex;
@@ -470,7 +480,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: -18px; }
-    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-level {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-cost {
       font-size: 20px;
       font-weight: normal;
       display: inline-block;
@@ -478,33 +488,27 @@
       text-align: center;
       flex-shrink: 0;
       margin-right: 15px; }
-    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots {
+    .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type {
       width: 100%;
       text-align: center;
       display: flex;
       overflow: hidden;
       padding-right: 15px; }
-      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-talent {
+      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type.sheet-psionics-type-psionics {
         justify-content: center;
         font-weight: normal;
         font-size: 9px;
         text-transform: uppercase;
         padding-right: 34px; }
-        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-psionics {
-          justify-content: center;
-          font-weight: normal;
-          font-size: 9px;
-          text-transform: uppercase;
-          padding-right: 34px; }
 
-          .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots.sheet-spells-slots-psionics input {
+          .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type.sheet-psionics-type-psionics input {
             text-align: center;
             font-weight: bold;
             font-size: 9px;
             text-transform: uppercase;
           }
 
-      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input {
+      .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type input {
         flex-grow: 0;
         width: 100%;
         text-align: right;
@@ -514,9 +518,9 @@
         margin-top: 1px;
         padding-top: 2px;
         min-width: 0; }
-        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input + * {
+        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type input + * {
           color: #dddddd; }
-        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-spells-slots input ~ * {
+        .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-header .sheet-psionics-type input ~ * {
           text-transform: none;
           font-size: 13px;
           line-height: 24px;
@@ -553,7 +557,8 @@
       margin-bottom: 2px;
       display: none; }
       .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body .sheet-container-body-header span {
-        width: 100%; }
+        width: 100%;
+        }
 .charsheet .sheet-darkerdungeons .sheet-container-well {
   min-height: 65px;
   padding: 10px;
@@ -776,7 +781,7 @@
 .sheet-licensecontainer.active-drop-target.dropping .sheet-compendium-warning,
 .sheet-monster_confirm_flag[value="1"] .sheet-licensecontainer .sheet-monster-confirm {
   display: block; }
-.sheet-rolltemplate-spell .sheet-grey {
+.sheet-rolltemplate-psionics .sheet-grey {
   color: #A0A0A0;
   font-weight: normal; }
 .sheet-rolltemplates {
@@ -1118,7 +1123,7 @@
   color: #EC2127; }
 .sheet-rolltemplate-atk a[href^="~"]:visited {
   pointer-events: none; }
-.sheet-rolltemplate-spell .sheet-container {
+.sheet-rolltemplate-psionics .sheet-container {
   width: 263px;
   background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/DD5thEditionLegacy/images/spellbg.jpg) center center;
   background-size: auto;
@@ -1128,20 +1133,20 @@
   padding: 10px;
   margin-left: -45px;
   border: 1px solid black; }
-.withoutavatars .sheet-rolltemplate-spell .sheet-container {
+.withoutavatars .sheet-rolltemplate-psionics .sheet-container {
   margin-left: -15px; }
-.sheet-rolltemplate-spell .sheet-row {
+.sheet-rolltemplate-psionics .sheet-row {
   display: block; }
-.sheet-rolltemplate-spell .sheet-title {
+.sheet-rolltemplate-psionics .sheet-title {
   color: #7e2d40;
   font-size: 1.2em; }
-.sheet-rolltemplate-spell .sheet-italics,
+.sheet-rolltemplate-psionics .sheet-italics,
 .sheet-npc .sheet-italics {
   font-style: italic; }
-.sheet-rolltemplate-spell .sheet-bold,
+.sheet-rolltemplate-psionics .sheet-bold,
 .sheet-actions .sheet-bold {
   font-weight: normal; }
-.sheet-rolltemplate-spell .sheet-spacer {
+.sheet-rolltemplate-psionics .sheet-spacer {
   height: 5px; }
 .sheet-rolltemplate-npc,
 .sheet-rolltemplate-npcaction .sheet-container,
@@ -1488,44 +1493,44 @@
   width: 100%; }
 .charsheet .sheet-darkerdungeons .sheet-section-npc-display .sheet-fieldset-item-npcreaction .sheet-fieldset-item-npcreaction-name {
   font-weight: normal; }
-.charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-npc .sheet-section-npc-footer {
+.charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-npc .sheet-section-npc-footer {
   display: none; }
-.charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc {
+.charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc {
   display: block;
   width: 385px;
   margin: 0 auto;
   margin-top: 6px; }
-  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-section-pc-header {
+  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-section-pc-header {
     display: none; }
-  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tabs {
+  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tabs {
     margin-top: 0;
     width: 385px;
     min-height: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab {
+  .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab {
     display: none;
     position: relative;
     width: 100%;
     margin: 0 auto; }
-    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab > :first-child {
+    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab > :first-child {
       display: none; }
-    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab .sheet-tab-label,
-    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab .sheet-tab-content {
+    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab .sheet-tab-label,
+    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab .sheet-tab-content {
       display: none;
       position: relative;
       padding: 0; }
-    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) {
+    .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) {
       display: block; }
-      .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content {
+      .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content {
         display: block;
         top: 0; }
-        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-spell-attributes {
+        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics-attributes {
           display: none; }
-        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics {
+        .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics {
           margin-bottom: 0;
           border-radius: 0;
           grid-template-columns: 1fr;
           grid-auto-flow: inherit; }
-          .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-spells:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics > .sheet-container-psionics {
+          .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) + .sheet-toggle-npc-psionics:checked ~ .sheet-section-pc .sheet-tab:nth-of-type(5) .sheet-tab-content .sheet-container-well-psionics > .sheet-container-psionics {
             min-height: 112px; }
 .charsheet .sheet-darkerdungeons .sheet-toggle-npc:not([value="0"]) ~ .sheet-toggle-npc-edit:checked ~ .sheet-section-pc .sheet-tab-content {
   display: none !important; }
@@ -2375,21 +2380,21 @@ grid-area: features; } */
   grid-area: attacks;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "spell-ability spell-dc spell-attack"
+  grid-template-areas: "psionics-ability psionics-dc psionics-attack"
  "resource-class resource-other psi-limit"
  "resources resources resources"
  "attacks attacks attacks";
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 65px 65px auto 1fr; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-ability {
-    grid-area: spell-ability; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-dc {
-    grid-area: spell-dc; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-dc .sheet-container-header {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-psionics-ability {
+    grid-area: psionics-ability; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-psionics-dc {
+    grid-area: psionics-dc; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-psionics-dc .sheet-container-header {
       padding-left: 10px;
       padding-right: 10px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-attack {
-    grid-area: spell-attack; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-psionics-attack {
+    grid-area: psionics-attack; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resource-class {
     grid-area: resource-class; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resource-other {
@@ -2446,7 +2451,7 @@ grid-area: features; } */
       display: flex;
       font-size: 24px;
       justify-content: center; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-burnout {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-psionics-burnout {
     grid-area: psi-limit; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-attacks {
     grid-area: attacks; }
@@ -3091,75 +3096,81 @@ grid-area: features; } */
     grid-area: allies; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-notes .sheet-pc-notes .sheet-pc-notes-treasure {
     grid-area: treasure; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-header,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-header {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics-ability .sheet-container-header,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psi-limit .sheet-container-header {
   padding-left: 10px;
   padding-right: 10px; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-body select,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell-ability .sheet-container-body input,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-body select,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-psi-limit .sheet-container-body input {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-psionics .sheet-checkbox-cog input,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-psionics .sheet-checkbox-cog span{
+   font-size: 15px;
+      }
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics-ability .sheet-container-body select,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics-ability .sheet-container-body input,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psi-limit .sheet-container-body select,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psi-limit .sheet-container-body input {
   height: 39px; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics {
   display: flex;
   padding-right: 20px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell button {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics button {
     justify-content: space-between;
+    padding: 8px;
     flex-grow: 1;
     display: flex;
     border: 0;
     background: none;
     box-shadow: none;
-    font-size: 11px;
+    font-size: 15px;
     width: 100%;
     overflow: hidden; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell button:hover {
-      background: #e5fffb;
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics button:hover {
+      background: #d9d9d9;
       margin-left: -3px;
       margin-right: -3px;
       padding-left: 3px;
-      padding-right: 3px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-checkbox-image {
+      padding-right: 3px;
+    }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-checkbox-image {
     margin-right: 5px;
     flex-shrink: 0;
     height: 10px;
     width: 10px;
     margin-top: 4px; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-checkbox-image span {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-checkbox-image span {
       padding: 1px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-name {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-psionics-name {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-pc-spell-components {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-psionics-components {
     font-size: 8px;
     margin-left: 5px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-pc-spell .sheet-display-brackets {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-display-brackets {
     opacity: .5; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells > input[type="radio"]:checked ~ .sheet-tab-content {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-row-gap: 5px;
   grid-template-rows: 85px auto; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes {
   display: grid;
   grid-column-gap: 5px;
   grid-template-columns: repeat(6, 1fr) 3fr; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-psionics-nullifying-conditions {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-psionics-nullifying-conditions {
     font-size: 11px;
     line-height: 1.3;
     text-align: center; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-psionics-nullifying-conditions ul {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-psionics-nullifying-conditions ul {
       list-style: none;
       margin: 0;
       padding: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-spell-dc .sheet-container-header {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-psionics-dc .sheet-container-header {
     padding-left: 10px;
     padding-right: 10px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-header,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-header {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-header,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-header {
     position: relative; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-header input,
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-header input {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-header input,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-header input {
       background: none;
       border: 0;
       bottom: 0;
@@ -3172,41 +3183,41 @@ grid-area: features; } */
       text-align: center;
       text-transform: uppercase;
       width: 100%; }
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-header input:focus,
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-header input:focus {
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-header input:focus,
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-header input:focus {
         height: 18px;
         opacity: 1; }
-        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-header input:focus + span,
-        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-header input:focus + span {
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-header input:focus + span,
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-header input:focus + span {
           opacity: 0; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-body,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-body {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-body,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-body {
     flex-direction: row; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-body input,
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-body input {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-body input,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-body input {
       padding: 0;
       font-size: 14px; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-class .sheet-container-body span,
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-spell-attributes .sheet-pc-resource-other .sheet-container-body span {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-class .sheet-container-body span,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics-attributes .sheet-pc-resource-other .sheet-container-body span {
       align-items: center;
       color: #dddddd;
       display: flex;
       font-size: 24px;
       justify-content: center; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics {
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto;
   grid-auto-flow: column; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-spells-8-9 {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-psionics-8-9 {
     display: grid;
     grid-row-gap: 10px;
     grid-template-rows: 1fr auto; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-spells-8-9 .sheet-container-psionics {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-psionics-8-9 .sheet-container-psionics {
       min-height: 112px; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-spells .sheet-container-well-psionics .sheet-container-psionics {
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics {
     min-height: 218px; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
@@ -3217,7 +3228,7 @@ grid-area: features; } */
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "class multiclass custom"
- "class spell custom"
+ "class psionics custom"
  "general attribute skill"
  "general save skill"
  "darker save skill";
@@ -3229,16 +3240,16 @@ grid-area: features; } */
   grid-area: darker; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-multiclass {
   grid-area: multiclass; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-spell {
-  grid-area: spell; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-spell .sheet-form-body {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-psionics {
+  grid-area: psionics; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-psionics .sheet-form-body {
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: column; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-spell .sheet-form-body > .sheet-form-group {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-psionics .sheet-form-body > .sheet-form-group {
       margin: 0; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-class-custom {
   grid-area: custom; }
