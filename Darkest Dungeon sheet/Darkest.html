@@ -983,14 +983,12 @@
 										<option value="19">19</option>
 										<option value="20">20</option>
 									</select>
-									<!-- <input type="number" name="attr_base_level" value="1"> -->
 									<label>Race:</label>
 									<select name="attr_race">
 										<option value="Pergashan">Pergashan</option>
 										<option value="Touched Kin">Touched Kin</option>
 										<option value="Pergashan Lizardfolk">Pergashan Lizardfolk</option>
 									</select>
-									<!-- <input type="text" name="attr_race"> -->
 									<label>Subrace:</label>
 									<select name="attr_subrace">
 										<option value=""></option>
@@ -999,15 +997,12 @@
 										<option value="Gem">Gem</option>
 										<option value="Sand">Sand</option>
 										<option value="Storm">Storm</option>
-										<option value="Bone Elemental">Bone Elemental</option>
-										<option value="Metal Elemental">Metal Elemental</option>
-										<option value="Psicrystal Elemental">Psicrystal Elemental</option>
-										<option value="Ettin">Ettin</option>
-										<option value="Harpy">Harpy</option>
+										<option value="Crowned">Crowned</option>
+										<option value="Direfolk">Direfolk</option>
+										<option value="Feathered">Feathered</option>
 										<option value="Spiderling">Spiderling</option>
-										<option value="Troll">Troll</option>
+										<option value="Twisted">Twisted</option>
 									</select>
-									<!-- <input type="text" name="attr_subrace"> -->
 								</div>
 							</div>
 						</div>
@@ -2738,7 +2733,7 @@
 							<div class="sheet-container-well sheet-container-well-equipment-purse">
 								<div class="sheet-container-bar sheet-pc-purse-cp">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_cp_title" title="@{cp_title}" value="COMMON">
+										<input type="text" name="attr_cp_title" title="@{cp_title}" class="sheet-class-display sheet-no_events" value="COMMON">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_cp" title="@{cp}">
@@ -2746,7 +2741,7 @@
 								</div>
 								<div class="sheet-container-bar sheet-pc-purse-sp">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_sp_title" title="@{sp_title}" value="UNCOMMON">
+										<input type="text" name="attr_sp_title" title="@{sp_title}" class="sheet-class-display sheet-no_events" value="UNCOMMON">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_sp" title="@{sp}">
@@ -2754,36 +2749,20 @@
 								</div>
 								<div class="sheet-container-bar sheet-pc-purse-gp">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_gp_title" title="@{gp_title}" value="GREATER">
+										<input type="text" name="attr_gp_title" title="@{gp_title}" class="sheet-class-display sheet-no_events" value="GREATER">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_gp" title="@{gp}">
 									</div>
 								</div>
-								<!-- <div class="sheet-container-bar sheet-pc-purse-ep">
-									<div class="sheet-container-header">
-										<input type="text" name="attr_ep_title" title="@{ep_title}" value="ELECTRUM">
-									</div>
-									<div class="sheet-container-body">
-										<input type="text" name="attr_ep" title="@{ep}">
-									</div>
-								</div> -->
 								<div class="sheet-container-bar sheet-pc-purse-pp">
 									<div class="sheet-container-header">
-										<input type="text" name="attr_pp_title" title="@{pp_title}" value="PREMIUM">
+										<input type="text" name="attr_pp_title" title="@{pp_title}" class="sheet-class-display sheet-no_events" value="PREMIUM">
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_pp" title="@{pp}">
 									</div>
 								</div>
-								<!-- <div class="sheet-container-bar sheet-pc-purse-other">
-									<div class="sheet-container-header">
-										<input type="text" name="attr_currency" title="@{currency}">
-									</div>
-									<div class="sheet-container-body">
-										<input type="text" name="attr_currency_value" title="@{currency_value}">
-									</div>
-								</div> -->
 							</div>
 							<div class="sheet-container-well sheet-container-well-equipment-encumbrance">
 								<input type="hidden" name="attr_use_inventory_slots" value="1" class="sheet-field-untoggle">
@@ -2918,7 +2897,7 @@
 																			<span>Fixed (Ignore quantity)</span>
 																		</label>
 																	</div>
-																	<div class="sheet-form-group sheet-item-columns-2">
+																	<!-- <div class="sheet-form-group sheet-item-columns-2">
 																		<div class="sheet-form-group">
 																			<label>Notches:</label>
 																			<input type="text" name="attr_itemnotches" value="0">
@@ -2934,7 +2913,7 @@
 																				<option value="broken">Broken</option>
 																			</select>
 																		</div>
-																	</div>
+																	</div> -->
 																	<div class="sheet-form-group">
 																		<label>Properties:</label>
 																		<input type="text" name="attr_itemproperties">
@@ -3022,7 +3001,6 @@
 																<span>Quantity</span>
 																<span>Weight</span>
 																<span>Slots</span>
-																<span>Notches</span>
 															</div>
 															<div class="sheet-pc-item-content">
 																<span class="sheet-pc-item-name">
@@ -3041,9 +3019,6 @@
 																</span>
 																<span class="sheet-pc-item-slots">
 																	<input type="text" name="attr_itemsize">
-																</span>
-																<span class="sheet-pc-item-notches">
-																	<input type="text" name="attr_itemnotches">
 																</span>
 															</div>
 														</div>
@@ -8595,9 +8570,6 @@
 					if (page.data["Higher Spell Slot Desc"]) {
 						update["repeating_psionics-" + lvl + "_" + id + "_spellathigherlevels"] = page.data["Higher Spell Slot Desc"]
 					};
-					if (page.data["data-Cantrip Scaling"] && lvl == "Talent") {
-						update["repeating_psionics-" + lvl + "_" + id + "_spell_damage_progression"] = "Cantrip " + page.data["data-Cantrip Scaling"].charAt(0).toUpperCase() + page.data["data-Cantrip Scaling"].slice(1);
-					};
 					if (page.data["data-description"]) {
 						update["repeating_psionics-" + lvl + "_" + id + "_psionicsdescription"] = page.data["data-description"]
 					};
@@ -9693,12 +9665,7 @@
 							if (psionics["Higher Spell Slot Bonus"]) {
 								update["repeating_psionics-" + lvl + "_" + id + "_psionicshlbonus"] = psionics["Higher Spell Slot Bonus"]
 							};
-							// if (psionics["Higher Spell Slot Desc"]) {
-							// 	update["repeating_psionics-" + lvl + "_" + id + "_spellathigherlevels"] = psionics["Higher Spell Slot Desc"]
-							// };
-							// if (psionics["data-Cantrip Scaling"] && lvl == "Talent") {
-							// 	update["repeating_psionics-" + lvl + "_" + id + "_spell_damage_progression"] = "Cantrip " + psionics["data-Cantrip Scaling"].charAt(0).toUpperCase() + psionics["data-Cantrip Scaling"].slice(1);
-							// };
+
 							if (psionics["data-description"]) {
 								update["repeating_psionics-" + lvl + "_" + id + "_psionicsdescription"] = psionics["data-description"]
 							};

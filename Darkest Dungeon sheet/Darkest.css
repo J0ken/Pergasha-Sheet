@@ -2589,17 +2589,13 @@ grid-area: features; } */
   border-radius: 3px; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-header,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-header,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep .sheet-container-header,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-gp .sheet-container-header,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-other .sheet-container-header {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header{
   padding: 0; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-header input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-header input,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep .sheet-container-header input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-gp .sheet-container-header input,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header input,
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-other .sheet-container-header input {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header input{
   text-align: center;
   width: 100%;
   border: 0;
@@ -2608,13 +2604,11 @@ grid-area: features; } */
   font-size: 8px;
   font-weight: normal;
   background: none; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-header input:hover,
+  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-header input:hover,
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep .sheet-container-header input:hover,
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-gp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-other .sheet-container-header input:hover {
-    background: #e5fffb; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header input:hover{
+    background: #e5fffb; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-body input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-body input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep .sheet-container-body input,
@@ -2630,16 +2624,12 @@ grid-area: features; } */
   grid-area: sp; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-gp {
   grid-area: gp; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep {
-  grid-area: ep; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp {
   grid-area: pp; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-other {
-  grid-area: other; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-template-columns: auto 262.5px;
-  grid-template-rows: 85px 120px 110px auto;
+  grid-template-rows: 85px 85px 110px auto;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "equipment supplies"
@@ -2656,17 +2646,17 @@ grid-area: features; } */
   grid-row-gap: 5px;
   grid-template-areas: "rations"
  "water"; }
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-equipment-purse {
+
   grid-area: purse;
   display: grid;
-  grid-template-rows: repeat(3, 30px);
+  grid-template-rows: repeat(2, 30px);
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 5px;
   grid-column-gap: 5px;
-  grid-template-areas: "cp gp"
- "sp pp"
- "ep other"
- ". ."; }
+  grid-template-areas: "cp gp"  "sp pp";
+}
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-container-well-equipment-encumbrance {
   grid-area: encumbrance;
   display: grid;
