@@ -19,7 +19,8 @@
 <!-- -Remove cantrip progression -->
 -----------------
 # Equipment Page
--Make quickdraw box (Above "Other" box), start at a base of three slots and can be extended. Or just starts at 0 and manually Add
+- Add Quickdraw bubble and option to items
+- Change math for slots
 <!-- -Remove "Notches" and Quality from Equipment -->
 <!-- -See if Properties and Modifiers serve any purpose, if not, remove them -->
 <!-- -Make base 4 barter section names unchangeable -->

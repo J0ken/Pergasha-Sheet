@@ -2716,8 +2716,8 @@ grid-area: features; } */
   justify-content: center;
   align-items: center;
   border-radius: 100%; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="1"] ~ .sheet-pc-item-carried {
-  display: none; }
+/* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="1"] ~ .sheet-pc-item-carried {
+  display: none; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="0"] ~ [name="attr_carried"][value="0"] + .sheet-pc-item-carried {
   display: inline-flex !important;
   background: none;
