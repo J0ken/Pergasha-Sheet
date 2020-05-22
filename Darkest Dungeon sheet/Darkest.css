@@ -2706,6 +2706,16 @@ grid-area: features; } */
   justify-content: center;
   align-items: center;
   border-radius: 100%; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-quickdraw {
+    background: #00b38f;
+    color: white;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item-carried {
   background: #dddddd;
   color: black;
@@ -2716,13 +2726,23 @@ grid-area: features; } */
   justify-content: center;
   align-items: center;
   border-radius: 100%; }
-/* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="1"] ~ .sheet-pc-item-carried {
-  display: none; } */
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="0"] ~ [name="attr_carried"][value="0"] + .sheet-pc-item-carried {
-  display: inline-flex !important;
-  background: none;
-  border: 1px solid #dddddd;
-  color: white; }
+
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_equipped"][value="0"]  + .sheet-pc-item-equipped {
+    display: inline-flex !important;
+    background: none;
+    border: 1px solid #dddddd;
+    color: white; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_carried"][value="0"]  + .sheet-pc-item-carried {
+    display: inline-flex !important;
+    background: none;
+    border: 1px solid #dddddd;
+    color: white; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment [name="attr_quickdraw"][value="0"]  + .sheet-pc-item-quickdraw {
+    display: inline-flex !important;
+    background: none;
+    border: 1px solid #dddddd;
+    color: white; }
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item {
   font-size: 11px;
   padding-right: 20px; }
@@ -2755,7 +2775,6 @@ grid-area: features; } */
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-name {
     flex-grow: 1; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-quantity,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-notches,
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-weight,
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-item .sheet-pc-item-slots {
     border: 1px solid #cccccc;
@@ -2783,13 +2802,16 @@ grid-area: features; } */
     background: none;
     border: 1px solid #dddddd;
     color: white; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-equipment-container [name="attr_equipped"][value="1"] ~ .sheet-pc-item-carried {
-    display: none; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-equipment-container [name="attr_equipped"][value="0"] ~ [name="attr_carried"][value="0"] + .sheet-pc-item-carried {
-    display: inline-flex !important;
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-equipment-container .sheet-pc-item-quickdraw {
     background: none;
     border: 1px solid #dddddd;
-    color: #7e2d40; }
+    color: white; }
+  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-equipment-container [name="attr_equipped"][value="1"] ~ .sheet-pc-item-carried {
+    display: none; } */
+
+
+      /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-equipment-container [name="attr_equipped"][value="0"] ~ [name="attr_carried"][value="0"] ~ [name="attr_quickdraw"][value="1"] .sheet-pc-item-quickdraw {
+        display: none; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-form-item .sheet-item-columns-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;

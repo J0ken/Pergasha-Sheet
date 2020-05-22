@@ -4,6 +4,7 @@
 # Core Page
 -Change Wounds box into a Focus & Mastery list with toggle -- Make list of all the focuses into a select list
 -Change toggle color for mastery
+- Add Inspiration shit bubbles
 <!-- -Change Effects and Conditions box into a features and traits list
 -Add filler text to extra resources boxes (Class and other) to make the editable field obvious
 -Change spell burnout to Psi Limit with a drop down option from 2 to 8
@@ -19,8 +20,8 @@
 <!-- -Remove cantrip progression -->
 -----------------
 # Equipment Page
-- Add Quickdraw bubble and option to items
-- Change math for slots
+<!-- - Add Quickdraw bubble and option to items -->
+<!-- - Change math for slots -->
 <!-- -Remove "Notches" and Quality from Equipment -->
 <!-- -See if Properties and Modifiers serve any purpose, if not, remove them -->
 <!-- -Make base 4 barter section names unchangeable -->

@@ -2857,6 +2857,7 @@
 														<div class="sheet-form-body">
 															<input type="hidden" name="attr_equipped">
 															<input type="hidden" name="attr_carried">
+															<input type="hidden" name="attr_quickdraw">
 															<input type="hidden" name="attr_inventorysubflag">
 															<input type="hidden" name="attr_itemattackid">
 															<input type="hidden" name="attr_itemresourceid">
@@ -2952,6 +2953,12 @@
 																</div>
 																<div class="sheet-form-group">
 																	<label class="sheet-form-checkbox">
+																		<input type="checkbox" name="attr_quickdraw" value="1">
+																		<span>Item in Quickdraw</span>
+																	</label>
+																</div>
+																<div class="sheet-form-group">
+																	<label class="sheet-form-checkbox">
 																		<input type="checkbox" name="attr_itemcontainer" value="1">
 																		<span>Container</span>
 																	</label>
@@ -2991,6 +2998,8 @@
 																	<span class="sheet-pc-item-equipped"><strong>E</strong></span>
 																	<input type="hidden" name="attr_carried" value="1" class="sheet-field-toggle">
 																	<span class="sheet-pc-item-carried"><strong>C</strong></span>
+																	<input type="hidden" name="attr_quickdraw" value="0" class="sheet-field-toggle">
+																	<span class="sheet-pc-item-quickdraw"><strong>Q</strong></span>
 																	<span name="attr_itemname"></span>
 																</span>
 																<span class="sheet-pc-item-quantity">
@@ -3012,6 +3021,8 @@
 															<span class="sheet-pc-item-equipped"><strong>E</strong></span>
 															<input type="hidden" name="attr_carried" value="1" class="sheet-field-toggle">
 															<span class="sheet-pc-item-carried"><strong>C</strong></span>
+															<input type="hidden" name="attr_quickdraw" value="0" class="sheet-field-toggle">
+															<span class="sheet-pc-item-quickdraw"><strong>Q</strong></span>
 															<span name="attr_itemname"></span>
 															<span class="sheet-pc-equipment-container-slots">
 																(
@@ -7339,11 +7350,11 @@
 
 			});
 
-			on("change:repeating_inventory:itemcontainer change:repeating_inventory:equipped change:repeating_inventory:carried change:repeating_inventory:itemweight change:repeating_inventory:itemcount change:cp change:sp change:ep change:gp change:pp change:currency_other change:encumbrance_setting change:size change:carrying_capacity_mod change:use_inventory_slots change:inventory_slots_mod change:repeating_inventory:itemweightfixed change:repeating_inventory:itemslotsfixed change:repeating_inventory:itemsize change:repeating_inventory:itemcontainer_slots_modifier", function() {
+			on("change:repeating_inventory:itemcontainer change:repeating_inventory:equipped change:repeating_inventory:carried change:repeating_inventory:quickdraw change:repeating_inventory:itemweight change:repeating_inventory:itemcount change:cp change:sp change:ep change:gp change:pp change:currency_other change:encumbrance_setting change:size change:carrying_capacity_mod change:use_inventory_slots change:inventory_slots_mod change:repeating_inventory:itemweightfixed change:repeating_inventory:itemslotsfixed change:repeating_inventory:itemsize change:repeating_inventory:itemcontainer_slots_modifier", function() {
 				update_weight();
 			});
 
-			on("change:repeating_inventory:itemmodifiers change:repeating_inventory:equipped change:repeating_inventory:carried", function(eventinfo) {
+			on("change:repeating_inventory:itemmodifiers change:repeating_inventory:equipped change:repeating_inventory:carried change:repeating_inventory:quickdraw", function(eventinfo) {
 				if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 					return;
 				}
@@ -10772,6 +10783,7 @@
 						weight_attrs.push("repeating_inventory_" + currentID + "_itemsize");
 						weight_attrs.push("repeating_inventory_" + currentID + "_equipped");
 						weight_attrs.push("repeating_inventory_" + currentID + "_carried");
+						weight_attrs.push("repeating_inventory_" + currentID + "_quickdraw");
 						weight_attrs.push("repeating_inventory_" + currentID + "_itemcontainer");
 						weight_attrs.push("repeating_inventory_" + currentID + "_itemweightfixed");
 						weight_attrs.push("repeating_inventory_" + currentID + "_itemslotsfixed");
@@ -10858,8 +10870,13 @@
 									size_slots = 39
 								}
 							}
+							var strMod = parseInt(v.strength_mod, 10);
+							size_slots += strMod;
+							var strVal = parseInt(v.strength, 10);
 
-							size_slots += parseInt(v.strength_mod, 10);
+							if(strMod > 0 && strVal%2 == 1){
+								size_slots += 1;
+							}
 
 							if (v.inventory_slots_mod) {
 								var operator = v.inventory_slots_mod.substring(0, 1);
