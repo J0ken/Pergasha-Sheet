@@ -1,10 +1,10 @@
 # Pergasha-Sheet
 # TODO
-
+Change class ressource to psi points
 # Core Page
--Change Wounds box into a Focus & Mastery list with toggle -- Make list of all the focuses into a select list
--Change toggle color for mastery
-- Add Inspiration shit bubbles
+<!-- -Change Wounds box into a Focus & Mastery list with toggle -- Make list of all the focuses into a select list -->
+<!-- -Change toggle color for mastery -->
+<!-- - Add Inspiration shit bubbles -->
 <!-- -Change Effects and Conditions box into a features and traits list
 -Add filler text to extra resources boxes (Class and other) to make the editable field obvious
 -Change spell burnout to Psi Limit with a drop down option from 2 to 8
@@ -29,7 +29,6 @@
 # Options Page
 <!-- -Remove Custom Classes  -->
 <!-- -Remove Spell Slot Modifiers  -->
--Add Class options related to Pergasha's Archetype? (Use the existing hidden options such as Eldritch Knight as a guideline)
 
 # Code
 
