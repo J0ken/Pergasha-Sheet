@@ -3106,7 +3106,6 @@
 															<span>Quantity</span>
 															<span>Weight</span>
 															<span>Slots</span>
-															<span>Notches</span>
 														</div>
 													</div>
 												</div>
@@ -3249,7 +3248,7 @@
 																<input type="text" name="attr_psionicsorder">
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<select name="attr_psionicscastingtime">
 																	<option value="Action" selected="selected">Action</option>
 																	<option value="Bonus Action">Bonus Action</option>
@@ -3508,7 +3507,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -3786,7 +3785,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -4039,7 +4038,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -4298,7 +4297,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -4556,7 +4555,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -4812,7 +4811,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -5060,7 +5059,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -5146,7 +5145,7 @@
 																<label>Effect:</label>
 																<input type="text" name="attr_psionicssavesuccess">
 															</div>
-															<div class="sheet-form-group">
+															<!-- <div class="sheet-form-group">
 																<label>Extra Psi Points:</label>
 																<input type="text" name="attr_psionicshldie" placeholder="1">
 																<select name="attr_psionicshldietype">
@@ -5160,7 +5159,7 @@
 																</select>
 																<span>+</span>
 																<input type="text" name="attr_psionicshlbonus" placeholder="0">
-															</div>
+															</div> -->
 															<div class="sheet-form-group">
 																<label>Add Psionics Description in Attack:</label>
 																<select name="attr_includedesc">
@@ -5322,7 +5321,7 @@
 																</select>
 															</div>
 															<div class="sheet-form-group">
-																<label>Casting Time:</label>
+																<label>Evoking Time:</label>
 																<input type="text" name="attr_psionicscastingtime">
 															</div>
 															<div class="sheet-form-group">
@@ -5495,25 +5494,6 @@
 													<label>Psionics Save DC Modifier:</label>
 													<input type="text" name="attr_psionics_dc_mod" placeholder="0" title="@{psionics_dc_mod}">
 												</div>
-												<!-- TODO Add races/classes extras -->
-												<!-- <div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{halflingluck_flag}">
-														<input type="checkbox" name="attr_halflingluck_flag" value="1">
-														<span>Halfling Luck</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{arcane_fighter}">
-														<input type="checkbox" name="attr_arcane_fighter" value="1">
-														<span>Arcane Fighter</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{arcane_rogue}">
-														<input type="checkbox" name="attr_arcane_rogue" value="1">
-														<span>Arcane Rogue</span>
-													</label>
-												</div> -->
 											</div>
 										</div>
 									</div>
@@ -5824,55 +5804,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div class="sheet-container-panel sheet-pc-option-gdd">
-									<div class="sheet-container-header">Giffyglyph's Extras</div>
-									<div class="sheet-container-body">
-										<div class="sheet-form sheet-form-borderless">
-											<div class="sheet-form-body">
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{show_death_failures_flag}">
-														<input type="checkbox" name="attr_show_death_failures_flag" value="1" checked="checked">
-														<span>Show Death Save Failures Only</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{show_exhaustion_flag}">
-														<input type="checkbox" name="attr_show_exhaustion_flag" value="1" checked="checked">
-														<span>Show Exhaustion Table</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{show_stress_flag}">
-														<input type="checkbox" name="attr_show_stress_flag" value="1" checked="checked">
-														<span>Show Stress & Afflictions</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{show_survival_conditions}">
-														<input type="checkbox" name="attr_show_survival_conditions" value="1" checked="checked">
-														<span>Show Survival Conditions</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{use_intelligent_initiative}">
-														<input type="checkbox" name="attr_use_intelligent_initiative" value="1" checked="checked">
-														<span>Use Intelligence for Initiative</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{use_inventory_slots}">
-														<input type="checkbox" name="attr_use_inventory_slots" value="1" checked="checked">
-														<span>Use Inventory Slots</span>
-													</label>
-												</div>
-												<div class="sheet-form-group">
-													<label>Inventory Slots Modifier</label>
-													<input type="text" name="attr_inventory_slots_mod" placeholder="*2/+2/-2" title="@{inventory_slots_mod}">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div> -->
 								<div class="sheet-container-panel sheet-pc-option-attribute">
 									<div class="sheet-container-header">Attribute Options</div>
 									<div class="sheet-container-body">
@@ -6291,7 +6222,7 @@
 			<input type='hidden' name='attr_show_stress_flag' value='1'>
 			<input type='hidden' name='attr_show_survival_conditions' value='1'>
 			<input type='hidden' name='attr_use_inventory_slots' value='1'>
-			<input type='hidden' name='attr_use_intelligent_initiative' value='1'>
+			<!-- <input type='hidden' name='attr_use_intelligent_initiative' value='1'> -->
 			<!-- COMPENDIUM DROP CATCHERS -->
 			<input type="hidden" name="attr_drop_category" accept="Category">
 			<input type="hidden" name="attr_drop_name" accept="Name">
@@ -7187,7 +7118,7 @@
 						<div class="spacer"></div>
 						{{#castingtime}}
 							<div class="row">
-								<span class="bold">**Casting Time:**</span> <span>{{castingtime}}</span>
+								<span class="bold">**Evoking Time:**</span> <span>{{castingtime}}</span>
 							</div>
 						{{/castingtime}}
 						{{#range}}
@@ -7310,8 +7241,8 @@
 							"Incite Courage": {name:"Incite Courage", order:"Avatar", discipline:"Beacon of Courage",castingtime:"Bonus Action", range:"60 feet", target:"Up to 6 creatures", concentration:"0", duration:"Instantaneous", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, choose up to six creatures you can see within 60 feet of you. If any of those creatures is frightened, that condition ends on that creature. If the creatures are not frightened, they get advantage on their next attack.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Aura of Victory": {name:"Aura of Victory [1-7]", order:"Avatar", discipline:"Beacon of Courage",castingtime:"Reaction", range:"30 feet", target:"You and allies within range", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You project psionic energy that fortifies you and your allies when your enemies are felled. As a reaction when an enemy you can see is reduced to 0 hit points, you and each of your allies within 30 feet of you gain 1d4 temporary hit points for each Psi Points spent to activate this effect. This effect lasts for 10 minutes or until your concentration ends.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Pillar of Confidence": {name:"Pillar of Confidence", order:"Avatar", discipline:"Beacon of Courage",castingtime:"Action", range:"60 feet", target:"You and up to 5 creatures", concentration:"1", duration:"Concentration, up to 1 Round", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you and up to five creatures you can see within 60 feet of you each gain one extra action to use on your individual turns. The action goes away if not used before the end of your next turn. The action can be used only to make one weapon attack or to take the Dash or Disengage action", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							"Talisman of Courage": {name:"Talisman of Courage", order:"Avatar", discipline:"Beacon of Courage",castingtime:"Other", range:"Touch", target:"One trinket", concentration:"0", duration:"Special", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You spend one hour to focus your psionic energy into a trinket (see trinkets in PHB). This item cannot be used by you and isn’t considered magical. \n The talisman remains charged until all their properties are used or until it is lost. It does not require attunement slots but linking a creature to the talisman still requires 1 hour of focus. Unless specified, the effects are triggered automatically when the triggering circumstances occur. The talisman has the following powers: \n Fear Not (ongoing). While the talisman is charged, the creature has advantage on all saving throws against fear. \n Steel Your Mind (1 use). A creature can repeat one failed saving throw with advantage against an effect that will impose the fear, charmed or any madness condition. \n No Longer (1 use). A creature can use an action to end a condition affecting its mind. \n Tough Mind, Tough Body (1 use). A creature can use it to push against its normal limits and ignore 1 level of exhaustion for 24 hours. \n Undying (1 use). A creature reduced to 0 HP isn’t unconscious and can still fight until it’s dead or recovers. It still must succeed on Death Saving Throws once per turn to stabilize.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							"Bestial Transformation": {name:"Bestial Transformation [2-7]", order:"Immortal", discipline:"Bestial Form",castingtime:"Bonus Action", range:"Self", target:"Self", concentration:"0", duration:"1 Hour", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you alter your physical form to gain different characteristics. When you use this ability, you can choose one or more of the following effects. Each effect has its own Psi Point cost. Add them together to determine the total cost. \n The transformation lasts for 1 hour, until you die, or until you decide to end it. \n Amphibious (2 psi). You gain gills, so you can breathe air and water. \n Climbing (2 psi). You grow tiny hooked claws that give you a climbing speed equal to your walking speed. \n Flight (5 psi). Wings sprout from your back. You gain a flying speed equal to your walking speed. \n Keen Senses (2 psi). Your eyes and ears become more sensitive. You gain advantage on Wisdom (Perception) checks that rely on them. \n Perfect Senses (3 psi). You gain a keen sense of smell, echolocation, and an instinct to detect prey. You have blindsight of 10 feet, allowing you to perceive your surroundings and creatures without relying on sight. \n Swimming (2 psi). You gain fins and webbing between your fingers and toes. You have a swimming speed equal to your walking speed. \n Tough Hide (2 psi). Your skin becomes as tough as leather. Your natural armor is 12 instead of 10.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							"Talisman of Courage": {name:"Talisman of Courage", order:"Avatar", discipline:"Beacon of Courage",castingtime:"Other", range:"Touch", target:"One trinket", concentration:"0", duration:"Special", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You spend one hour to focus your psionic energy into a trinket (see trinkets in PHB). This item cannot be used by you and isn’t considered magical. \n The talisman remains charged until all their properties are used or until it is lost. It does not require attunement slots but linking a creature to the talisman still requires 1 hour of focus. Unless specified, the effects are triggered automatically when the triggering circumstances occur. The talisman has the following powers: \n **Fear Not (ongoing)**. While the talisman is charged, the creature has advantage on all saving throws against fear. \n **Steel Your Mind (1 use)**. A creature can repeat one failed saving throw with advantage against an effect that will impose the fear, charmed or any madness condition. \n **No Longer (1 use)**. A creature can use an action to end a condition affecting its mind. \n **Tough Mind, Tough Body (1 use)**. A creature can use it to push against its normal limits and ignore 1 level of exhaustion for 24 hours. \n **Undying (1 use)**. A creature reduced to 0 HP isn’t unconscious and can still fight until it’s dead or recovers. It still must succeed on Death Saving Throws once per turn to stabilize.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							"Bestial Transformation": {name:"Bestial Transformation [2-7]", order:"Immortal", discipline:"Bestial Form",castingtime:"Bonus Action", range:"Self", target:"Self", concentration:"0", duration:"1 Hour", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you alter your physical form to gain different characteristics. When you use this ability, you can choose one or more of the following effects. Each effect has its own Psi Point cost. Add them together to determine the total cost. \n The transformation lasts for 1 hour, until you die, or until you decide to end it. \n **Amphibious (2 psi)**. You gain gills, so you can breathe air and water. \n **Climbing (2 psi)**. You grow tiny hooked claws that give you a climbing speed equal to your walking speed. \n **Flight (5 psi)**. Wings sprout from your back. You gain a flying speed equal to your walking speed. \n **Keen Senses (2 psi)**. Your eyes and ears become more sensitive. You gain advantage on Wisdom (Perception) checks that rely on them. \n **Perfect Senses (3 psi)**. You gain a keen sense of smell, echolocation, and an instinct to detect prey. You have blindsight of 10 feet, allowing you to perceive your surroundings and creatures without relying on sight. \n **Swimming (2 psi)**. You gain fins and webbing between your fingers and toes. You have a swimming speed equal to your walking speed. \n **Tough Hide (2 psi)**. Your skin becomes as tough as leather. Your natural armor is 12 instead of 10.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Brute Strike": {name:"Brute Strike [1-7]", order:"Immortal", discipline:"Brute Force",castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you gain a bonus to your next damage roll against a target you hit with a melee attack during the current turn. The bonus equals +1d8 per psi point spent, and the bonus damage is the same type as the attack. If the attack has more than one damage type, you choose which one to use for the bonus damage.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Mighty Leap": {name:"Mighty Leap [1-7]", order:"Immortal", discipline:"Brute Force",castingtime:"Other", range:"Self", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As part of your movement, you jump in any direction up to 20 feet per Psi Point spent.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Titan’s Strength": {name:"Titan’s Strength", order:"Immortal", discipline:"Brute Force",castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"Up to 10 Minutes", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You increase your muscle mass to an incredible degree. Your size increases by one level, and you have a 22 in Strength. You have advantage on Strength saving throws and advantage on any rolls required to stand from prone. However, this incredible feat is physically taxing and once this effect is over, you gain 1 level of exhaustion.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
@@ -7365,10 +7296,10 @@
 							"Iron Hide": {name:"Iron Hide [1-7]", order:"Immortal", discipline:"Iron Durability", castingtime:"Reaction", range:"Self", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a reaction when you are hit by an attack, you gain a +1 bonus to AC for each psi point you spend on this ability (maximum +3). This bonus applies against the triggering attack.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Steel Hide": {name:"Steel Hide", order:"Immortal", discipline:"Iron Durability", castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"Until the end of your next turn", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you gain resistance to bludgeoning, piercing, and slashing damage until the end of your next turn.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Iron Resistance": {name:"Iron Resistance", order:"Immortal", discipline:"Iron Durability", castingtime:"Action", range:"Self", target:"", concentration:"1", duration:"Concentration, up to 1 Hour", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you gain resistance to bludgeoning, piercing, or slashing damage (your choice), which lasts until your concentration ends.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							"Project Shrapnel": {name:"Project Shrapnel [1-7]", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"5-foot wide line up to 60 feet", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"1d10", damagetype1:"piercing", damage2:"", damagetype2:"", savingthrow:"Dexterity", healing: "", effect:"Creatures Large or smaller are knocked prone. On a success, creatures take half damage and do not fall prone.", description:"You levitate and project any small objects around you, such as gravel, nails, or scraps of metal or ceramic against any enemy in a 5-foot wide line up to 60 feet from you. All creatures in the area must succeed in a Dexterity saving throw or receive 1d10 piercing  damage for each Psi Point spent + your Intelligence modifier, and those that are Large or smaller are knocked prone. On a success, creatures take half damage and do not fall prone. Creatures in heavy armor or wielding a shield have advantage on the check.", psionicshldie:"1", psionicshldietype: "d10" , psionicshlbonus:""},
+							"Project Shrapnel": {name:"Project Shrapnel [1-7]", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"5-foot wide line up to 60 feet", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"1d10", damagetype1:"piercing", damage2:"", damagetype2:"", savingthrow:"Dexterity", healing: "", effect:"Creatures Large or smaller are knocked prone. On a success, creatures take half damage and do not fall prone.", description:"You levitate and project any small objects around you, such as gravel, nails, or scraps of metal or ceramic against any enemy in a 5-foot wide line up to 60 feet from you. All creatures in the area must succeed in a Dexterity saving throw or receive 1d10 piercing  damage for each Psi Point spent, and those that are Large or smaller are knocked prone. On a success, creatures take half damage and do not fall prone. Creatures in heavy armor or wielding a shield have advantage on the check.", psionicshldie:"1", psionicshldietype: "d10" , psionicshlbonus:""},
 							Disarm: {name:"Disarm", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"60 feet", target:"One weapon", concentration:"0", duration:"Instantaneous", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"Strength", healing: "", effect:"", description:"As an action, you can knock a weapon from the hands of a foe that you can see up to 60 feet and attract it to your hands. The foe must succeed on a Strength saving throw to avoid it. On a success, the weapon flies immediately to your hand.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Flying Knives": {name:"Flying Knives", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"100 feet", target:"", concentration:"1", duration:"Concentration, up to 1 Minute", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"8d6", damagetype1:"piercing", damage2:"", damagetype2:"", savingthrow:"Dexterity", healing: "", effect:"", description:"As an action, you direct a handful of knives, arrows, spears, swords or other pointy objects at your foe. Select a target that you can see within 100 feet of you. The creature must succeed on a Dexterity save or take 8d6 piercing damage as these objects impale it repeatedly. If you drop a target to 0 hit points with this attack, the damage increases by 1d6. On a success, the target takes half the damage and on the next use of this ability, the damage is reduced by 1d6.\n Each turn for the duration of this ability, you may redirect your flying knives or continue to target the same enemy. When you redirect the knives, you lose 1 damage die as some of the sharp objects are lost in transit. These knives continue to obey for up to 1 minute, until you lose concentration, or immediately after the damage is reduced to 1d6.\n A creature in heavy armor or wielding a shield has advantage on the saving throw. A creature that is Huge or bigger has disadvantage on the saving throw.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							Poltergeist: {name:"Poltergeist", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"30-foot radius", target:"All loose objects", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you gain control of loose objects in a 30-foot radius around you for the duration. You continue to gather objects each turn, even as you move, so long as you maintain concentration. The objects individually cannot weigh more than 10 pounds.\n You can use this collection of objects in multiple ways. On each of your turns for the duration or until you lose concentration, you may use a bonus action to switch abilities.\n Barrier. You send the objects to orbit you up to a maximum radius of 15 feet. Anyone trying to pass the barrier receives [[5d6]] bludgeoning damage, and the barrier provides those within it half cover. As a bonus action, you can adjust the barrier’s radius, but it will otherwise continue to follow you as you move so long as you maintain concentration and do not teleport.\n Living Knives: You can project the objects to attack your foes. Select a number of creatures up to your Intelligence modifier (minimum 2) that you can see within 60 feet of you. The creatures must make a Dexterity saving throw or take [[10d4]] slashing damage and have their speed reduced by half until the end of their next turn as objects are stuck in their bodies. On a success, creatures take half damage and suffer no other effects. Once you use this ability, you must use an action to gather more objects.\n Rearrange. You make all the objects, even those that enter the area for the first time (such as arrows, bolts or rocks) float aloof and harmless. You can move all of them at your will and arrange them as you please at a speed of 30 feet.\n After the duration of 10 minutes, even if you lose concentration on this power earlier, you gain 1 point of exhaustion.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							Poltergeist: {name:"Poltergeist", order:"Far Hand", discipline:"Living Knives",castingtime:"Action", range:"30-foot radius", target:"All loose objects", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you gain control of loose objects in a 30-foot radius around you for the duration. You continue to gather objects each turn, even as you move, so long as you maintain concentration. The objects individually cannot weigh more than 10 pounds.\n You can use this collection of objects in multiple ways. On each of your turns for the duration or until you lose concentration, you may use a bonus action to switch abilities.\n **Barrier.** You send the objects to orbit you up to a maximum radius of 15 feet. Anyone trying to pass the barrier receives [[5d6]] bludgeoning damage, and the barrier provides those within it half cover. As a bonus action, you can adjust the barrier’s radius, but it will otherwise continue to follow you as you move so long as you maintain concentration and do not teleport.\n **Living Knives.** You can project the objects to attack your foes. Select a number of creatures up to your Intelligence modifier (minimum 2) that you can see within 60 feet of you. The creatures must make a Dexterity saving throw or take [[10d4]] slashing damage and have their speed reduced by half until the end of their next turn as objects are stuck in their bodies. On a success, creatures take half damage and suffer no other effects. Once you use this ability, you must use an action to gather more objects.\n **Rearrange.** You make all the objects, even those that enter the area for the first time (such as arrows, bolts or rocks) float aloof and harmless. You can move all of them at your will and arrange them as you please at a speed of 30 feet.\n After the duration of 10 minutes, even if you lose concentration on this power earlier, you gain 1 point of exhaustion.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Charming Presence": {name:"Charming Presence [1-7]", order:"Avatar", discipline:"Mantle of Awe",castingtime:"Action", range:"30 feet", target:"", concentration:"0", duration:"10 Minutes", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you exert an aura of sympathetic power. Roll 2d8 per Psi Point spent on this ability; the total is how many hit points worth of creatures this option can affect. Creatures that are not already friendly with you within 30 feet of you are affected in  ascending order of their hit point maximums, ignoring incapacitated creatures, creatures immune to being charmed, and creatures engaged in combat.\n Starting with the creature that has the lowest hit point maximum, each creature affected by this option is charmed by you for 10 minutes, regarding you as a friendly acquaintance.\n Subtract each creature’s hit point maximum from the total before moving on to the next creature. A creature’s hit point maximum must be equal to or less than the remaining total for that creature to be affected.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Flattering Aura ": {name:"Flattering Aura [1-7]", order:"Avatar", discipline:"Mantle of Awe",castingtime:"Bonus Action", range:"30 feet", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "1d6", effect:"", description:"As a bonus action, you grant a boon to your companions as you fill them with awe at your presence. Roll 1d6 per Psi Point spent on this ability and grant that total as temporary hit 	points to all creatures you select that can see you within 30 feet of you.", psionicshldie:"1", psionicshldietype: "d6" , psionicshlbonus:""},
 							"Center of Attention": {name:"Center of Attention", order:"Avatar", discipline:"Mantle of Awe",castingtime:"Action", range:"60 feet", target:"One creature", concentration:"1", duration:"Concentration, up to 1 Minute", psiability:"@{charisma_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"Charisma", healing: "", effect:"", description:"As an action, you exert an aura of power that grabs a creature's attention. Choose one creature you can see within 60 feet of you. It must make a 	Charisma saving throw. On a failed save, the creature is so thoroughly distracted by you that all other creatures are invisible to it until your concentration ends. This effect ends if the creature can no longer see or hear you or if it takes damage.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
@@ -7411,8 +7342,8 @@
 							Daze: {name:"Daze", order:"Awakened", discipline:"Psychic Disruption", castingtime:"Action", range:"60 feet", target:"One creature", concentration:"1", duration:"Until the end of your next turn or until it takes any damage", psiability:"@{intelligence_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"Daze (3 psi). As an action, choose one creature you can see within 60 feet of you. That creature must make an Intelligence saving throw. On a failed save, the target is incapacitated until the end of your next turn or until it takes any damage.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Mind Storm": {name:"Mind Storm", order:"Awakened", discipline:"Psychic Disruption", castingtime:"Action", range:"60 feet", target:"Each creature in a 20-foot-radius sphere", concentration:"0", duration:"Instantaneous", psiability:"@{intelligence_mod}+", output:"ATTACK", psiattack:"None", damage1:"6d8", damagetype1:"psychic", damage2:"", damagetype2:"", savingthrow:"Wisdom", healing: "", effect:"Suffers disadvantage on all saving throws until the end of your next turn.", description:"As an action, choose a point you can see within 60 feet of you. Each creature in a 20-foot-radius sphere centered on that point must make a Wisdom saving throw. On a failed save, a target takes 6d8 psychic damage and suffers disadvantage on all saving throws until the end of your next turn. On a successful save, a creature takes half as much damage. ", psionicshldie:"1", psionicshldietype: "d10" , psionicshlbonus:""},
 							Push: {name:"Push [1-7]", order:"Far Hand", discipline:"Psychokinesis", castingtime:"Action", range:"60 feet", target:"One creature", concentration:"0", duration:"Instantaneous", psiability:"@{dexterity_mod}+", output:"ATTACK", psiattack:"None", damage1:"1d8", damagetype1:"force", damage2:"", damagetype2:"", savingthrow:"Strength", healing: "", effect:"Large or smaller creature pushed 5 feet per Psi Point spent away from you in a straight line", description:"As an action, choose one creature you can see within 60 feet of you. The target must make a Strength saving throw. On a failed save, it takes 1d8 force damage per psi point spent and if it is Large or smaller, is pushed up to 5 feet per point spent in a straight line away from you. On a successful save, it takes half as much damage and isn’t pushed.", psionicshldie:"1", psionicshldietype: "d8" , psionicshlbonus:""},
-							Telekinesis: {name:"Telekinesis [2-7]", order:"Far Hand", discipline:"Psychokinesis", castingtime:"Action", range:"60 feet", target:"One object", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you can choose one object you can see within 60 feet of you that isn’t being worn or carried by another creature and that isn’t secured in place. It can’t be larger than 20 feet on a side, and its maximum weight depends on the Psi Points spent on this ability, as shown below. \n As an action, you move the object up to 60 feet, and you must keep the object within sight during this movement. You can maintain control over this object for up to 10 minutes or until your concentration ends. You must continue to use your action to move the object. \n You can decide to drop the object. If your concentration or the duration of this ability ends with the object in mid-air, it promptly falls. If the object would fall on a creature, the creature must succeed on a DC 10 Dexterity saving throw or take damage as listed on the table below. \n 2 psi - 25lbs max - 2d6 \n 3 psi - 50lbs max - 4d6 \n 5 psi - 250lbs max - 6d6 \n 6 psi - 500lbs max - 7d6 \n 7 psi - 1000lbs max - 8d6", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							Grasp: {name:"Grasp [3*]", order:"Far Hand", discipline:"Psychokinesis", castingtime:"Action", range:"60 feet", target:"One creature", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You attempt to grasp a creature with telekinetic energy and hold it captive. As an action, choose one creature up to one size category larger than you that you can see within 60 feet of you. The target must succeed on a Strength saving throw or be grappled by your telekinetic energy until your concentration ends or until the target leaves your reach, which is 60 feet for this grapple. \n The grappled target can escape by using its action and succeeding on a Strength (Athletics) check contested by your psionic ability plus your proficiency bonus. When a target attempts to escape in this way, you can spend Psi Points to boost your check, abiding by your Psi Limit. You gain a +1 bonus per Psi Point spent. \n While a target is grappled in this manner, you create one of the following effects as an action: \n Crush (1-7 psi). The target takes 1d6 bludgeoning damage per Psi Point spent. \n Move (1-7 psi). You move the target up to 5 feet per Psi Point spent. You can move it in the air and hold it there. It falls if the grapple ends.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							Telekinesis: {name:"Telekinesis [2-7]", order:"Far Hand", discipline:"Psychokinesis", castingtime:"Action", range:"60 feet", target:"One object", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you can choose one object you can see within 60 feet of you that isn’t being worn or carried by another creature and that isn’t secured in place. It can’t be larger than 20 feet on a side, and its maximum weight depends on the Psi Points spent on this ability, as shown below. \n As an action, you move the object up to 60 feet, and you must keep the object within sight during this movement. You can maintain control over this object for up to 10 minutes or until your concentration ends.\n You must continue to use your action to move the object. \n You can decide to drop the object. If your concentration or the duration of this ability ends with the object in mid-air, it promptly falls. If the object would fall on a creature, the creature must succeed on a DC 10 Dexterity saving throw or take damage as listed on the table below.\n \n 2 psi - 25lbs max - 2d6 \n 3 psi - 50lbs max - 4d6 \n 5 psi - 250lbs max - 6d6 \n 6 psi - 500lbs max - 7d6 \n 7 psi - 1000lbs max - 8d6", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							Grasp: {name:"Grasp [3*]", order:"Far Hand", discipline:"Psychokinesis", castingtime:"Action", range:"60 feet", target:"One creature", concentration:"1", duration:"Concentration, up to 10 Minutes", psiability:"@{dexterity_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You attempt to grasp a creature with telekinetic energy and hold it captive. As an action, choose one creature up to one size category larger than you that you can see within 60 feet of you. The target must succeed on a Strength saving throw or be grappled by your telekinetic energy until your concentration ends or until the target leaves your reach, which is 60 feet for this grapple. \n The grappled target can escape by using its action and succeeding on a Strength (Athletics) check contested by your psionic ability plus your proficiency bonus. When a target attempts to escape in this way, you can spend Psi Points to boost your check, abiding by your Psi Limit. You gain a +1 bonus per Psi Point spent. \n While a target is grappled in this manner, you create one of the following effects as an action: \n **Crush (1-7 psi).** The target takes 1d6 bludgeoning damage per Psi Point spent. \n **Move (1-7 psi).** You move the target up to 5 feet per Psi Point spent. You can move it in the air and hold it there. It falls if the grapple ends.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Mend Wounds": {name:"Mend Wounds [1-7]", order:"Immortal", discipline:"Rebalancing the Chakras", castingtime:"Action", range:"Touch", target:"One creature", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "1d4", effect:"", description:"As an action, you can spend Psi Points to restore hit points to one creature you touch. The creature regains 1d4 hit points per psi point spent.", psionicshldie:"1", psionicshldietype: "d4" , psionicshlbonus:""},
 							"Align Chakras": {name:"Align Chakras", order:"Immortal", discipline:"Rebalancing the Chakras", castingtime:"Action", range:"Touch", target:"One creature", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you touch one creature and remove one of the following conditions from it: blinded, deafened, paralyzed, or stunned by expending one Hit Die from the creature. If the creature has no Hit Die left to expend, this ability fails. \n Alternatively, you give a creature a new Saving Throw against a disease, healing it on a success. This use does not expend a Hit Die of the creature.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Restore Vigor": {name:"Restore Vigor", order:"Immortal", discipline:"Rebalancing the Chakras", castingtime:"Action", range:"Touch", target:"One creature", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you can touch one creature and choose one of the following: remove any reductions to one of its ability scores, remove one effect that reduces its hit point maximum, or reduce its exhaustion level by one. The creature must expend 1 Hit Die or this ability fails.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
@@ -7648,8 +7579,8 @@
 				getAttrs(["repeating_focuses_focusname"], function(values){
 					const focuses = {
 						None: {description: ""},
-						"Adaptive Body": {description: "While focused on this discipline, you don’t suffer any penalties for sustaining with half rations, you can hold your breath twice its normal time, and you need half the normal sleeping time (you have still to perform only light activity for the rest of your long rest). This focus must be active until you take a long rest for the benefits of half rations and sleeping time to take effect."},
-						"Aura of Command": {description: "While focused on this discipline, when you end your turn you can use your reaction to allow one ally you can see within 20 feet of you to move up to half their speed. While you can suggest a path, the ally decides how to use this movement. To move in this way, the ally cannot be incapacitated."},
+						"Adaptive Body": {description: "While focused on this discipline, you don’t suffer any penalties for sustaining with half rations, you can hold your breath twice its normal time, and you need half the normal sleeping time (you have still to perform only light activity for the rest of your long rest).\n This focus must be active until you take a long rest for the benefits of half rations and sleeping time to take effect."},
+						"Aura of Command": {description: "While focused on this discipline, when you end your turn you can use your reaction to allow one ally you can see within 20 feet of you to move up to half their speed.\n While you can suggest a path, the ally decides how to use this movement. To move in this way, the ally cannot be incapacitated."},
 						"Aura of Fury": {description: "While focused on this discipline in combat, you and any ally who starts their turn within 10 feet of you gains a 5-foot increase to their walking speed during that turn."},
 						"Aura Sight": {description: "While focused on this discipline, you have advantage on Wisdom (Insight) checks. You may also spend a bonus action to learn a one-word summary of the emotional state of one creature you can see within 30 feet of you."},
 						"Beacon of Courage": {description: "While focused on this discipline, you and allies within 10 feet of you who can see you receive a bonus to saving throws equal to your Charisma modifier."},
@@ -7674,13 +7605,13 @@
 						"Mantle of Fear": {description: "While focused on this discipline, you have advantage on Charisma (Intimidation) checks."},
 						"Mantle of Joy": {description: "While focused on this discipline, you have advantage on Charisma (Persuasion) checks."},
 						"Mass Manipulation": {description: "While focused on this discipline, you have advantage on Strength saves."},
-						"Nomadic Mind": {description: "Whenever you focus on this discipline, you choose one skill or tool and have proficiency with it until your focus ends. Alternatively, you gain the ability to read and write one language of your choice until your focus ends. The taxing nature of this ability prevents you from switching knowledge too quickly. Once you select a proficiency or language, you cannot change it until you take a long rest and refocus on this discipline."},
+						"Nomadic Mind": {description: "Whenever you focus on this discipline, you choose one skill or tool and have proficiency with it until your focus ends. \nAlternatively, you gain the ability to speak one language of your choice until your focus ends. While using this ability, you recognize the written form of this language, increasing the efficacy of studying to become literate in it. Symbols or words may slowly start to make more sense the longer you focus. The taxing nature of this ability prevents you from switching knowledge too quickly. \nOnce you select a proficiency or language, you cannot change it until you take a full rest and refocus on this discipline."},
 						"Nomadic Step": {description: "After you teleport on your turn while focused on this discipline, your walking speed increases by 10 feet until the end of the turn, as you are propelled by your teleportation. You can receive this increase only once per turn."},
 						"Precognition": {description: "While focused on this discipline, you have advantage on initiative rolls. "},
 						"Psionic Weapon": {description: "While focused on this discipline, regain 1 Psi Point whenever you roll a critical hit with a melee attack. You cannot regain Psi Points beyond your maximum."},
 						"Psychic Assault": {description: "While focused on this discipline, you add your proficiency bonus to damage rolls with Psionic Talents that deal psychic damage."},
 						"Psychic Disruption": {description: "While focused on this discipline, you have advantage on Charisma (Deception) checks."},
-						"Psychokinesis": {description: "While focused on this discipline, you can  have an inanimate object orbit you. This orbiting object cannot weigh more than 10 pounds and does not float further than 1 foot away from you, but you can interact with or change the object as a free action. Also, any of your telekinesis abilities can affect creatures one size category larger."},
+						"Psychokinesis": {description: "While focused on this discipline, you can  have an inanimate object orbit you.\n This orbiting object cannot weigh more than 10 pounds and does not float further than 1 foot away from you, but you can interact with or change the object as a free action.\n Also, any of your telekinesis abilities can affect creatures one size category larger."},
 						"Rebalancing the Chakras": {description: "While focused on this discipline, you can use a bonus action to touch a creature that has 0 hit points and stabilize it"},
 						"Telemachia": {description: "While focused on this discipline, you gain reach with a melee weapon in which you are proficient. If the weapon already has reach, it increases by 5 feet. Natural weapons and unarmed strikes are excluded."},
 						"Telepathic Contact": {description: "While focused on this discipline, you gain the ability to use the Telepathy talent with up to six creatures at once. If you don’t have the Telepathy talent, you instead gain it while focused on this discipline."},
@@ -9184,8 +9115,8 @@
 					if (page.data["School"]) {
 						update["repeating_psionics" + lvl + "_" + id + "_psionicsorder"] = page.data["School"].toLowerCase()
 					};
-					if (page.data["Casting Time"]) {
-						update["repeating_psionics" + lvl + "_" + id + "_psionicscastingtime"] = page.data["Casting Time"]
+					if (page.data["Evoking Time"]) {
+						update["repeating_psionics" + lvl + "_" + id + "_psionicscastingtime"] = page.data["Evoking Time"]
 					};
 					if (page.data["Range"]) {
 						update["repeating_psionics" + lvl + "_" + id + "_psionicsrange"] = page.data["Range"]
@@ -9235,8 +9166,8 @@
 					if (page.data["Healing"]) {
 						update["repeating_psionics" + lvl + "_" + id + "_psionicshealing"] = page.data["Healing"];
 					};
-					if (page.data["Add Casting Modifier"]) {
-						update["repeating_psionics" + lvl + "_" + id + "_psionicsdmgmod"] = page.data["Add Casting Modifier"]
+					if (page.data["Add Evoking Modifier"]) {
+						update["repeating_psionics" + lvl + "_" + id + "_psionicsdmgmod"] = page.data["Add Evoking Modifier"]
 					};
 					if (page.data["Save"]) {
 						update["repeating_psionics" + lvl + "_" + id + "_psionicssave"] = page.data["Save"]
@@ -10272,8 +10203,8 @@
 							if (psionics["School"]) {
 								update["repeating_psionics" + lvl + "_" + id + "_psionicsorder"] = psionics["School"].toLowerCase()
 							};
-							if (psionics["Casting Time"]) {
-								update["repeating_psionics" + lvl + "_" + id + "_psionicscastingtime"] = psionics["Casting Time"]
+							if (psionics["Evoking Time"]) {
+								update["repeating_psionics" + lvl + "_" + id + "_psionicscastingtime"] = psionics["Evoking Time"]
 							};
 							if (psionics["Range"]) {
 								update["repeating_psionics" + lvl + "_" + id + "_psionicsrange"] = psionics["Range"]
@@ -10325,8 +10256,8 @@
 							if (psionics["Healing"]) {
 								update["repeating_psionics" + lvl + "_" + id + "_psionicshealing"] = psionics["Healing"];
 							};
-							if (psionics["Add Casting Modifier"]) {
-								update["repeating_psionics" + lvl + "_" + id + "_psionicsdmgmod"] = psionics["Add Casting Modifier"]
+							if (psionics["Add Evoking Modifier"]) {
+								update["repeating_psionics" + lvl + "_" + id + "_psionicsdmgmod"] = psionics["Add Evoking Modifier"]
 							};
 							if (psionics["Save"]) {
 								update["repeating_psionics" + lvl + "_" + id + "_psionicssave"] = psionics["Save"]
@@ -10837,7 +10768,11 @@
 					if (v["repeating_psionics" + lvl + "_" + psionicsid + "_psionicshldie"] && v["repeating_psionics" + lvl + "_" + psionicsid + "_psionicshldie"] != "" && v["repeating_psionics" + lvl + "_" + psionicsid + "_psionicshldietype"] && v["repeating_psionics" + lvl + "_" + psionicsid + "_psionicshldietype"] != "") {
 						var bonus = "";
 						var psicost = v["repeating_psionics" + lvl + "_" + psionicsid + "_psicost"];
+						if(psicost == "8"){
+							psicost = "1";
+						}
 						var query = "?{Spend?";
+
 						for (i = 0; i < 8 - psicost; i++) {
 							query = query + "| " + (parseInt(i, 8) + parseInt(psicost, 8)) +" Psi Points"+ "," + i;
 						}
