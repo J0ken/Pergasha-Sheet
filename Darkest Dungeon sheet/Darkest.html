@@ -1885,7 +1885,7 @@
 																<label>Amount:</label>
 																<input type="text" name="attr_resourceamount">
 																<label>Max:</label>
-																<input type="text" name="attr_resourcemax">
+																<input type="text" name="attr_resourcemax" value="?">
 															</div>
 														</div>
 													</div>
@@ -2952,6 +2952,7 @@
 																		<select name="attr_itemsize">
 																			<option value="0">Free-handed (0 slots)</option>
 																			<option value="0.2">Tiny (0.2 slots)</option>
+																			<option value="0.5">X-Small (0.5 slots)</option>
 																			<option value="1" selected>Small (1 slot)</option>
 																			<option value="2">Medium (2 slots)</option>
 																			<option value="3">Large (3 slots)</option>
@@ -7986,22 +7987,18 @@
 				});
 			});
 
-			on("change:other_resource change:other_resource_name change:repeating_resource:resource_left change:repeating_resource:resource_left_name change:repeating_resource:resource_right change:repeating_resource:resource_right_name", function(eventinfo) {
+			on("change:other_resource change:other_resource_name change:repeating_resource:resourceamount change:repeating_resource:resourcename change:repeating_resource:resourcemax", function(eventinfo) {
 				if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 					return;
 				}
 				var resourceid = eventinfo.sourceAttribute;
 				if (eventinfo.sourceAttribute.indexOf("other") > -1) {
 					resourceid = "other_resource";
-				} else if (eventinfo.sourceAttribute.substring(eventinfo.sourceAttribute.length - 5) == "_name") {
-					resourceid = eventinfo.sourceAttribute.substring(0, eventinfo.sourceAttribute.length - 5);
+				} else if (eventinfo.sourceAttribute.substring(eventinfo.sourceAttribute.length - 13) == "_resourcename") {
+					resourceid = eventinfo.sourceAttribute.substring(0, eventinfo.sourceAttribute.length - 13);
 				};
 
-				getAttrs([resourceid, resourceid + "_name", resourceid + "_itemid"], function(v) {
-					// if (!v[resourceid + "_name"]) {
-					// 	console.log("remove");
-					// 	remove_resource(resourceid);
-					// } else
+				getAttrs([resourceid, resourceid + "_resourcename", resourceid + "_itemid"], function(v) {
 					if (v[resourceid + "_itemid"] && v[resourceid + "_itemid"] != "") {
 						update_item_from_resource(resourceid, v[resourceid + "_itemid"]);
 					};
@@ -8325,8 +8322,9 @@
 
 			on("remove:repeating_resource", function(eventinfo) {
 				var resourceid = eventinfo.sourceAttribute.substring(19, 39);
-				var left_itemid = eventinfo.removedInfo["repeating_resource_" + resourceid + "_resource_left_itemid"];
-				var right_itemid = eventinfo.removedInfo["repeating_resource_" + resourceid + "_resource_right_itemid"];
+				console.log("ID= "+resourceid);
+				var left_itemid = eventinfo.removedInfo["repeating_resource_" + resourceid + "_itemid"];
+				var right_itemid = eventinfo.removedInfo["repeating_resource_" + resourceid + "_itemid"];
 				var update = {};
 				if (left_itemid) {
 					update["repeating_inventory_" + left_itemid + "_useasresource"] = 0;
@@ -8684,7 +8682,7 @@
 					},
 					{
 						name: "resource",
-						list: ["resource_left_name", "resource_right_name"]
+						list: ["resourcename", "resourcename"]
 					},
 					{
 						name: "psionics_talent",
@@ -10063,6 +10061,7 @@
 							} else if (currentData["other_resource_name"] == "" || currentData["other_resource_name"] == value["Name"]) {
 								section = "other_resource";
 							} else {
+								console.log("RepeatRes");
 								_.each(repeating.resource, function(resource, id) {
 									if (resource.left == "" && section == "" || resource.left == value["Name"]) {
 										section = "repeating_resource_" + id + "_resource_left";
@@ -10557,45 +10556,34 @@
 				var update = {};
 				var newrowid = generateRowID();
 
-				getAttrs(["other_resource_name"], function(x) {
-					if (!x.other_resource_name || x.other_resource_name == "") {
-						update["repeating_inventory_" + itemid + "_itemresourceid"] = "other_resource";
-						setAttrs(update, {}, update_resource_from_item(itemid, "other_resource", true));
-					} else {
-						getSectionIDs("repeating_resource", function(idarray) {
-							if (idarray.length == 0) {
-								update["repeating_inventory_" + itemid + "_itemresourceid"] = newrowid + "_resource_left";
-								setAttrs(update, {}, update_resource_from_item(itemid, newrowid + "_resource_left", true));
-							} else {
-								var resource_names = [];
+					getSectionIDs("repeating_resource", function(idarray) {
+						if (idarray.length == 0) {
+							update["repeating_inventory_" + itemid + "_itemresourceid"] = newrowid ; //+ "_resource_left"
+							setAttrs(update, {}, update_resource_from_item(itemid, newrowid , true));//+ "_resource_left"
+						} else {
+							var resource_names = [];
+							_.each(idarray, function(currentID, i) {
+								resource_names.push("repeating_resource_" + currentID + "_resourcename");
+							});
+
+							getAttrs(resource_names, function(y) {
+								var existing = false;
 								_.each(idarray, function(currentID, i) {
-									resource_names.push("repeating_resource_" + currentID + "_resource_left_name");
-									resource_names.push("repeating_resource_" + currentID + "_resource_right_name");
+									if ((!y["repeating_resource_" + currentID + "_resourcename"] || y["repeating_resource_" + currentID + "_resourcename"] === "") && existing == false) {
+										update["repeating_inventory_" + itemid + "_itemresourceid"] = currentID ;//+ "_resource_left"
+										setAttrs(update, {}, update_resource_from_item(itemid, currentID , true));//+ "_resource_left"
+										existing = true;
+									};
 								});
+								if (!existing) {
+									update["repeating_inventory_" + itemid + "_itemresourceid"] = newrowid ;//+ "_resource_left"
+									setAttrs(update, {}, update_resource_from_item(itemid, newrowid , true));//+ "_resource_left"
+								}
+							});
 
-								getAttrs(resource_names, function(y) {
-									var existing = false;
-									_.each(idarray, function(currentID, i) {
-										if ((!y["repeating_resource_" + currentID + "_resource_left_name"] || y["repeating_resource_" + currentID + "_resource_left_name"] === "") && existing == false) {
-											update["repeating_inventory_" + itemid + "_itemresourceid"] = currentID + "_resource_left";
-											setAttrs(update, {}, update_resource_from_item(itemid, currentID + "_resource_left", true));
-											existing = true;
-										} else if ((!y["repeating_resource_" + currentID + "_resource_right_name"] || y["repeating_resource_" + currentID + "_resource_right_name"] === "") && existing == false) {
-											update["repeating_inventory_" + itemid + "_itemresourceid"] = currentID + "_resource_right";
-											setAttrs(update, {}, update_resource_from_item(itemid, currentID + "_resource_right", true));
-											existing = true;
-										};
-									});
-									if (!existing) {
-										update["repeating_inventory_" + itemid + "_itemresourceid"] = newrowid + "_resource_left";
-										setAttrs(update, {}, update_resource_from_item(itemid, newrowid + "_resource_left", true));
-									}
-								});
+						};
+					});
 
-							};
-						});
-					};
-				});
 
 			};
 
@@ -10603,27 +10591,26 @@
 				getAttrs(["repeating_inventory_" + itemid + "_itemname", "repeating_inventory_" + itemid + "_itemcount"], function(v) {
 					var update = {};
 					var id;
-
 					if (resourceid && resourceid == "other_resource") {
 						id = resourceid;
 					} else {
 						id = "repeating_resource_" + resourceid;
+						console.log("repeat id: "+ id);
 					};
 
 					if (newresource) {
 						update[id + "_itemid"] = itemid;
 					};
-
 					if (!v["repeating_inventory_" + itemid + "_itemname"]) {
 						update["repeating_inventory_" + itemid + "_useasresource"] = 0;
 						update["repeating_inventory_" + itemid + "_itemresourceid"] = "";
 						remove_resource(resourceid);
 					};
 					if (v["repeating_inventory_" + itemid + "_itemname"] && v["repeating_inventory_" + itemid + "_itemname"] != "") {
-						update[id + "_name"] = v["repeating_inventory_" + itemid + "_itemname"];
+						update[id + "_resourcename"] = v["repeating_inventory_" + itemid + "_itemname"];
 					};
 					if (v["repeating_inventory_" + itemid + "_itemcount"] && v["repeating_inventory_" + itemid + "_itemcount"] != "") {
-						update[id] = v["repeating_inventory_" + itemid + "_itemcount"];
+						update[id + "_resourceamount"] = v["repeating_inventory_" + itemid + "_itemcount"];
 					};
 
 					setAttrs(update, {
@@ -11369,26 +11356,14 @@
 					};
 					if (id == "other_resource") {
 						update["other_resource"] = "";
-						update["other_resource_name"] = "";
+						update["other_resource_name"] = "Psi Points";
 						update["other_resource_itemid"] = "";
 						setAttrs(update, {
 							silent: true
 						});
 					} else {
 						var baseid = id.replace("repeating_resource_", "").substring(0, 20);
-						var resource_names = ["repeating_resource_" + baseid + "_resource_left_name", "repeating_resource_" + baseid + "_resource_right_name"];
-						getAttrs(resource_names, function(v) {
-							if ((id.indexOf("left") > -1 && !v["repeating_resource_" + baseid + "_resource_right_name"]) || (id.indexOf("right") > -1 && !v["repeating_resource_" + baseid + "_resource_left_name"])) {
-								removeRepeatingRow("repeating_resource_" + baseid);
-							} else {
-								update["repeating_resource_" + id.replace("repeating_resource_", "")] = "";
-								update["repeating_resource_" + id.replace("repeating_resource_", "") + "_name"] = "";
-							};
-							setAttrs(update, {
-								silent: true
-							});
-						});
-
+						removeRepeatingRow("repeating_resource_" + baseid);
 					};
 				});
 			};
@@ -13290,44 +13265,44 @@
 
 			// CHANGE SURVIVAL CONDITIONS
 
-			on("change:condition_temperature change:condition_hunger change:condition_thirst change:condition_fatigue", function() {
-				let field1 = "condition_temperature";
-				let field2 = "condition_hunger";
-				let field3 = "condition_thirst";
-				let field4 = "condition_fatigue";
-				let exhaustionMod = 0;
-
-				getAttrs([field1, field2, field3, field4], function(v) {
-
-					[field1, field2, field3, field4].forEach(function(field) {
-						let value = toInt(v[field]);
-						exhaustionMod += (value == 0 ? -1 : value >= 5 ? 1 : 0);
-					});
-
-					let update = {};
-					update["exhaustion_conditions"] = exhaustionMod;
-					setAttrs(update);
-				});
-			});
+			// on("change:condition_temperature change:condition_hunger change:condition_thirst change:condition_fatigue", function() {
+			// 	let field1 = "condition_temperature";
+			// 	let field2 = "condition_hunger";
+			// 	let field3 = "condition_thirst";
+			// 	let field4 = "condition_fatigue";
+			// 	let exhaustionMod = 0;
+			//
+			// 	getAttrs([field1, field2, field3, field4], function(v) {
+			//
+			// 		[field1, field2, field3, field4].forEach(function(field) {
+			// 			let value = toInt(v[field]);
+			// 			exhaustionMod += (value == 0 ? -1 : value >= 5 ? 1 : 0);
+			// 		});
+			//
+			// 		let update = {};
+			// 		update["exhaustion_conditions"] = exhaustionMod;
+			// 		setAttrs(update);
+			// 	});
+			// });
 
 			// CHANGE EXHAUSTION
 
-			on("change:exhaustion_base change:exhaustion_wounds change:exhaustion_conditions change:show_survival_conditions", function() {
-				let field1 = "exhaustion_base";
-				let field2 = "exhaustion_wounds";
-				let field3 = "exhaustion_conditions";
-				let field4 = "show_survival_conditions";
-
-				getAttrs([field1, field2, field3, field4], function(v) {
-					let update = {};
-					let exhaustionTotal = clamp(toInt(v[field1]) + toInt(v[field2]) + toInt(v[field3]), 0, 6);
-					update["exhaustion_total"] = exhaustionTotal;
-					if (toInt(v[field4]) == 1) {
-						update["exhaustion_status"] = exhaustionTotal;
-					}
-					setAttrs(update);
-				});
-			});
+			// on("change:exhaustion_base change:exhaustion_wounds change:exhaustion_conditions change:show_survival_conditions", function() {
+			// 	let field1 = "exhaustion_base";
+			// 	let field2 = "exhaustion_wounds";
+			// 	let field3 = "exhaustion_conditions";
+			// 	let field4 = "show_survival_conditions";
+			//
+			// 	getAttrs([field1, field2, field3, field4], function(v) {
+			// 		let update = {};
+			// 		let exhaustionTotal = clamp(toInt(v[field1]) + toInt(v[field2]) + toInt(v[field3]), 0, 6);
+			// 		update["exhaustion_total"] = exhaustionTotal;
+			// 		if (toInt(v[field4]) == 1) {
+			// 			update["exhaustion_status"] = exhaustionTotal;
+			// 		}
+			// 		setAttrs(update);
+			// 	});
+			// });
 
 
 			// CHANGE Focus
@@ -13361,23 +13336,23 @@
 
 			// CHANGE STRESS
 
-			on("change:stress", function(eventinfo) {
-				let stress = toInt(eventinfo.newValue);
-				let update = {};
-				if (stress >= 20) {
-					update["stress_state_20"] = 1;
-				}
-				if (stress >= 30) {
-					update["stress_state_30"] = 1;
-				}
-				if (stress >= 35) {
-					update["stress_state_35"] = 1;
-				}
-				if (stress >= 40) {
-					update["stress_state_40"] = 1;
-				}
-				setAttrs(update);
-			});
+			// on("change:stress", function(eventinfo) {
+			// 	let stress = toInt(eventinfo.newValue);
+			// 	let update = {};
+			// 	if (stress >= 20) {
+			// 		update["stress_state_20"] = 1;
+			// 	}
+			// 	if (stress >= 30) {
+			// 		update["stress_state_30"] = 1;
+			// 	}
+			// 	if (stress >= 35) {
+			// 		update["stress_state_35"] = 1;
+			// 	}
+			// 	if (stress >= 40) {
+			// 		update["stress_state_40"] = 1;
+			// 	}
+			// 	setAttrs(update);
+			// });
 
 			// CHANGE HIT POINTS
 

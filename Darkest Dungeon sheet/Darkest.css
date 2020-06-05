@@ -2281,8 +2281,11 @@
         opacity: .5; }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resources .sheet-pc-resource span:nth-of-type(2)::before {
           content: "("; }
-        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resources .sheet-pc-resource span:nth-of-type(2)::after {
-          content: " /"; }
+
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resources .sheet-pc-resource span:nth-of-type(2)::after {
+            content: " /"; }
+
+
       .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resources .sheet-pc-resource span:nth-of-type(3) {
         opacity: .5; }
         .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-resources .sheet-pc-resource span:nth-of-type(3)::after {
@@ -2469,11 +2472,6 @@
   font-size: 8px;
   font-weight: normal;
   background: none; }
-  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-gp .sheet-container-header input:hover,
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-pp .sheet-container-header input:hover{
-    background: #e5fffb; } */
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-cp .sheet-container-body input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-sp .sheet-container-body input,
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-equipment .sheet-pc-purse-ep .sheet-container-body input,
