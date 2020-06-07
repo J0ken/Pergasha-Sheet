@@ -30,6 +30,10 @@
 					<input type="radio" name="attr_whispertoggle" value="/w gm ">
 					<span title="@{whispertoggle}">GM</span>
 				</label>
+				<label class="sheet-radio">
+					<input type="radio" name="attr_whispertoggle" value="/w @{character_name} ">
+					<span title="@{whispertoggle}">Self</span>
+				</label>
 			</div>
 		</div>
 		<div class="sheet-section-npc"> <!-- NPC -->
@@ -322,12 +326,12 @@
 									</select>
 								</div>
 								<div class="sheet-form-group">
-									<label>Whisper Rolls to GM</label>
+									<label>Whisper Rolls</label>
 									<select name="attr_wtype">
 										<option value="">Never Whisper Rolls</option>
 										<option value="@{whispertoggle}">Whisper Toggle</option>
-										<option value="?{Whisper?|Public Roll,|Whisper Roll,/w gm }">Query Whisper</option>
-										<option value="/w gm ">Always Whisper Rolls</option>
+										<option value="?{Whisper?|Public Roll,|Whisper Roll to GM,/w gm ,Whisper Roll to Self,/w  @{character_name} }">Query Whisper</option>
+										<option value="/w gm">Whisper to GM</option>
 									</select>
 								</div>
 								<div class="sheet-form-group">
@@ -5895,7 +5899,7 @@
 											<div class="sheet-form-body">
 												<div class="sheet-form-group">
 													<label>Version:</label>
-													<input type="text" name="attr_version" value="1.5" hidden disabled>
+													<input type="text" name="attr_version" value="1.6" hidden disabled>
 													<span name="attr_version"></span>
 												</div>
 												<div class="sheet-form-group">
@@ -5914,12 +5918,12 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
-													<label>Whisper Rolls to GM:</label>
+													<label>Whisper Rolls:</label>
 													<select name="attr_wtype" title="@{wtype}">
 														<option value="">Never Whisper Rolls</option>
 														<option value="@{whispertoggle}">Whisper Toggle</option>
-														<option value="?{Whisper?|Public Roll,|Whisper Roll,/w gm }">Query Whisper</option>
-														<option value="/w gm ">Always Whisper Rolls</option>
+														<option value="?{Whisper?|Public Roll,|Whisper Roll to GM,/w gm ,Whisper Roll to Self,/w  @{character_name} }">Query Whisper</option>
+														<option value="/w gm">Whisper to GM</option>
 													</select>
 												</div>
 												<div class="sheet-form-group">
