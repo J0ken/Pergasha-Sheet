@@ -2289,7 +2289,7 @@
 																			<input type="checkbox" name="attr_hide_details" value="1">
 																			<span>Hide Details</span>
 																		</label>
-																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -2357,12 +2357,24 @@
 																			<span>Hide Details</span>
 																		</label>
 																	</div>
+																	<div class="sheet-form-group">
+																		<label>Color:</label>
+																		<select  name="attr_customcolor">
+																			<option selected>Default</option>
+																			<option>Red</option>
+																			<option>Brown</option>
+																			<option>Blue</option>
+																			<option>Orange</option>
+																			<option>Green</option>
+																		</select>
+																	</div>
 																</div>
 															</div>
 														</div>
 														<div class="sheet-toggle-unchecked">
 															<div class="sheet-pc-feature">
 																<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
+																	<input type="hidden" name="attr_customcolor">
 																	<div class="sheet-pc-feature-name">
 																		<span name="attr_name"></span>
 																	</div>
@@ -2682,12 +2694,24 @@
 																	<span>Hide Details</span>
 																</label>
 															</div>
+															<div class="sheet-form-group">
+																		<label>Color:</label>
+																		<select  name="attr_customcolor">
+																			<option selected>Default</option>
+																			<option>Red</option>
+																			<option>Brown</option>
+																			<option>Blue</option>
+																			<option>Orange</option>
+																			<option>Green</option>
+																		</select>
+																	</div>
 														</div>
 													</div>
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-feature">
 														<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
+															<input type="hidden" name="attr_customcolor">
 															<div class="sheet-pc-feature-name">
 																<span name="attr_name"></span>
 															</div>
@@ -3202,8 +3226,7 @@
 								<!-- Talents -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">Talents</span>
+										<span class="sheet-psionics-type">Talents</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionicstalent">
@@ -3358,6 +3381,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -3365,15 +3405,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}{{innate=@{innate}}}  @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -3384,8 +3431,7 @@
 								<!-- 1st level - 1 point psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics" >1 Psi Point</span>
+										<span class="sheet-psionics-type" >1 Psi Point</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics1">
@@ -3622,6 +3668,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -3629,15 +3692,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename} }} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -3648,8 +3718,7 @@
 								<!-- 2nd level - 2 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">2 Psi-Points</span>
+										<span class="sheet-psionics-type">2 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics2">
@@ -3900,6 +3969,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -3907,15 +3993,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -3926,8 +4019,7 @@
 								<!-- 3rd level - 3 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">3 Psi-Points</span>
+										<span class="sheet-psionics-type">3 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics3">
@@ -4153,6 +4245,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -4160,15 +4269,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -4179,8 +4295,7 @@
 								<!-- 4th level - 4 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">4 Psi-Points</span>
+										<span class="sheet-psionics-type">4 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics4">
@@ -4412,6 +4527,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -4419,15 +4551,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -4438,8 +4577,7 @@
 								<!-- 5th level - 5 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">5 Psi-Points</span>
+										<span class="sheet-psionics-type">5 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics5">
@@ -4670,6 +4808,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -4677,15 +4832,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -4696,8 +4858,7 @@
 								<!-- 6th level - 6 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">6 Psi-Points</span>
+										<span class="sheet-psionics-type">6 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics6">
@@ -4926,6 +5087,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -4933,15 +5111,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -4952,8 +5137,7 @@
 								<!-- 7th level - 7 points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">7 Psi-Points</span>
+										<span class="sheet-psionics-type">7 Psi-Points</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics7">
@@ -5174,6 +5358,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -5181,15 +5382,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -5200,8 +5408,7 @@
 								<!-- Variable points psionics -->
 								<div class="sheet-container-psionics sheet-pc-psibox">
 									<div class="sheet-container-header">
-										<span class="sheet-psionics-cost"></span>
-										<span class="sheet-psionics-type sheet-psionics-type-psionics">Variable Psi-Points Cost</span>
+										<span class="sheet-psionics-type">Variable Psi-Points Cost</span>
 									</div>
 									<div class="sheet-container-body">
 										<fieldset class="repeating_psionics8">
@@ -5436,6 +5643,23 @@
 																<label>Description:</label>
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
+															<div class="sheet-form-group">
+																<label class="sheet-form-checkbox">
+																	<input type="checkbox" name="attr_hide_details" value="1">
+																	<span>Hide Details</span>
+																</label>
+															</div>
+															<div class="sheet-form-group">
+																<label>Color:</label>
+																<select  name="attr_customcolor">
+																	<option selected>Default</option>
+																	<option>Red</option>
+																	<option>Brown</option>
+																	<option>Blue</option>
+																	<option>Orange</option>
+																	<option>Green</option>
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -5443,15 +5667,22 @@
 													<div class="sheet-pc-psionics">
 														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
 														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<span class="sheet-pc-psionics-name">
+															<input type="hidden" name="attr_customcolor">
+															<div class="sheet-pc-psionics-name">
 																<span name="attr_psionicsname"></span>
 																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
 																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</span>
-															<span class="sheet-pc-psionics-components">
-																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																<strong><span>C</span></strong>
-															</span>
+															</div>
+															<div class="sheet-pc-psionics-details">
+																<span class="sheet-pc-feature-source">
+																	<span name="attr_psionicscastingtime"></span>
+																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																	<span> - Concentration</span>
+																</span>
+																<br>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<span name="attr_psionicsdescription"></span>
+															</div>
 														</button>
 													</div>
 												</div>
@@ -5664,7 +5895,7 @@
 											<div class="sheet-form-body">
 												<div class="sheet-form-group">
 													<label>Version:</label>
-													<input type="text" name="attr_version" value="1.2" hidden disabled>
+													<input type="text" name="attr_version" value="1.5" hidden disabled>
 													<span name="attr_version"></span>
 												</div>
 												<div class="sheet-form-group">
@@ -13263,47 +13494,6 @@
 				return results;
 			};
 
-			// CHANGE SURVIVAL CONDITIONS
-
-			// on("change:condition_temperature change:condition_hunger change:condition_thirst change:condition_fatigue", function() {
-			// 	let field1 = "condition_temperature";
-			// 	let field2 = "condition_hunger";
-			// 	let field3 = "condition_thirst";
-			// 	let field4 = "condition_fatigue";
-			// 	let exhaustionMod = 0;
-			//
-			// 	getAttrs([field1, field2, field3, field4], function(v) {
-			//
-			// 		[field1, field2, field3, field4].forEach(function(field) {
-			// 			let value = toInt(v[field]);
-			// 			exhaustionMod += (value == 0 ? -1 : value >= 5 ? 1 : 0);
-			// 		});
-			//
-			// 		let update = {};
-			// 		update["exhaustion_conditions"] = exhaustionMod;
-			// 		setAttrs(update);
-			// 	});
-			// });
-
-			// CHANGE EXHAUSTION
-
-			// on("change:exhaustion_base change:exhaustion_wounds change:exhaustion_conditions change:show_survival_conditions", function() {
-			// 	let field1 = "exhaustion_base";
-			// 	let field2 = "exhaustion_wounds";
-			// 	let field3 = "exhaustion_conditions";
-			// 	let field4 = "show_survival_conditions";
-			//
-			// 	getAttrs([field1, field2, field3, field4], function(v) {
-			// 		let update = {};
-			// 		let exhaustionTotal = clamp(toInt(v[field1]) + toInt(v[field2]) + toInt(v[field3]), 0, 6);
-			// 		update["exhaustion_total"] = exhaustionTotal;
-			// 		if (toInt(v[field4]) == 1) {
-			// 			update["exhaustion_status"] = exhaustionTotal;
-			// 		}
-			// 		setAttrs(update);
-			// 	});
-			// });
-
 
 			// CHANGE Focus
 
@@ -13334,25 +13524,6 @@
 				});
 			});
 
-			// CHANGE STRESS
-
-			// on("change:stress", function(eventinfo) {
-			// 	let stress = toInt(eventinfo.newValue);
-			// 	let update = {};
-			// 	if (stress >= 20) {
-			// 		update["stress_state_20"] = 1;
-			// 	}
-			// 	if (stress >= 30) {
-			// 		update["stress_state_30"] = 1;
-			// 	}
-			// 	if (stress >= 35) {
-			// 		update["stress_state_35"] = 1;
-			// 	}
-			// 	if (stress >= 40) {
-			// 		update["stress_state_40"] = 1;
-			// 	}
-			// 	setAttrs(update);
-			// });
 
 			// CHANGE HIT POINTS
 
@@ -13411,6 +13582,7 @@
 				return value !== null && typeof(value) !== 'undefined';
 			};
 		</script>
+
 		<div class="sheet-compendium-warning">
 			<span>Importing compendium data</span>
 		</div>
