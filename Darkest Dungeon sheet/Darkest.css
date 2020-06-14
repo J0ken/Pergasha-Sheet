@@ -532,7 +532,6 @@
       width: 100%;
       z-index: -1;
       border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png") 103 103 103 103 fill stretch;
-      /* border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-spell-header.png") 155 82 155 82 fill stretch; */
       border-width: 52px 28px 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body {
     box-sizing: border-box;
@@ -783,7 +782,7 @@
   display: none; }
 .sheet-rolltemplate-simple .sheet-containerold {
   width: 189px;
-  background: url(http://i.imgur.com/53WSdhx.png) top left;
+  background: url(http://i.imgur.com/53WSdhx.png) top left; /*Big Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -797,7 +796,7 @@
 .sheet-rolltemplate-atkdmg .sheet-container.sheet-atkold,
 .sheet-rolltemplate-dmg .sheet-atkold {
   width: 189px;
-  background: url(http://i.imgur.com/4RCRsAd.png) top left;
+  background: url(http://i.imgur.com/4RCRsAd.png) top left; /*Top Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -813,7 +812,7 @@
 .sheet-rolltemplate-dmg .sheet-containerold,
 .sheet-rolltemplate-atkdmg .sheet-container.sheet-damagetemplateold {
   width: 189px;
-  background: url(http://i.imgur.com/gw9HTsq.png) top left;
+  background: url(http://i.imgur.com/gw9HTsq.png) top left; /*Bottom Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -1052,7 +1051,7 @@
 .sheet-rolltemplate-atkdmg .sheet-descold,
 .sheet-rolltemplate-dmg .sheet-descold {
   width: 189px;
-  background: url(http://i.imgur.com/4988JS0.png) top left;
+  background: url(http://i.imgur.com/4988JS0.png) top left; /*Middle Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black;
