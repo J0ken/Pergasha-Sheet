@@ -130,7 +130,7 @@
   .charsheet .sheet-darkerdungeons .sheet-compendium-drop-target.dropping .sheet-section-pc::before {
     width: 800px; }
 .charsheet .sheet-darkerdungeons .sheet-container-attribute {
-  background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-attribute-bg.png");
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-attribute-bg.png);/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-attribute-bg.png"*/
   background-size: 100% 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -182,7 +182,7 @@
   position: relative;
   z-index: 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-bar::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png") 103 103 103 103 fill stretch;
+    border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-bar-border.png) 103 103 103 103 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png"*/
     border-style: solid;
     border-width: 30px 30px 0;
     box-sizing: border-box;
@@ -212,7 +212,7 @@
     text-transform: uppercase;
     vertical-align: middle; }
     .charsheet .sheet-darkerdungeons .sheet-container-bar .sheet-container-header::after {
-      background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-spacer.png");
+      background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-bar-spacer.png);/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-spacer.png"*/
       background-size: 100% 100%;
       content: '';
       display: inline-block;
@@ -239,7 +239,7 @@
   min-width: 0;
   overflow: hidden; }
   .charsheet .sheet-darkerdungeons .sheet-container-box::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
+    border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-box-border.png) 50 50 50 50 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png"*/
     border-style: solid;
     border-width: 15px 15px;
     box-sizing: border-box;
@@ -349,7 +349,7 @@
   position: relative;
   z-index: 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-counter::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-proficiency-border.png") 143 145 143 145 fill stretch;
+    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-proficiency-border.png") 143 145 143 145 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-proficiency-border.png"*/
     border-style: solid;
     border-width: 42px 42px 0;
     box-sizing: border-box;
@@ -384,7 +384,7 @@
   position: relative;
   z-index: 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-panel::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
+    border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-box-border.png) 50 50 50 50 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png"*/
     border-style: solid;
     border-width: 15px 15px;
     box-sizing: border-box;
@@ -459,7 +459,7 @@
   z-index: 0;
   margin-top: 3px; }
   .charsheet .sheet-darkerdungeons .sheet-container-psionics::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png") 50 50 50 50 fill stretch;
+    border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-box-border.png) 50 50 50 50 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png"*/
     border-style: solid;
     border-width: 15px 15px;
     box-sizing: border-box;
@@ -531,7 +531,7 @@
       top: 0;
       width: 100%;
       z-index: -1;
-      border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png") 103 103 103 103 fill stretch;
+      border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-bar-border.png) 103 103 103 103 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png"*/
       border-width: 52px 28px 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-psionics .sheet-container-body {
     box-sizing: border-box;
@@ -559,7 +559,7 @@
   position: relative;
   z-index: 0; }
   .charsheet .sheet-darkerdungeons .sheet-container-well::before {
-    border-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-well-border.png") 96 314 96 314 fill stretch;
+    border-image: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-well-border.png) 96 314 96 314 fill stretch;/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-well-border.png"*/
     border-style: solid;
     border-width: 32px 101px;
     box-sizing: border-box;
@@ -782,7 +782,7 @@
   display: none; }
 .sheet-rolltemplate-simple .sheet-containerold {
   width: 189px;
-  background: url(http://i.imgur.com/53WSdhx.png) top left; /*Big Box*/
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/Big%20Box.png) top left; /*http://i.imgur.com/53WSdhx.png Big Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -796,7 +796,7 @@
 .sheet-rolltemplate-atkdmg .sheet-container.sheet-atkold,
 .sheet-rolltemplate-dmg .sheet-atkold {
   width: 189px;
-  background: url(http://i.imgur.com/4RCRsAd.png) top left; /*Top Box*/
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/Top%20Box.png) top left; /*http://i.imgur.com/4RCRsAd.png Top Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -812,7 +812,7 @@
 .sheet-rolltemplate-dmg .sheet-containerold,
 .sheet-rolltemplate-atkdmg .sheet-container.sheet-damagetemplateold {
   width: 189px;
-  background: url(http://i.imgur.com/gw9HTsq.png) top left; /*Bottom Box*/
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/Bottom%20Box.png) top left; /*http://i.imgur.com/gw9HTsq.png Bottom Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black; }
@@ -1051,7 +1051,7 @@
 .sheet-rolltemplate-atkdmg .sheet-descold,
 .sheet-rolltemplate-dmg .sheet-descold {
   width: 189px;
-  background: url(http://i.imgur.com/4988JS0.png) top left; /*Middle Box*/
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/Middle%20Box.png) top left; /*background: url(http://i.imgur.com/4988JS0.png) top left; Middle Box*/
   background-size: 189px 100%;
   background-repeat: no-repeat;
   color: black;
@@ -1119,7 +1119,7 @@
   pointer-events: none; }
 .sheet-rolltemplate-psionics .sheet-container {
   width: 263px;
-  background: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/DD5thEditionLegacy/images/spellbg.jpg) center center;
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/spellbg.jpg) center center;/*https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/DD5thEditionLegacy/images/spellbg.jpg*/
   background-size: auto;
   background-repeat: repeat;
   color: black;
@@ -1578,7 +1578,7 @@
       text-decoration: none;
       background: #e5fffb; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header {
-  background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-header-bg.png");
+  background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/sheet-header-bg.png);/*"https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-header-bg.png"*/
   background-size: 100% 100%;
   display: grid;
   grid-template-areas: ". logo . . ."
@@ -1656,7 +1656,7 @@
     padding: 0px 5px 6px;
     text-align: center; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-section-pc-header .sheet-section-pc-header-logo div {
-      background: url("https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/dreadful_odysseys_sheet_logo-02.png");
+      background: url(https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/Darkest%20Dungeon%20sheet/img/dreadful_odysseys_sheet_logo-02.png);/*"https://raw.githubusercontent.com/J0ken/Pergasha-Sheet/master/img/dreadful_odysseys_sheet_logo-02.png"*/
       width: 278px;
       height: 70px;
       display: block;
