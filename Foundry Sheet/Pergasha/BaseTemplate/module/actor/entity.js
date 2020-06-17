@@ -1,6 +1,9 @@
 import { d20Roll, damageRoll } from "../dice.js";
+import BreatherDialog from "../apps/breather.js";
 import ShortRestDialog from "../apps/short-rest.js";
 import LongRestDialog from "../apps/long-rest.js";
+import FullRestDialog from "../apps/full-rest.js";
+import PsionicEvokeDialog from "../apps/psionics-evoke-dialog.js";
 import SpellCastDialog from "../apps/spell-cast-dialog.js";
 import AbilityTemplate from "../pixi/ability-template.js";
 import {DND5E} from '../config.js';
@@ -116,6 +119,8 @@ export default class Actor5e extends Actor {
     init.bonus = init.value + (flags.initiativeAlert ? 5 : 0);
     init.total = init.mod + init.prof + init.bonus;
 
+
+    //TODO the same for psionics
     // Prepare spell-casting data
     data.attributes.spelldc = this.getSpellDC(data.attributes.spellcasting);
     // TODO: Only do this IF we have already processed item types (see Entity#initialize)
@@ -761,7 +766,42 @@ export default class Actor5e extends Actor {
   }
 
   /* -------------------------------------------- */
+  /**
+   * Cause this Actor to take a Breather
+   * During a Breather you can recover CON mod hit points
+   * @param {boolean} chat    Summarize the results of the rest workflow as a chat message
+   * @return {Promise}        A Promise which resolves once the short rest workflow has completed
+   */
+  async breather({chat=true}={}) {
+    const data = this.data.data;
 
+    // Take note of the initial hit points and number of hit dice the Actor has
+    const hp0 = data.attributes.hp.value;
+
+    // Note the change in HP  which occurred
+    const dhp = hp0 + data.abilities.con.mod;
+
+    // Display a Chat Message summarizing the rest effects
+    let restFlavor = game.i18n.localize("DND5E.Breather");
+
+
+    if ( chat ) {
+      ChatMessage.create({
+        user: game.user._id,
+        speaker: {actor: this, alias: this.name},
+        flavor: restFlavor,
+        content: game.i18n.format("DND5E.BreatherResult", {name: this.name, health: dhp})
+      });
+    }
+
+    // Return data summarizing the rest effects
+    return {
+      dhp: dhp,
+      updateData: updateData
+    }
+  }
+
+  /* -------------------------------------------- */
   /**
    * Cause this Actor to take a Short Rest
    * During a Short Rest resources and limited item uses may be recovered
@@ -798,11 +838,6 @@ export default class Actor5e extends Actor {
       }
     }
 
-    // Recover pact slots.
-    const pact = data.spells.pact;
-    updateData['data.spells.pact.value'] = pact.override || pact.max;
-    await this.update(updateData);
-
     // Recover item uses
     const recovery = newDay ? ["sr", "day"] : ["sr"];
     const items = this.items.filter(item => item.data.data.uses && recovery.includes(item.data.data.uses.per));
@@ -815,12 +850,8 @@ export default class Actor5e extends Actor {
     await this.updateEmbeddedEntity("OwnedItem", updateItems);
 
     // Display a Chat Message summarizing the rest effects
-    let restFlavor;
-    switch (game.settings.get("dnd5e", "restVariant")) {
-      case 'normal': restFlavor = game.i18n.localize("DND5E.ShortRestNormal"); break;
-      case 'gritty': restFlavor = game.i18n.localize(newDay ? "DND5E.ShortRestOvernight" : "DND5E.ShortRestGritty"); break;
-      case 'epic':  restFlavor = game.i18n.localize("DND5E.ShortRestEpic"); break;
-    }
+    let restFlavor = game.i18n.localize("DND5E.ShortRestNormal");
+
 
     if ( chat ) {
       ChatMessage.create({
@@ -862,10 +893,29 @@ export default class Actor5e extends Actor {
       }
     }
 
+
+    // Take note of the initial hit points and number of hit dice the Actor has
+    const hd0 = data.attributes.hd;
+    const hp0 = data.attributes.hp.value;
+
+    // Display a Dialog for rolling hit dice
+    let newDay = false;
+    if ( dialog ) {
+      try {
+        newDay = await LongRestDialog.longRestDialog({actor: this, canRoll: hd0 > 0});
+      } catch(err) {
+        return;
+      }
+    }
+
+    // Note the change in HP and HD which occurred
+    const dhd = data.attributes.hd - hd0;
+    const dhp = data.attributes.hp.value - hp0;
+
     // Recover hit points to full, and eliminate any existing temporary HP
-    const dhp = data.attributes.hp.max - data.attributes.hp.value;
+    // const dhp = data.attributes.hp.max - data.attributes.hp.value;
     const updateData = {
-      "data.attributes.hp.value": data.attributes.hp.max,
+      // "data.attributes.hp.value": data.attributes.hp.max,
       "data.attributes.hp.temp": 0,
       "data.attributes.hp.tempmax": 0
     };
@@ -878,17 +928,14 @@ export default class Actor5e extends Actor {
     }
 
     // Recover spell slots
-    for ( let [k, v] of Object.entries(data.spells) ) {
-      if ( !v.max && !v.override ) continue;
-      updateData[`data.spells.${k}.value`] = v.override || v.max;
-    }
+    // for ( let [k, v] of Object.entries(data.spells) ) {
+    //   if ( !v.max && !v.override ) continue;
+    //   updateData[`data.spells.${k}.value`] = v.override || v.max;
+    // }
 
-    // Recover pact slots.
-    const pact = data.spells.pact;
-    updateData['data.spells.pact.value'] = pact.override || pact.max;
 
     // Determine the number of hit dice which may be recovered
-    let recoverHD = Math.max(Math.floor(data.details.level / 2), 1);
+    let recoverHD = Math.max(data.abilities.con.mod, 1);
     let dhd = 0;
 
     // Sort classes which can recover HD, assuming players prefer recovering larger HD first.
@@ -924,12 +971,8 @@ export default class Actor5e extends Actor {
     if ( updateItems.length ) await this.updateEmbeddedEntity("OwnedItem", updateItems);
 
     // Display a Chat Message summarizing the rest effects
-    let restFlavor;
-    switch (game.settings.get("dnd5e", "restVariant")) {
-      case 'normal': restFlavor = game.i18n.localize(newDay ? "DND5E.LongRestOvernight" : "DND5E.LongRestNormal"); break;
-      case 'gritty': restFlavor = game.i18n.localize("DND5E.LongRestGritty"); break;
-      case 'epic':  restFlavor = game.i18n.localize("DND5E.LongRestEpic"); break;
-    }
+    let restFlavor = game.i18n.localize("DND5E.LongRestEpic");
+
 
     if ( chat ) {
       ChatMessage.create({

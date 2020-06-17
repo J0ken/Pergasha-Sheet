@@ -24,6 +24,7 @@ import ActorSheetFlags from "./module/apps/actor-flags.js";
 import ActorSheet5eCharacter from "./module/actor/sheets/character.js";
 import ActorSheet5eNPC from "./module/actor/sheets/npc.js";
 import ItemSheet5e from "./module/item/sheet.js";
+import PsionicsEvokeDialog from "./module/apps/psionics-evoke-dialog.js"
 import ShortRestDialog from "./module/apps/short-rest.js";
 import SpellCastDialog from "./module/apps/spell-cast-dialog.js";
 import TraitSelector from "./module/apps/trait-selector.js";
@@ -48,6 +49,7 @@ Hooks.once("init", function() {
       ActorSheet5eCharacter,
       ActorSheet5eNPC,
       ItemSheet5e,
+      PsionicsEvokeDialog,
       ShortRestDialog,
       SpellCastDialog,
       TraitSelector

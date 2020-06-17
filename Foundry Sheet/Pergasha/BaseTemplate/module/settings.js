@@ -25,6 +25,7 @@ export const registerSystemSettings = function() {
       "normal": "SETTINGS.5eRestPHB",
       "gritty": "SETTINGS.5eRestGritty",
       "epic": "SETTINGS.5eRestEpic",
+      "pergasha": "SETTINGS.5eRestPergasha"
     }
   });
 

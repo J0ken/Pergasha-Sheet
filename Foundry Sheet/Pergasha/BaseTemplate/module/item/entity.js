@@ -61,7 +61,7 @@ export default class Item5e extends Item {
    * @type {boolean}
    */
   get hasAttack() {
-    return ["mwak", "rwak", "msak", "rsak"].includes(this.data.data.actionType);
+    return ["mwak", "rwak", "mpak", "rpak"].includes(this.data.data.actionType);
   }
 
   /* -------------------------------------------- */

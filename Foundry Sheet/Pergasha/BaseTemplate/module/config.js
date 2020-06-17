@@ -3,11 +3,11 @@ export const DND5E = {};
 
 // ASCII Artwork
 DND5E.ASCII = `_______________________________
-______      ______ _____ _____ 
+______      ______ _____ _____
 |  _  \\___  |  _  \\  ___|  ___|
-| | | ( _ ) | | | |___ \\| |__  
-| | | / _ \\/\\ | | |   \\ \\  __| 
-| |/ / (_>  < |/ //\\__/ / |___ 
+| | | ( _ ) | | | |___ \\| |__
+| | | / _ \\/\\ | | |   \\ \\  __|
+| |/ / (_>  < |/ //\\__/ / |___
 |___/ \\___/\\/___/ \\____/\\____/
 _______________________________`;
 
@@ -50,18 +50,30 @@ DND5E.weaponProficiencies = {
 };
 
 DND5E.toolProficiencies = {
-  "art": "DND5E.ToolArtisans",
-  "disg": "DND5E.ToolDisguiseKit",
-  "forg": "DND5E.ToolForgeryKit",
-  "game": "DND5E.ToolGamingSet",
-  "herb": "DND5E.ToolHerbalismKit",
-  "music": "DND5E.ToolMusicalInstrument",
-  "navg": "DND5E.ToolNavigators",
-  "pois": "DND5E.ToolPoisonersKit",
+  "artist": "DND5E.ToolArtist",
+  "brewer": "DND5E.ToolBrewer",
+  "builder": "DND5E.ToolBuilder",
+  "cook": "DND5E.ToolCook",
+  "harvester": "DND5E.ToolHarvester",
+  "herbalism": "DND5E.ToolHerbalismKit",
+  "leather": "DND5E.ToolLeatherworker",
+  "poison": "DND5E.ToolPoisonersKit",
+  "smith": "DND5E.ToolSmith",
   "thief": "DND5E.ToolThieves",
-  "vehicle": "DND5E.ToolVehicle"
+  "tinker": "DND5E.ToolTinker"
 };
-
+/*
+"art": "DND5E.ToolArtisans",
+"disg": "DND5E.ToolDisguiseKit",
+"forg": "DND5E.ToolForgeryKit",
+"game": "DND5E.ToolGamingSet",
+"herb": "DND5E.ToolHerbalismKit",
+"music": "DND5E.ToolMusicalInstrument",
+"navg": "DND5E.ToolNavigators",
+"pois": "DND5E.ToolPoisonersKit",
+"thief": "DND5E.ToolThieves",
+"vehicle": "DND5E.ToolVehicle"
+*/
 
 /* -------------------------------------------- */
 
@@ -143,19 +155,21 @@ DND5E.tokenSizes = {
 DND5E.itemActionTypes = {
   "mwak": "DND5E.ActionMWAK",
   "rwak": "DND5E.ActionRWAK",
-  "msak": "DND5E.ActionMSAK",
-  "rsak": "DND5E.ActionRSAK",
+  "mpak": "DND5E.ActionMPAK",
+  "rpak": "DND5E.ActionRPAK",
   "save": "DND5E.ActionSave",
   "heal": "DND5E.ActionHeal",
   "abil": "DND5E.ActionAbil",
   "util": "DND5E.ActionUtil",
   "other": "DND5E.ActionOther"
 };
-
+/*  "msak": "DND5E.ActionMSAK",
+  "rsak": "DND5E.ActionRSAK",*/
 /* -------------------------------------------- */
 
 DND5E.itemCapacityTypes = {
   "items": "DND5E.ItemContainerCapacityItems",
+  "slots": "DND5E.ItemContainerCapacitySlots",
   "weight": "DND5E.ItemContainerCapacityWeight"
 };
 
@@ -166,8 +180,10 @@ DND5E.itemCapacityTypes = {
  * @type {Object}
  */
 DND5E.limitedUsePeriods = {
+  "br": "DND5E.Breather",
   "sr": "DND5E.ShortRest",
   "lr": "DND5E.LongRest",
+  "fr": "DND5E.FullRest",
   "day": "DND5E.Day",
   "charges": "DND5E.Charges"
 };
@@ -216,12 +232,13 @@ DND5E.consumableTypes = {
   "potion": "DND5E.ConsumablePotion",
   "poison": "DND5E.ConsumablePoison",
   "food": "DND5E.ConsumableFood",
-  "scroll": "DND5E.ConsumableScroll",
-  "wand": "DND5E.ConsumableWand",
-  "rod": "DND5E.ConsumableRod",
+  "mysterium": "DND5E.ConsumableMysterium"
   "trinket": "DND5E.ConsumableTrinket"
 };
-
+/*
+"scroll": "DND5E.ConsumableScroll",
+"wand": "DND5E.ConsumableWand",
+  "rod": "DND5E.ConsumableRod",*/
 /* -------------------------------------------- */
 
 /**
@@ -236,6 +253,13 @@ DND5E.currencies = {
   "cp": "DND5E.CurrencyCP",
 };
 
+
+DND5E.barter = {
+  "cb": "DND5E.CurrencyCB",
+  "ub": "DND5E.CurrencyUB",
+  "gb": "DND5E.CurrencyGB",
+  "pb": "DND5E.CurrencyPB"
+};
 /* -------------------------------------------- */
 
 
@@ -367,7 +391,6 @@ DND5E.senses = {
 DND5E.skills = {
   "acr": "DND5E.SkillAcr",
   "ani": "DND5E.SkillAni",
-  "arc": "DND5E.SkillArc",
   "ath": "DND5E.SkillAth",
   "dec": "DND5E.SkillDec",
   "his": "DND5E.SkillHis",
@@ -375,17 +398,19 @@ DND5E.skills = {
   "itm": "DND5E.SkillItm",
   "inv": "DND5E.SkillInv",
   "med": "DND5E.SkillMed",
+  "mys": "DND5E.SkillMys",
   "nat": "DND5E.SkillNat",
   "prc": "DND5E.SkillPrc",
   "prf": "DND5E.SkillPrf",
   "per": "DND5E.SkillPer",
-  "rel": "DND5E.SkillRel",
+  "psi": "DND5E.SkillPsi",
   "slt": "DND5E.SkillSlt",
   "ste": "DND5E.SkillSte",
   "sur": "DND5E.SkillSur"
 };
 
-
+/*  "arc": "DND5E.SkillArc",
+  "rel": "DND5E.SkillRel",*/
 /* -------------------------------------------- */
 
 DND5E.spellPreparationModes = {
