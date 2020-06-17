@@ -7,7 +7,7 @@
 	"minimumCoreVersion": "0.5.0",
 	"compatibleCoreVersion": "0.6.0",
 	"systems": ["dnd5e"],
-	"esmodules": ["dnd5e.js"],
+	"esmodules": ["my-actor-sheet.js"],
 	"styles": ["alt5e.css"],
 	"url": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/Test",
 	"manifest": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/Test/module.json",
