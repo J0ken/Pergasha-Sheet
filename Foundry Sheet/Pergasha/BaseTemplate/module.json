@@ -1,0 +1,14 @@
+{
+	"name": "TestTemplate",
+	"title": "A test version for Pergasha ",
+	"description": "Replaces the base dnd sheet",
+	"version": "0.01",
+	"author": "Michael Baglio",
+	"minimumCoreVersion": "0.5.0",
+	"compatibleCoreVersion": "0.6.0",
+	"systems": ["dnd5e"],
+	"esmodules": ["dnd5e.js"],
+	"styles": ["dnd5e.css"],
+	"url": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/BaseTemplate",
+	"manifest": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/BaseTemplate/module.json",
+}
