@@ -10,5 +10,5 @@
 	"esmodules": ["my-actor-sheet.js"],
 	"styles": ["alt5e.css"],
 	"url": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/Test",
-	"manifest": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/Test/module.json",
+	"manifest": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/Test/module.json"
 }
