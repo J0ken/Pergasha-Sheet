@@ -2,7 +2,7 @@
  * Extend the basic ActorSheet with some very simple modifications
  * When you construct an ActorSheet, you pass it the Actor entity it modifies and an object of options
  */
-class MyActorSheet extends ActorSheet {
+class PergashaActorSheet extends ActorSheet {
   constructor(actor, options) {
     super(actor, options);
   }
@@ -13,8 +13,8 @@ class MyActorSheet extends ActorSheet {
    */
 	static get defaultOptions() {
 	  const options = super.defaultOptions;
-	  options.classes = options.classes.concat(["my-sheet"]);  // Give your sheet a namespaced class so you can effectively target CSS rules
-	  options.template = "public/systems/my-system/templates/my-actor-sheet.html";  // This will point towards the HTML file you are going to use for the sheet
+	  options.classes = options.classes.concat(["pergasha-actor-sheet"]);  // Give your sheet a namespaced class so you can effectively target CSS rules
+	  options.template = "modules/Test/pergasha-actor-sheet.html";  // This will point towards the HTML file you are going to use for the sheet
     options.width = 600; // This configures the default starting width
     options.height = 720; // Starting height
     options.submitOnUnfocus = true;  // Should the form be saved when an input field is unfocused?
@@ -54,7 +54,7 @@ class MyActorSheet extends ActorSheet {
 /**
  * An important step is to register your sheet so it can be used
  */
-Actors.registerSheet("core", MyActorSheet, {
+Actors.registerSheet("core", PergashaActorSheet, {
   types: [],            // Use this sheet for all types of actors, or just a specific type?
   makeDefault: true     // Make this sheet the default choice for these types of actors?
 });
