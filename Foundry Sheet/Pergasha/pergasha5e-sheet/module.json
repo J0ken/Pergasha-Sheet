@@ -16,7 +16,6 @@
 		"styles/tidy5e-items.css",
 		"styles/tidy5e-modules.css",
 	],
-  "url": "https://github.com/sdenec/tidy5e-sheet",
-  "manifest": "https://raw.githubusercontent.com/sdenec/tidy5e-sheet/master/module.json",
-  "download": "https://github.com/sdenec/tidy5e-sheet/raw/master/tidy5e-sheet.zip"
+  "url": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/pergasha5e-sheet",
+  "manifest": "https://github.com/J0ken/Pergasha-Sheet/blob/master/Foundry%20Sheet/Pergasha/pergasha5e-sheet/module.json"
 }
