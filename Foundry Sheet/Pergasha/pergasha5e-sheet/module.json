@@ -1,0 +1,22 @@
+{
+	"name": "pergasha5e-sheet",
+	"title": "Pergasha5e Sheet",
+	"description": "Test version for the Pergasha Sheet",
+	"version": "0.1.10",
+	"author": "Michael Baglio",
+	"minimumCoreVersion": "0.6.0",
+	"compatibleCoreVersion": "0.6.2",
+	"systems": ["dnd5e"],
+	"esmodules": [
+		"tidy5e-sheet.js",
+		"tidy5e-favorites.js"
+	],
+	"styles": [
+		"styles/tidy5e-sheet.css",
+		"styles/tidy5e-items.css",
+		"styles/tidy5e-modules.css",
+	],
+  "url": "https://github.com/sdenec/tidy5e-sheet",
+  "manifest": "https://raw.githubusercontent.com/sdenec/tidy5e-sheet/master/module.json",
+  "download": "https://github.com/sdenec/tidy5e-sheet/raw/master/tidy5e-sheet.zip"
+}
