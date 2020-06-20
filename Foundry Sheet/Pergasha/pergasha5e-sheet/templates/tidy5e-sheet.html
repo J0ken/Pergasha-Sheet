@@ -1,7 +1,7 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-	<div class="tidy5e-sheet{{#if actor.flags.tidy5e-sheet.allow-delete}} allow-delete{{/if}}">
+	<div class="pergasha5e-sheet{{#if actor.flags.pergasha5e-sheet.allow-delete}} allow-delete{{/if}}">
 		{{!-- Sheet Header --}}
-		<header class="flex tidy5e-header">
+		<header class="flex pergasha5e-header">
 			<div class="profile hp-{{data.attributes.hp.value}} deathsuccess-{{data.attributes.death.success}} deathfailure-{{data.attributes.death.failure}}">
 
 				{{!-- Death Saves --}}
@@ -176,7 +176,7 @@
 		</header>
 		
 		{{!-- PC Sheet Navigation --}}
-		<nav class="flex tidy5e-navigation tabs" data-group="primary">
+		<nav class="flex pergasha5e-navigation tabs" data-group="primary">
 			<a class="item active" data-tab="attributes">{{ localize "DND5E.Attributes" }}</a>
 			<a class="item" data-tab="inventory">{{ localize "DND5E.Inventory" }}</a>
 			<a class="item" data-tab="features">{{ localize "DND5E.Features" }}</a>
@@ -259,7 +259,7 @@
 
 
 					{{!-- Traits --}}
-					<div class="traits-wrap{{#if actor.flags.tidy5e-sheet.traits-compressed}} compressed{{/if}}">
+					<div class="traits-wrap{{#if actor.flags.pergasha5e-sheet.traits-compressed}} compressed{{/if}}">
 						<header class=traits-toggle>
 							<h4>Character Traits</h4>
 							<div class="toggle-icon">
@@ -267,11 +267,11 @@
 								<i class="fas fa-caret-right"></i>
 							</div>
 						</header>
-						{{> "modules/tidy5e-sheet/templates/parts/tidy5e-traits.html"}}
+						{{> "modules/pergasha5e-sheet/templates/parts/pergasha5e-traits.html"}}
 					</div>
 
 					{{!-- Favorites --}}
-					<div class="favorites-wrap{{#if actor.flags.tidy5e-sheet.favorites-compressed}} compressed{{/if}}">
+					<div class="favorites-wrap{{#if actor.flags.pergasha5e-sheet.favorites-compressed}} compressed{{/if}}">
 						<header class=favorites-toggle>
 							<h4>Favorites</h4>
 							<div class="toggle-icon">
@@ -286,17 +286,17 @@
 
 			{{!-- Inventory Tab --}}
 			<div class="tab inventory flexcol" data-group="primary" data-tab="inventory">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-inventory.html" sections=inventory}}
+				{{> "modules/pergasha5e-sheet/templates/parts/pergasha5e-inventory.html" sections=inventory}}
 			</div>
 
 			{{!-- Features Tab --}}
 			<div class="tab features flexcol" data-group="primary" data-tab="features">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-features.html" sections=features}}
+				{{> "modules/pergasha5e-sheet/templates/parts/pergasha5e-features.html" sections=features}}
 			</div>
 
 			{{!-- Spellbook Tab --}}
 			<div class="tab spellbook flexcol" data-group="primary" data-tab="spellbook">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-spellbook.html"}}
+				{{> "modules/pergasha5e-sheet/templates/parts/pergasha5e-spellbook.html"}}
 			</div>
 
 			{{!-- Biography Tab --}}

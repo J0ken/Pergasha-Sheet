@@ -7,7 +7,7 @@
         <div class="item-detail item-action" title="Item Usage"><i class="fas fa-hourglass"></i></div>
       </li>
       {{#each favItems as |item id|}}
-       {{> "modules/tidy5e-sheet/templates/favorites/item.hbs" item=item}}
+       {{> "modules/pergasha5e-sheet/templates/favorites/item.hbs" item=item}}
       {{/each}}
     </ol>
   {{/if}}
@@ -19,7 +19,7 @@
         <div class="item-detail item-action" title="Feat Usage"><i class="fas fa-hourglass"></i>
       </li>
       {{#each favFeats as |feat lvl|}}
-      {{> "modules/tidy5e-sheet/templates/favorites/item.hbs" item=feat}}
+      {{> "modules/pergasha5e-sheet/templates/favorites/item.hbs" item=feat}}
       {{/each}}
     </ol>
   {{/if}}
@@ -52,7 +52,7 @@
             </li>
           {{/if}}
           {{#each section.spells as |spell id|}}
-            {{> "modules/tidy5e-sheet/templates/favorites/item.hbs" item=spell}}
+            {{> "modules/pergasha5e-sheet/templates/favorites/item.hbs" item=spell}}
           {{/each}}
         {{/if}}
       </ol>
@@ -85,7 +85,7 @@
             </li>
           {{/if}}
           {{#each section.spells as |spell id|}}
-            {{> "modules/tidy5e-sheet/templates/favorites/item.hbs" item=spell}}
+            {{> "modules/pergasha5e-sheet/templates/favorites/item.hbs" item=spell}}
           {{/each}}
         {{/if}}
       </ol>

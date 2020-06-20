@@ -2,16 +2,16 @@
 /*   Support Better Rolls / Minor QOL   */
 /* ------------------------------------ */
 
-.tidy5e.sheet.actor .inventory-list .item-summary .item-buttons {
+.pergasha5e.sheet.actor .inventory-list .item-summary .item-buttons {
 	margin: 8px 0; 
 }
 
-.tidy5e.sheet.actor .inventory-list .item-summary .item-buttons .tag {
+.pergasha5e.sheet.actor .inventory-list .item-summary .item-buttons .tag {
 	border: none;
 	margin: 2px 4px 2px 0; 
 }
 
-.tidy5e.sheet.actor .inventory-list .item-summary .item-buttons .tag button {
+.pergasha5e.sheet.actor .inventory-list .item-summary .item-buttons .tag button {
 	border: 1px solid rgba(0,0,0,.2);
 	background: rgba(0,0,0,.4);
 	color: rgba(255,255,255,.8);
@@ -20,7 +20,7 @@
 	cursor: pointer;
 }
 
-.tidy5e.sheet.actor .inventory-list .item-summary .item-buttons .tag button:hover {
+.pergasha5e.sheet.actor .inventory-list .item-summary .item-buttons .tag button:hover {
 	background: rgba(0,0,0,.6);
 }
 
@@ -159,11 +159,11 @@
 /*    Support Magic Items   */
 /* ------------------------ */
 
-.tidy5e.sheet.actor .magic-items-spells-content {
+.pergasha5e.sheet.actor .magic-items-spells-content {
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .spellbook-filters.magic-items-head,
-.tidy5e.sheet.actor .magic-items-spells-content .spellbook-filters.magic-items-head {
+.pergasha5e.sheet.actor .magic-items-feats-content .spellbook-filters.magic-items-head,
+.pergasha5e.sheet.actor .magic-items-spells-content .spellbook-filters.magic-items-head {
 	padding: .5rem 0;
 	margin: .5rem 0 0 0;
 	border: none;
@@ -171,43 +171,43 @@
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .spellbook-filters.magic-items-head h3,
-.tidy5e.sheet.actor .magic-items-spells-content .spellbook-filters.magic-items-head h3 {
+.pergasha5e.sheet.actor .magic-items-feats-content .spellbook-filters.magic-items-head h3,
+.pergasha5e.sheet.actor .magic-items-spells-content .spellbook-filters.magic-items-head h3 {
 	font-size: 16px;
 	font-weight: 600;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .inventory-header.spellbook-header,
-.tidy5e.sheet.actor .magic-items-spells-content .inventory-header.spellbook-header,
-.tidy5e.sheet.actor .magic-items-feats-content .spellbook-header div,
-.tidy5e.sheet.actor .magic-items-spells-content .spellbook-header div,
-.tidy5e.sheet.actor .magic-items-feats-content .magic-item,
-.tidy5e.sheet.actor .magic-items-spells-content .magic-item {
+.pergasha5e.sheet.actor .magic-items-feats-content .inventory-header.spellbook-header,
+.pergasha5e.sheet.actor .magic-items-spells-content .inventory-header.spellbook-header,
+.pergasha5e.sheet.actor .magic-items-feats-content .spellbook-header div,
+.pergasha5e.sheet.actor .magic-items-spells-content .spellbook-header div,
+.pergasha5e.sheet.actor .magic-items-feats-content .magic-item,
+.pergasha5e.sheet.actor .magic-items-spells-content .magic-item {
 	border: none;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .spell-slots input:last-child,
-.tidy5e.sheet.actor .magic-items-spells-content .spell-slots input:last-child {
+.pergasha5e.sheet.actor .magic-items-feats-content .spell-slots input:last-child,
+.pergasha5e.sheet.actor .magic-items-spells-content .spell-slots input:last-child {
 	text-align: left;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .magic-item div,
-.tidy5e.sheet.actor .magic-items-spells-content .magic-item div {
+.pergasha5e.sheet.actor .magic-items-feats-content .magic-item div,
+.pergasha5e.sheet.actor .magic-items-spells-content .magic-item div {
 	border-right: 1px solid rgba(0,0,0,.15);
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .magic-item div:last-child,
-.tidy5e.sheet.actor .magic-items-spells-content .magic-item div:last-child {
+.pergasha5e.sheet.actor .magic-items-feats-content .magic-item div:last-child,
+.pergasha5e.sheet.actor .magic-items-spells-content .magic-item div:last-child {
 	border-right: none;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .magic-item-image,
-.tidy5e.sheet.actor .magic-items-spells-content .magic-item-image {
+.pergasha5e.sheet.actor .magic-items-feats-content .magic-item-image,
+.pergasha5e.sheet.actor .magic-items-spells-content .magic-item-image {
 	border-radius: 5px 0 0 5px;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .item-name:hover .magic-item-image,
-.tidy5e.sheet.actor .magic-items-spells-content .item-name:hover .magic-item-image {
+.pergasha5e.sheet.actor .magic-items-feats-content .item-name:hover .magic-item-image,
+.pergasha5e.sheet.actor .magic-items-spells-content .item-name:hover .magic-item-image {
   background-repeat: no-repeat;
   background-position: center;
 	background-size: 70%;
@@ -215,8 +215,8 @@
   cursor: pointer;
 }
 
-.tidy5e.sheet.actor .magic-items-feats-content .item-name:hover .magic-item-image:hover,
-.tidy5e.sheet.actor .magic-items-spells-content .item-name:hover .magic-item-image:hover {
+.pergasha5e.sheet.actor .magic-items-feats-content .item-name:hover .magic-item-image:hover,
+.pergasha5e.sheet.actor .magic-items-spells-content .item-name:hover .magic-item-image:hover {
   background-image: url(../images/d20-highlight.svg) !important;
 }
 

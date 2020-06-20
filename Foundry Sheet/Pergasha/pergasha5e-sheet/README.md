@@ -5,7 +5,7 @@ An alternative Character Sheet for Foundry VTT dnd5e aimed at creating a cleaner
 ![Tidy5e Sheet Preview](/preview/tidy5e_0-1-5_preview.gif)
 
 ## Installation
-See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste https://raw.githubusercontent.com/sdenec/tidy5e-sheet/master/module.json in as the Manifest URL, then click Install.
+See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste https://raw.githubusercontent.com/sdenec/pergasha5e-sheet/master/module.json in as the Manifest URL, then click Install.
 
 ### Settings
 In the `Configure Settings` menu for your world under `Module Settings` you can chose your prefered settings. Round Portraits and Hit Point Overlay Border can only be set by the DM for a consistent use of Portraits.

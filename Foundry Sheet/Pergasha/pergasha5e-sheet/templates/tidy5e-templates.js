@@ -10,10 +10,10 @@ export const preloadTidy5eHandlebarsTemplates = async function() {
   const tidy5etemplatePaths = [
 
     // Actor Sheet Partials
-    "modules/tidy5e-sheet/templates/parts/tidy5e-traits.html",
-    "modules/tidy5e-sheet/templates/parts/tidy5e-inventory.html",
-    "modules/tidy5e-sheet/templates/parts/tidy5e-features.html",
-    "modules/tidy5e-sheet/templates/parts/tidy5e-spellbook.html"
+    "modules/pergasha5e-sheet/templates/parts/pergasha5e-traits.html",
+    "modules/pergasha5e-sheet/templates/parts/pergasha5e-inventory.html",
+    "modules/pergasha5e-sheet/templates/parts/pergasha5e-features.html",
+    "modules/pergasha5e-sheet/templates/parts/pergasha5e-spellbook.html"
   ];
 
   // Load the template parts

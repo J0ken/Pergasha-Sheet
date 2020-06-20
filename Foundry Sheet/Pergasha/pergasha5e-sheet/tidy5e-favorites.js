@@ -2,7 +2,7 @@
 * This file and its functions are 
 * adapted for the Tidy5eSheet from 
 * FavTab Module version 0.5.4 
-* by Felix Müller aka syl3r96 
+* by Felix Mï¿½ller aka syl3r96 
 * (Felix#6196 on Discord).
 *
 * It is licensed under a 
@@ -222,8 +222,8 @@ export const addFavorites = async function(app, html, data, position) {
       data.favSpells = spellCount > 0 ? favSpells : false;
       data.editable = app.options.editable;
 
-      await loadTemplates(['modules/tidy5e-sheet/templates/favorites/item.hbs']);
-      let favHtml = $(await renderTemplate('modules/tidy5e-sheet/templates/favorites/template.hbs', data));
+      await loadTemplates(['modules/pergasha5e-sheet/templates/favorites/item.hbs']);
+      let favHtml = $(await renderTemplate('modules/pergasha5e-sheet/templates/favorites/template.hbs', data));
 
       // Activating favorite-list events
 
