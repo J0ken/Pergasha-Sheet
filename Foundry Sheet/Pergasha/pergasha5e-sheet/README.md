@@ -1,8 +1,7 @@
 # Pergasha5e Sheet
 An alternative Character Sheet for Foundry VTT dnd5e aimed at creating a cleaner UI.
 
-## Preview
-![Pergasha5e Sheet Preview](/preview/pergasha5e_0-1-5_preview.gif)
+
 
 ## Installation
 See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste https://raw.githubusercontent.com/sdenec/pergasha5e-sheet/master/module.json in as the Manifest URL, then click Install.

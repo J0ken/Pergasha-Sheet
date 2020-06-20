@@ -14,7 +14,10 @@
 	"styles": [
 		"styles/pergasha5e-sheet.css",
 		"styles/pergasha5e-items.css",
-		"styles/pergasha5e-modules.css"
+		"styles/pergasha5e-modules.css",
+		"styles/darkmode/pergasha5e-darksheet.css",
+		"styles/darkmode/pergasha5e-darkitems.css",
+		"styles/darkmode/pergasha5e-darkmodules.css"
 	],
   "url": "https://github.com/J0ken/Pergasha-Sheet/tree/master/Foundry%20Sheet/Pergasha/pergasha5e-sheet",
   "manifest": "https://github.com/J0ken/Pergasha-Sheet/blob/master/Foundry%20Sheet/Pergasha/pergasha5e-sheet/module.json"

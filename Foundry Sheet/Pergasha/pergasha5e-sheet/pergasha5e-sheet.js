@@ -215,17 +215,6 @@ async function hidePortraitButtons(app, html, data){
 	}
 }
 
-// can't figure out how to check if itemcollection is active and pass it to the item sheet :(
-// async function showContainerItems(app, html, data) {
-// 	let actor = game.actors.entities.find(a => a.data._id === data.actor._id);
-// 	let items = data.actor.items;
-// 	for (let item of items) {
-// 		item.showcollection = false;
-// 		if (game.modules.get("itemcollection")?.active){
-// 			item.showcollection = true;
-// 		}
-// 	}
-// }
 
 
 // Preload pergasha5e Handlebars Templates
@@ -244,8 +233,46 @@ Hooks.once("init", () => {
      }
 	});
 
+	game.settings.register("pergasha5e-sheet", "primaryAccent", {
+		name: "Custom Primary Accent Color.",
+		hint: "Overwrite the default primary accent color (#48BB78) for Dark Mode used to highlight e. g. buttons, input field borders or hover states. Use any valid css value like red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)",
+		scope: "user",
+		config: true,
+		default: "",
+		type: String,
+		onChange: data => {
+			data === true ? document.documentElement.style.setProperty('--darkmode-primary-accent',primaryAccentColor)
+	:document.documentElement.style.setProperty('--darkmode-primary-accent',"#48BB78");
+	;
+		 }
+	});
 
+	game.settings.register("pergasha5e-sheet", "secondaryAccent", {
+		name: "Custom Secondary Accent Color.",
+		hint: "Overwrite the default secondary accent color (#22543) for Dark Mode used to highlight preparation states. Use any valid css value like red/#ff0000/rgba(255,0,0)/rgba(255,0,0,1)",
+		scope: "user",
+		config: true,
+		default: "",
+		type: String,
+		onChange: data => {
+			data === true ? document.documentElement.style.setProperty('--darkmode-secondary-accent',secondaryAccentColor)
+	:document.documentElement.style.setProperty('--darkmode-secondary-accent',"#22543D");
+		 }
+	});
 
+	const useDarkMode = game.settings.get('pergasha5e-sheet', "useDarkMode");
+	if (useDarkMode === true) {
+		document.body.classList.add("pergasha5eDark");
+	}
+	const primaryAccentColor = game.settings.get('pergasha5e-sheet', "primaryAccent");
+	const secondaryAccentColor = game.settings.get('pergasha5e-sheet', "secondaryAccent");
+	if(useDarkMode === true && primaryAccentColor !==  '') {
+		document.documentElement.style.setProperty('--darkmode-primary-accent',primaryAccentColor);
+	}
+	if(useDarkMode === true && secondaryAccentColor !==  '') {
+		document.documentElement.style.setProperty('--darkmode-secondary-accent',secondaryAccentColor);
+	}
+	});
 
 // Register Pergasha5e Sheet and make default character sheet
 Actors.registerSheet("dnd5e", Pergasha5eSheet, {
@@ -334,4 +361,5 @@ Hooks.once("ready", () => {
 		default: false,
 		type: Boolean
 	});
+});
 });
