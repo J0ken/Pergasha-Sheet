@@ -1,6 +1,6 @@
 /*
 * This file and its functions are 
-* adapted for the Tidy5eSheet from 
+* adapted for the Pergasha5eSheet from 
 * FavTab Module version 0.5.4 
 * by Felix M�ller aka syl3r96 
 * (Felix#6196 on Discord).
@@ -349,5 +349,5 @@ export const addFavorites = async function(app, html, data, position) {
       $('.tab.attributes').scrollTop(position);
     }
 
-    Hooks.callAll("renderedTidy5eSheet", app, html, data);
+    Hooks.callAll("renderedPergasha5eSheet", app, html, data);
   }

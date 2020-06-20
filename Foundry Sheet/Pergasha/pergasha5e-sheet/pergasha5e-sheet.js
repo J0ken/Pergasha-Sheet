@@ -2,12 +2,12 @@ import { DND5E } from "../../systems/dnd5e/module/config.js";
 import ActorSheet5e from "../../systems/dnd5e/module/actor/sheets/base.js";
 import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/character.js";
 
-import { preloadTidy5eHandlebarsTemplates } from "./templates/pergasha5e-templates.js";
+import { preloadPergasha5eHandlebarsTemplates } from "./templates/pergasha5e-templates.js";
 import { addFavorites } from "./pergasha5e-favorites.js";
 
 let scrollPos = 0;
 
-export class Tidy5eSheet extends ActorSheet5eCharacter {
+export class Pergasha5eSheet extends ActorSheet5eCharacter {
 
 	get template() {
 		if ( !game.user.isGM && this.actor.limited ) return "modules/pergasha5e-sheet/templates/pergasha5e-sheet-ltd.html";
@@ -124,7 +124,7 @@ async function migrateTraits(app, html, data) {
 
 	if (!actor.getFlag('pergasha5e-sheet', 'useCoreTraits')){
 
-		console.log('Tidy5e Sheet | Data needs migration! Migrating.');
+		console.log('Pergasha5e Sheet | Data needs migration! Migrating.');
 
 		let coreTrait = (actor.data.data.details.trait !== '') ? actor.data.data.details.trait+"<br>Migrated Content:" : '';
 		let coreIdeal = (actor.data.data.details.ideal !== '') ? actor.data.data.details.trait+"<br>Migrated Content:" : '';
@@ -152,7 +152,7 @@ async function migrateTraits(app, html, data) {
 			"flags.pergasha5e-sheet.useCoreTraits":true
 		});
 
-		console.log('Tidy5e Sheet | Data migrated to dnd5e core values.')
+		console.log('Pergasha5e Sheet | Data migrated to dnd5e core values.')
 	}
 }
 
@@ -230,30 +230,30 @@ async function hidePortraitButtons(app, html, data){
 
 // Preload pergasha5e Handlebars Templates
 Hooks.once("init", () => {
-  preloadTidy5eHandlebarsTemplates();
+  preloadPergasha5eHandlebarsTemplates();
 
 	game.settings.register("pergasha5e-sheet", "useDarkMode", {
 		name: "Use alternate Dark Mode version of the sheet",
-		hint: "Checking this option will enable an alternate Dark Mode version of the Tidy5e Sheet. Goes well with D&D5E Dark Mode or as a Standalone.",
+		hint: "Checking this option will enable an alternate Dark Mode version of the Pergasha5e Sheet. Goes well with D&D5E Dark Mode or as a Standalone.",
 		scope: "user",
 		config: true,
 		default: false,
 		type: Boolean,
 		onChange: data => {
-      data === true ? document.body.classList.add("tidy5eDark"):document.body.classList.remove("tidy5eDark");
+      data === true ? document.body.classList.add("pergasha5eDark"):document.body.classList.remove("pergasha5eDark");
      }
 	});
 
 
 
 
-// Register Tidy5e Sheet and make default character sheet
-Actors.registerSheet("dnd5e", Tidy5eSheet, {
+// Register Pergasha5e Sheet and make default character sheet
+Actors.registerSheet("dnd5e", Pergasha5eSheet, {
 	types: ["character"],
 	makeDefault: true
 });
 
-Hooks.on("renderTidy5eSheet", (app, html, data) => {
+Hooks.on("renderPergasha5eSheet", (app, html, data) => {
 	addFavorites(app, html, data, scrollPos);
 	migrateTraits(app, html, data);
 	addClassList(app, html, data);
@@ -267,7 +267,7 @@ Hooks.on("renderTidy5eSheet", (app, html, data) => {
 Hooks.once("ready", () => {
 
 	if (window.BetterRolls) {
-	  window.BetterRolls.hooks.addActorSheet("Tidy5eSheet");
+	  window.BetterRolls.hooks.addActorSheet("Pergasha5eSheet");
 	}
 
 	game.settings.register("pergasha5e-sheet", "useRoundPortraits", {

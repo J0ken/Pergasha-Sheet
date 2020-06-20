@@ -3,11 +3,11 @@
  * Pre-loaded templates are compiled and cached for fast access when rendering
  * @return {Promise}
  */
- 
-export const preloadTidy5eHandlebarsTemplates = async function() {
+
+export const preloadPergasha5eHandlebarsTemplates = async function() {
 
   // Define template paths to load
-  const tidy5etemplatePaths = [
+  const pergasha5etemplatePaths = [
 
     // Actor Sheet Partials
     "modules/pergasha5e-sheet/templates/parts/pergasha5e-traits.html",
@@ -17,5 +17,5 @@ export const preloadTidy5eHandlebarsTemplates = async function() {
   ];
 
   // Load the template parts
-  return loadTemplates(tidy5etemplatePaths);
+  return loadTemplates(pergasha5etemplatePaths);
 };
