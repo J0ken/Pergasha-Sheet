@@ -1,12 +1,11 @@
-<div class="inventory-filters spellbook-filters">
-  <ul class="filter-list flexrow" data-filter="spellbook">
+<div class="inventory-filters psionics-filters">
+  <ul class="filter-list flexrow" data-filter="psionics">
     <li class="filter-title">{{localize "DND5E.Filter"}}</li>
     <li class="filter-item" data-filter="action">{{localize "DND5E.Action"}}</li>
     <li class="filter-item" data-filter="bonus">{{localize "DND5E.BonusAction"}}</li>
     <li class="filter-item" data-filter="reaction">{{localize "DND5E.Reaction"}}</li>
+    <li class="filter-item" data-filter="other">Other</li>
     <li class="filter-item" data-filter="concentration">{{localize "DND5E.AbbreviationConc"}}</li>
-    <li class="filter-item" data-filter="ritual">{{localize "DND5E.Ritual"}}</li>
-    <li class="filter-item" data-filter="prepared">{{localize "DND5E.Prepared"}}{{#if preparedSpells}} ({{preparedSpells}}){{/if}}</li>
     <li class="pergasha5e-delete-lock"><label for="pergasha5e-allow-delete" class="pergasha5e-delete-toggle"><span class="pergasha5e-delete-disabled" title="show item delete button"><i class="fas fa-lock"></i>Delete disabled</span><span class="pergasha5e-delete-enabled" title="hide item delete button"><i class="fas fa-unlock"></i>Delete enabled</span></label></li>
   </ul>
 </div>
@@ -118,14 +117,18 @@
 
 <div class="spellcasting-ability flexrow">
   <h3 class="spell-dc">{{localize "DND5E.SpellDC"}} {{data.attributes.spelldc}}</h3>
-  <h3 class="psi-limit">Psi-limit {{data.psiLimit}}</h3>
-  <!-- <select name="data.psiLimit">
-      {{#select data.psiLimit}}
-      {{#each config.psiLimit}}
-        <option value="{{this}}">{{this}}</option>
-      {{/each}}
-      {{/select}}
-    </select> -->
+  <<h3 class="psi-limit">"Psi-limit"</h3>
+  <select name="psi-limit-select" data-type="Non-negative integer">
+    <option value="">{{localize "DND5E.None"}}</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+  </select>
   <h3>{{localize "DND5E.SpellAbility"}}</h3>
   <select name="data.attributes.spellcasting" data-type="String">
     {{#select data.attributes.spellcasting}}

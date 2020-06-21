@@ -1,4 +1,5 @@
-import { DND5E } from "../../systems/dnd5e/module/config.js";
+// import { DND5E } from "../../systems/dnd5e/module/config.js";
+import { DND5E } from "./config.js";
 import ActorSheet5e from "../../systems/dnd5e/module/actor/sheets/base.js";
 import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/character.js";
 
@@ -258,7 +259,8 @@ Hooks.once("init", () => {
 			data === true ? document.documentElement.style.setProperty('--darkmode-secondary-accent',secondaryAccentColor)
 	:document.documentElement.style.setProperty('--darkmode-secondary-accent',"#22543D");
 		 }
-	});
+	 });
+
 
 	const useDarkMode = game.settings.get('pergasha5e-sheet', "useDarkMode");
 	if (useDarkMode === true) {
@@ -361,5 +363,4 @@ Hooks.once("ready", () => {
 		default: false,
 		type: Boolean
 	});
-});
 });
