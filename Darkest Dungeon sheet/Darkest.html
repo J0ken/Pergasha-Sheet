@@ -2385,10 +2385,10 @@
 																	<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
 																	<div class="sheet-pc-feature-details">
 																		<span class="sheet-pc-feature-source">
-																			<span name="attr_source"></span>
-																			<span name="attr_source_type"></span>
+																			<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
 																		</span>
-																		<span name="attr_description"></span>
+																		<br>
+																		<span class="sheet-pc-feature-desc" name="attr_description"></span>
 																	</div>
 																</button>
 															</div>
@@ -2722,10 +2722,10 @@
 															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
 															<div class="sheet-pc-feature-details">
 																<span class="sheet-pc-feature-source">
-																	<span name="attr_source"></span>
-																	<span name="attr_source_type"></span>
+																	<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
 																</span>
-																<span name="attr_description"></span>
+																<br>
+																<span class="sheet-pc-feature-desc" name="attr_description"></span>
 															</div>
 														</button>
 													</div>
@@ -7438,7 +7438,7 @@
 							"Intellect Labyrinth": {name:"Intellect Labyrinth", order:"Awakened", discipline:"Intellect Fortress",castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"1 Minute", psiability:"@{intelligence_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"You master your mind beyond your normal limits.As an action, you gain immunity against psychic damage for the duration of the effect, and you are immune to mind-altering effects, such as charm, fear, unconscious (if you fall below 0 HP you still are incapacitated and your movement becomes 0), and stunned. After using this ability, you gain 1 level of exhaustion at the end of its duration.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Speed Dart": {name:"Speed Dart [1-7]", order:"Nomad", discipline:"Intelligent Arrow",castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"Until the end of your turn", psiability:"@{wisdom_mod}+", output:"ATTACK", psiattack:"None", damage1:"1d10", damagetype1:"psychic", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you imbue one ranged weapon you hold with psionic power. The next attack you make with it that hits before the end of the current turn deals an extra 1d10 psychic damage per Psi Point spent.", psionicshldie:"1", psionicshldietype: "d10" , psionicshlbonus:""},
 							"Seeking Missile": {name:"Seeking Missile", order:"Nomad", discipline:"Intelligent Arrow",castingtime:"Reaction", range:"Self", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{wisdom_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:" As a reaction when you miss with a ranged weapon attack, you can repeat the attack roll against the same target.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
-							"Faithful Archer": {name:"Faithful Archer", order:"Nomad", discipline:"Intelligent Arrow",castingtime:"Bonus Action", range:"Self", target:"One ranged weapon", concentration:"1", duration:"Concentration, up to 1 Minute", psiability:"@{wisdom_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you imbue a ranged weapon with a limited sentience. Until your concentration ends, the ranged weapon makes a single free psionic attack at the start of each of your turns. No actionis required on your part. If it is a thrown weapon, it returns to your grasp each time you make any attack with it.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
+							"Faithful Archer": {name:"Faithful Archer", order:"Nomad", discipline:"Intelligent Arrow",castingtime:"Bonus Action", range:"Self", target:"One ranged weapon", concentration:"1", duration:"Concentration, up to 1 Minute", psiability:"@{wisdom_mod}+", output:"PSIONICS-CARD", psiattack:"None", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you imbue a ranged weapon with a limited sentience. Until your concentration ends, the ranged weapon makes a single free psionic attack at the start of each of your turns. No action is required on your part. If it is a thrown weapon, it returns to your grasp each time you make any attack with it.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Iron Hide": {name:"Iron Hide [1-7]", order:"Immortal", discipline:"Iron Durability", castingtime:"Reaction", range:"Self", target:"", concentration:"0", duration:"Instantaneous", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a reaction when you are hit by an attack, you gain a +1 bonus to AC for each psi point you spend on this ability (maximum +3). This bonus applies against the triggering attack.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Steel Hide": {name:"Steel Hide", order:"Immortal", discipline:"Iron Durability", castingtime:"Bonus Action", range:"Self", target:"", concentration:"0", duration:"Until the end of your next turn", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As a bonus action, you gain resistance to bludgeoning, piercing, and slashing damage until the end of your next turn.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
 							"Iron Resistance": {name:"Iron Resistance", order:"Immortal", discipline:"Iron Durability", castingtime:"Action", range:"Self", target:"", concentration:"1", duration:"Concentration, up to 1 Hour", psiability:"@{strength_mod}+", output:"PSIONICS-CARD", psiattack:"NONE", damage1:"", damagetype1:"", damage2:"", damagetype2:"", savingthrow:"", healing: "", effect:"", description:"As an action, you gain resistance to bludgeoning, piercing, or slashing damage (your choice), which lasts until your concentration ends.", psionicshldie:"", psionicshldietype: "" , psionicshlbonus:""},
