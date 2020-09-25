@@ -18,7 +18,7 @@
                 "Query Advantage|{{query=1}} ?{Advantage?|Normal Roll,&#123&#123normal=1&#125&#125 &#123&#123r2=[[0d20|Advantage,&#123&#123advantage=1&#125&#125 &#123&#123r2=[[1d20|Disadvantage,&#123&#123disadvantage=1&#125&#125 &#123&#123r2=[[1d20}",
                 "Never Roll Advantage|{{normal=1}} {{r2=[[0d20"
             ],
-            "default": "@{advantagetoggle}",
+            "default": "@{advantagetoggle}"
         },
         {
             "attribute": "wtype",
@@ -30,7 +30,7 @@
                 "Query Whisper|?{Whisper?|Public Roll,|Whisper Roll,/w gm }",
                 "Always Whisper Rolls|/w gm "
             ],
-            "default": "@{whispertoggle}",
+            "default": "@{whispertoggle}"
         },
         {
             "attribute": "dtype",
@@ -193,6 +193,6 @@
             "optiontranslationkeys": ["on","off"],
             "default": "off",
             "description": "Provides automatic ammo tracking with the <a href='https://wiki.roll20.net/5th_Edition_OGL_by_Roll20#Utilizing_the_5th_Edition_OGL_Companion_API_Script'>5th Edition OGL by Roll20 Companion API Script</a>."
-        },
+        }
     ]
 }

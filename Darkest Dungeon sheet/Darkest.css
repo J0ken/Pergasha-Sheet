@@ -1937,8 +1937,10 @@
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-focuses .sheet-pc-focuses .sheet-pc-focus {
       font-size: 11px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       white-space: nowrap;
+      padding-right: 15px;
      }
      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-focuses .sheet-checkbox-cog:hover span {
        color: white;
@@ -2003,17 +2005,23 @@
   margin-top: 5px;
   padding-top: 5px;
   border-top: 1px dotted #dddddd; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature {
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature,
+.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature {
+  display: flex;
+  flex-direction: column;
   font-size: 15px;
-  overflow-wrap: break-word;}
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature button {
+  overflow-wrap: break-word;
+  padding-right: 20px;
+}
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature button,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature button  {
     background: none;
     border: 0;
     box-shadow: none;
-    width: 100%;
-    text-shadow: none; }
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature button:hover {
-      background: #e5fffb; }
+    width: 85%;
+    text-shadow: none;
+    text-align: left; 
+  }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-name {
     background: #5A8C87;
     color: white;
@@ -2953,18 +2961,8 @@
     margin-top: 5px;
     padding-top: 5px;
     border-top: 1px dotted #dddddd; }
-  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature {
-    font-size: 15px;
-    overflow-wrap: break-word;}
 
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature button {
-      background: none;
-      border: 0;
-      box-shadow: none;
-      width: 100%;
-      text-shadow: none; }
-      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature button:hover {
-        background: #e5fffb; }
+
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-features .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-name {
       background: #5A8C87;
       color: white;
@@ -3048,7 +3046,9 @@
   display: flex;
   padding-right: 20px;
   font-size: 11px;
-  overflow-wrap: break-word;}
+  overflow-wrap: break-word;
+  flex-direction: column;
+}
 
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psibox .repitem:first-of-type {
     padding-top: 10px;
@@ -3057,24 +3057,11 @@
     margin-top: 5px;
     padding-top: 5px;
     border-top: 1px dotted #dddddd; }
-  /* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics button {
-    justify-content: space-between;
-    padding: 8px;
-    flex-grow: 1;
-    display: flex;
-    border: 0;
-    background: none;
-    box-shadow: none;
-    font-size: 15px;
-    width: 100%;
-    overflow: hidden; } */
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics button:hover {
-      background: #d9d9d9;
-      margin-left: -3px;
-      margin-right: -3px;
-      padding-left: 3px;
-      padding-right: 3px;
-    }
+
+    
+  
+
+
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-checkbox-image {
     margin-right: 5px;
     flex-shrink: 0;
@@ -3098,17 +3085,13 @@
     border-radius: 3px;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* padding: 0 20px; */
     padding: 0 5px;
 }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-feature-source {
   opacity: .75;
   font-weight: bold;
   }
-/* .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-feature-source::before {
-    content: "("; }
-.charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-feature-source::after {
-    content: ")"; } */
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-pc-psionics .sheet-pc-psionics-details{
   text-align: left;
     white-space: normal;
@@ -3198,7 +3181,9 @@
   grid-template-rows: auto auto auto;
   grid-auto-flow: column; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics .sheet-pc-psionics-name {
-    font-size: 15px;}
+    font-size: 15px;
+ 
+  }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics .sheet-pc-psionics-details {
       font-size: 12px;}
 
@@ -3208,8 +3193,9 @@
           word-break: break-word;}
 
 
-    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics . {
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics{
       min-height: 218px; }
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options > input[type="radio"]:checked ~ .sheet-tab-content {
   display: grid;
   grid-row-gap: 5px;
@@ -3242,6 +3228,7 @@
     grid-auto-flow: column; }
     .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-psionics .sheet-form-body > .sheet-form-group {
       margin: 0; }
+
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-class-custom {
   grid-area: custom; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-options .sheet-pc-option-class-custom .sheet-form-fieldset-body {
@@ -3406,3 +3393,23 @@
   display: none !important; }
 .charsheet .sheet-darkerdungeons .sheet-field-untoggle[value="1"] + * {
   display: none !important; }
+
+.charsheet .sheet-darkerdungeons .sheet-display-button{
+    font-family: pictos!important; 
+    flex-basis:content;
+    font-size: 20px!important;
+  }
+  .charsheet .sheet-darkerdungeons  .sheet-display-button:hover { 
+    color: red!important;
+  }
+
+  .charsheet .sheet-darkerdungeons .sheet-psionic-title,
+  .charsheet .sheet-darkerdungeons .sheet-feature-title,
+  .charsheet .sheet-darkerdungeons .sheet-focus-title{
+    display: flex;
+  }
+
+  .charsheet .sheet-darkerdungeons .sheet-focus-title{
+    align-items: center;
+    width: 100%;
+  }

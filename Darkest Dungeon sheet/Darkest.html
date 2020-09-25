@@ -2288,31 +2288,30 @@
 																		<span>Mastery</span>
 																	</label>
 																</div>
-																<div class="sheet-form-group">
-																		<label class="sheet-form-checkbox">
-																			<input type="checkbox" name="attr_hide_details" value="1">
-																			<span>Hide Details</span>
-																		</label>
-																</div>
 															</div>
 														</div>
 													</div>
 													<div class="sheet-toggle-unchecked">
 														<div class="sheet-pc-focus">
-															<div class="sheet-checkbox-image">
-																<input type="checkbox" name="attr_checkfocus" value="1" >
-																<span></span>
+															<div class="focus-title">
+																<div class="sheet-checkbox-image">
+																	<input type="checkbox" name="attr_checkfocus" value="1" >
+																	<span></span>
+																</div>
+															
+																<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{focusname}}} {{description=@{description}}}">
+																	<input type="hidden" name="attr_mastery">
+																	<div class="sheet-pc-focus-name">
+																		<span name="attr_focusname"></span>
+																	</div>
+																</button>
+																		
+																<button type='action' class="display-button" name="act_displaybutton">E</button>
 															</div>
-															<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{focusname}}} {{description=@{description}}}">
-																<input type="hidden" name="attr_mastery">
-																<div class="sheet-pc-focus-name">
-																	<span name="attr_focusname"></span>
-																</div>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<div class="sheet-pc-focus-details">
-																	<span name="attr_description"></span>
-																</div>
-															</button>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<div class="sheet-pc-focus-details">
+																<span name="attr_description"></span>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -2356,12 +2355,6 @@
 																		<textarea name="attr_description"></textarea>
 																	</div>
 																	<div class="sheet-form-group">
-																		<label class="sheet-form-checkbox">
-																			<input type="checkbox" name="attr_hide_details" value="1">
-																			<span>Hide Details</span>
-																		</label>
-																	</div>
-																	<div class="sheet-form-group">
 																		<label>Color:</label>
 																		<select  name="attr_customcolor">
 																			<option selected>Default</option>
@@ -2377,20 +2370,23 @@
 														</div>
 														<div class="sheet-toggle-unchecked">
 															<div class="sheet-pc-feature">
-																<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
-																	<input type="hidden" name="attr_customcolor">
-																	<div class="sheet-pc-feature-name">
-																		<span name="attr_name"></span>
-																	</div>
-																	<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																	<div class="sheet-pc-feature-details">
-																		<span class="sheet-pc-feature-source">
-																			<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
-																		</span>
-																		<br>
-																		<span class="sheet-pc-feature-desc" name="attr_description"></span>
-																	</div>
-																</button>
+																<div class="feature-title">
+																	<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
+																		<input type="hidden" name="attr_customcolor">
+																		<div class="sheet-pc-feature-name">
+																			<span name="attr_name"></span>
+																	</div>	
+																	</button>
+																	<button type='action' class="display-button" name="act_displaybutton">E</button>
+																</div>
+																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+																<div class="sheet-pc-feature-details">
+																	<span class="sheet-pc-feature-source">
+																		<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
+																	</span>
+																	<br>
+																	<span class="sheet-pc-feature-desc" name="attr_description"></span>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -2693,12 +2689,6 @@
 																<textarea name="attr_description"></textarea>
 															</div>
 															<div class="sheet-form-group">
-																<label class="sheet-form-checkbox">
-																	<input type="checkbox" name="attr_hide_details" value="1">
-																	<span>Hide Details</span>
-																</label>
-															</div>
-															<div class="sheet-form-group">
 																		<label>Color:</label>
 																		<select  name="attr_customcolor">
 																			<option selected>Default</option>
@@ -2714,20 +2704,23 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-feature">
-														<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-feature-name">
-																<span name="attr_name"></span>
-															</div>
-															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-															<div class="sheet-pc-feature-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
-																</span>
-																<br>
-																<span class="sheet-pc-feature-desc" name="attr_description"></span>
-															</div>
-														</button>
+														<div class="feature-title">
+															<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{name}}} {{source=@{source}: @{source_type}}} {{description=@{description}}}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-feature-name">
+																	<span name="attr_name"></span>
+															</div>	
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+														<div class="sheet-pc-feature-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_source"></span><span>: </span><span name="attr_source_type"></span>
+															</span>
+															<br>
+															<span class="sheet-pc-feature-desc" name="attr_description"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -2737,7 +2730,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="sheet-tab sheet-tab-notes">
+					<div class="sheet-tab sheet-tab-notes"> <!-- NOTE TAB -->
 						<input type="radio" name="attr_tab" value="notes">
 						<span class="sheet-tab-label">Notes</span>
 						<div class="sheet-tab-content">
@@ -2767,7 +2760,7 @@
 									</div>
 								</div>
 							</div>
-						</div> <!-- NOTE TAB -->
+						</div> 
 					</div>
 					<div class="sheet-tab sheet-tab-equipment"> <!-- EQUIPMENT TAB -->
 						<input type="radio" name="attr_tab" value="equipment">
@@ -3192,7 +3185,6 @@
 								<div class="sheet-container-box sheet-pc-resource-other">
 									<div class="sheet-container-header">
 										<span name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay" value="Psi Points">Psi Points</span>
-										<!-- <input type="text" name="attr_other_resource_name" title="@{other_resource_name}" class="sheet-input-overlay" placeholder="Other Resource"> -->
 									</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_other_resource" title="@{other_resource}">
@@ -3386,12 +3378,6 @@
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
 															<div class="sheet-form-group">
-																<label class="sheet-form-checkbox">
-																	<input type="checkbox" name="attr_hide_details" value="1">
-																	<span>Hide Details</span>
-																</label>
-															</div>
-															<div class="sheet-form-group">
 																<label>Color:</label>
 																<select  name="attr_customcolor">
 																	<option selected>Default</option>
@@ -3407,25 +3393,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}{{innate=@{innate}}}  @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -3673,12 +3661,6 @@
 																<textarea name="attr_psionicsdescription"></textarea>
 															</div>
 															<div class="sheet-form-group">
-																<label class="sheet-form-checkbox">
-																	<input type="checkbox" name="attr_hide_details" value="1">
-																	<span>Hide Details</span>
-																</label>
-															</div>
-															<div class="sheet-form-group">
 																<label>Color:</label>
 																<select  name="attr_customcolor">
 																	<option selected>Default</option>
@@ -3694,25 +3676,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename} }} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -3995,25 +3979,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -4271,25 +4257,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -4553,25 +4541,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -4834,25 +4824,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -5113,25 +5105,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -5384,25 +5378,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -5669,25 +5665,27 @@
 												</div>
 												<div class="sheet-toggle-unchecked">
 													<div class="sheet-pc-psionics">
-														<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder} - @{disciplinename}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}} {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}} {{innate=@{innate}}} @{psionicsconcentration} @{charname_output}">
-														<button type="roll" name="roll_psionics" value="@{rollcontent}" class="sheet-pc-psionics-button">
-															<input type="hidden" name="attr_customcolor">
-															<div class="sheet-pc-psionics-name">
-																<span name="attr_psionicsname"></span>
-																<input type="hidden" name="attr_innate" value="" class="sheet-field-toggle">
-																<span name="attr_innate" class="sheet-display-brackets"></span>
-															</div>
-															<div class="sheet-pc-psionics-details">
-																<span class="sheet-pc-feature-source">
-																	<span name="attr_psionicscastingtime"></span>
-																	<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
-																	<span> - Concentration</span>
-																</span>
-																<br>
-																<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
-																<span name="attr_psionicsdescription"></span>
-															</div>
-														</button>
+														<div class="psionic-title">
+															<input type="hidden" name="attr_rollcontent" value="@{wtype}&{template:psionics} {{level=@{psionicsorder}}} {{name=@{psionicsname}}} {{castingtime=@{psionicscastingtime}}} {{range=@{psionicsrange}}} {{target=@{psionicstarget}}}  {{duration=@{psionicsduration}}} {{description=@{psionicsdescription}}}  @{psionicsconcentration}  @{charname_output}">
+															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
+																<input type="hidden" name="attr_customcolor">
+																<div class="sheet-pc-psionics-name">
+																	<span name="attr_psionicsname"></span>	
+																</div>
+															</button>
+															<button type='action' class="display-button" name="act_displaybutton">E</button>
+														</div>
+														
+														<div class="sheet-pc-psionics-details">
+															<span class="sheet-pc-feature-source">
+																<span name="attr_psionicscastingtime"></span>
+																<input type="hidden" name="attr_psionicsconcentration" value="0" class="sheet-field-toggle">
+																<span> - Concentration</span>
+															</span>
+															<br>
+															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
+															<span name="attr_psionicsdescription" class="test"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -7801,8 +7799,27 @@
 											}
 			            });
 
-			var mastery = {};
+//Display buttons
+
+const displayList = ['repeating_psionicstalent','repeating_psionics1','repeating_psionics2','repeating_psionics3','repeating_psionics4','repeating_psionics5','repeating_psionics6','repeating_psionics7','repeating_psionics8', 'repeating_traits', 'repeating_focuses'];
+
+
+displayList.forEach(function(section) {
+	on(`clicked:${section}:displaybutton`, function(event) {
+			var hiddenFlag = `${section}_hide_details`;
+			getAttrs([hiddenFlag], function(v) {
+		        // Update the value of the hidden flag to "1" for checked or "0" for unchecked.
+		        setAttrs({
+		          [hiddenFlag]: v[hiddenFlag] !== "1" ? "1" : "0"
+		        });
+		      });
+	});
+});
+
+
 //Toggle controls for masteries
+
+			var mastery = {};
 			on("change:repeating_focuses:mastery", function(event){
 				mastery[event.sourceAttribute] = event.newValue;
 			});
