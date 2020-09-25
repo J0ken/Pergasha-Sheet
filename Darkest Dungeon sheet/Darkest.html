@@ -1,4 +1,4 @@
-<div class="sheet-darkerdungeons">
+pergasha<div class="sheet-pergasha">
 	<input class="monster_confirm_flag" type="hidden" name="attr_monster_confirm_flag">
 	<div class="licensecontainer compendium-drop-target monsters">
 		<input class="sheet-toggle-npc" name="attr_npc" type="hidden" value="0">
@@ -1798,6 +1798,81 @@
 											</div>
 										</div>
 									</div>
+									<div class="sheet-container-box sheet-pc-exhaustion">
+										<div class="sheet-container-header">
+											<span>
+												Exhaustion
+											</span>
+										</div>
+										<div class="sheet-container-body">
+											<div class="sheet-exhaustion-toggle">
+												<input type="hidden" name="attr_exhaustion" class="dot" value="0" />
+												<button type="action" name="act_exhaustion_0" class="dot">
+											    <span class="checked"></span>
+											  </button>
+											  <button type="action" name="act_exhaustion_1" class="dot gt-0">
+											    <span class="checked"></span>
+											  </button>
+											  <button type="action" name="act_exhaustion_2" class="dot gt-0 gt-1">
+											    <span class="checked"></span>
+											  </button>
+											  <button type="action" name="act_exhaustion_3" class="dot gt-0 gt-1 gt-2">
+											    <span class="checked"></span>
+											  </button>
+											  <button type="action" name="act_exhaustion_4" class="dot gt-0 gt-1 gt-2 gt-3">
+											    <span class="checked"></span>
+											  </button>
+											  <button type="action" name="act_exhaustion_5" class="dot gt-0 gt-1 gt-2 gt-3 gt-4">
+											    <span class="checked"></span>
+											  </button>
+												<button type="action" name="act_exhaustion_6" class="dot gt-0 gt-1 gt-2 gt-3 gt-4">
+											    <span class="checked"></span>
+											  </button>
+											</div>
+											<div class="sheet-exhaustion-details">
+												<ul>
+													<li id="sheet-exhaustion-details-1">Test1</li>
+													<li id="sheet-exhaustion-details-2">Test2</li>
+													<li id="sheet-exhaustion-details-3">Test3</li>
+													<li id="sheet-exhaustion-details-4">Test4</li>
+													<li id="sheet-exhaustion-details-5">Test5</li>
+													<li id="sheet-exhaustion-details-6">You are dead..</li>
+												</ul>
+											</div>
+										</div>
+										<!-- <div class="sheet-container-body">
+											<input type="hidden" name="attr_exhaustion" class="fill-dots" value="0" />
+
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_0" title="@{exhaustion0}">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_1" title="@{exhaustion1}" class="gt-0">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_2" title="@{exhaustion2}" class="gt-0 gt-1">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_3" title="@{exhaustion3}" class="gt-0 gt-1 gt-2">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_4" title="@{exhaustion4}" class="gt-0 gt-1 gt-2 gt-3">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_5" title="@{exhaustion5}" class="gt-0 gt-1 gt-2 gt-3 gt-4">
+													<span class="checked"></span>
+												</div>
+												<div class="sheet-checkbox-image">
+													<input type="checkbox" name="attr_exhaustion_6" title="@{exhaustion6}" class="gt-0 gt-1 gt-2 gt-3 gt-4 gt-5">
+													<span class="checked"></span>
+												</div>
+										</div> -->
+									</div>
 								</div>
 							</div>
 							<div class="sheet-container-well sheet-container-well-attacks">
@@ -2298,14 +2373,14 @@
 																	<input type="checkbox" name="attr_checkfocus" value="1" >
 																	<span></span>
 																</div>
-															
+
 																<button type="roll" name="roll_output" value="@{wtype}&{template:traits} @{charname_output} {{name=@{focusname}}} {{description=@{description}}}">
 																	<input type="hidden" name="attr_mastery">
 																	<div class="sheet-pc-focus-name">
 																		<span name="attr_focusname"></span>
 																	</div>
 																</button>
-																		
+
 																<button type='action' class="display-button" name="act_displaybutton">E</button>
 															</div>
 															<input type="hidden" name="attr_hide_details" class="sheet-field-untoggle">
@@ -2375,7 +2450,7 @@
 																		<input type="hidden" name="attr_customcolor">
 																		<div class="sheet-pc-feature-name">
 																			<span name="attr_name"></span>
-																	</div>	
+																	</div>
 																	</button>
 																	<button type='action' class="display-button" name="act_displaybutton">E</button>
 																</div>
@@ -2709,7 +2784,7 @@
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-feature-name">
 																	<span name="attr_name"></span>
-															</div>	
+															</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
@@ -2760,7 +2835,7 @@
 									</div>
 								</div>
 							</div>
-						</div> 
+						</div>
 					</div>
 					<div class="sheet-tab sheet-tab-equipment"> <!-- EQUIPMENT TAB -->
 						<input type="radio" name="attr_tab" value="equipment">
@@ -3398,12 +3473,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -3681,12 +3756,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -3984,12 +4059,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -4262,12 +4337,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -4546,12 +4621,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -4829,12 +4904,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -5110,12 +5185,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -5383,12 +5458,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -5670,12 +5745,12 @@
 															<button  type="roll" name="roll_psionics" value="@{rollcontent}">
 																<input type="hidden" name="attr_customcolor">
 																<div class="sheet-pc-psionics-name">
-																	<span name="attr_psionicsname"></span>	
+																	<span name="attr_psionicsname"></span>
 																</div>
 															</button>
 															<button type='action' class="display-button" name="act_displaybutton">E</button>
 														</div>
-														
+
 														<div class="sheet-pc-psionics-details">
 															<span class="sheet-pc-feature-source">
 																<span name="attr_psionicscastingtime"></span>
@@ -7798,6 +7873,23 @@
 												return;
 											}
 			            });
+//Fillable radiolist attr_exhaustion
+
+
+const exhaustionValues = ["0","1","2","3","4","5","6"];
+  exhaustionValues.forEach(function(value) {
+
+    on(`clicked:exhaustion_${value}`, function() {
+			console.log('click');
+			getAttrs(["exhaustion"], (v) =>{
+				console.log(v["exhaustion"]);
+			});
+      setAttrs({
+        "exhaustion": value
+      });
+    });
+  });
+
 
 //Display buttons
 
