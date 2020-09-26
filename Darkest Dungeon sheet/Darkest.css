@@ -1732,15 +1732,35 @@
       min-height: 847px;
       padding-top: 35px;
       width: 100%; }
-.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core > input[type="radio"]:checked ~ .sheet-tab-content {
-  display: grid;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  grid-template-areas: "attributes trackers trackers"
- "attributes health focuses"
- "attributes attacks features";
-  grid-template-columns: 265px 1fr 1fr;
-  grid-template-rows: 85px auto 1fr; }
+  .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core > input[type="radio"]:checked ~ .sheet-tab-content {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas: "attributes trackers trackers"
+   "attributes center right"
+   "attributes center right";
+    grid-template-columns: 265px 1fr 1fr;
+    grid-template-rows: 85px auto 1fr; }
+
+    .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-center{
+      grid-area: center;
+      display: grid;
+      grid-row-gap: 5px;
+      align-self: flex-start;
+      grid-template-areas: "health" "attacks";
+      min-height: 628px;
+      grid-template-rows: max-content;
+      }
+      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-right{
+        grid-area: right;
+        display: grid;
+        grid-row-gap: 5px;
+        align-self: flex-start;
+        grid-template-areas: "focuses" "features";
+        min-height: 628px;
+        grid-template-rows: max-content;
+        }
+
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes {
   grid-area: attributes;
   display: grid;
@@ -1751,6 +1771,7 @@
  "attributes skills"
  "tools tools"
  "proficiencies proficiencies";
+  align-self: flex-start;
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-attributes {
@@ -1927,6 +1948,7 @@
   display: grid;
   flex-direction: column;
   flex-grow: 1;
+  align-self: flex-start;
   grid-template-areas: "focuses" ;
   }
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-focuses .sheet-pc-focuses {
@@ -2021,6 +2043,7 @@
     width: 85%;
     text-shadow: none;
     text-align: left;
+    flex-shrink: 0;
   }
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-pc-features .sheet-pc-feature .sheet-pc-feature-name {
     background: #5A8C87;
@@ -2163,6 +2186,7 @@
  "exhaustion exhaustion exhaustion";
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 65px auto auto;
+  align-self: flex-start;
   }
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-hp-max {
     grid-area: hp-max; }
@@ -2242,32 +2266,20 @@
       .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body .sheet-exhaustion-toggle{
         display: flex;
         padding: 5px;
+        margin-bottom: 5px;
       }
 
-        /* Fillable radio */
+      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body .sheet-exhaustion-details ul{
+        margin: 0 5px 10px 15px;
+      }
+      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body .sheet-exhaustion-details ul li{
+        margin-top: 5px;
+      }
 
-      /* .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="0"] + .sheet-checkbox-image input.sheet-gt-0 > .sheet-checkbox-image .span.sheet-checked {
-          display: none!important;
-        }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="1"] ~ .sheet-checkbox-image input.sheet-gt-1 > .sheet-checkbox-image span.sheet-checked {
-          display: none!important;
-        }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="2"] ~ .sheet-checkbox-image input.sheet-gt-2 > .sheet-checkbox-image span.sheet-checked {
-          display: none!important;
-        }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="3"] ~ .sheet-checkbox-image input.sheet-gt-3 > .sheet-checkbox-image span.sheet-checked {
-          display: none!important;
-        }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="4"] ~ .sheet-checkbox-image input.sheet-gt-4 > .sheet-checkbox-image span.sheet-checked {
-          display: none!important;
-        }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body  input.sheet-fill-dots[value="5"] ~ .sheet-checkbox-image input.sheet-gt-5 > .sheet-checkbox-image span.sheet-checked {
-          display: none!important;
-        } */
 
         button.sheet-dot {
           padding: 0;
-          border: solid 1px #a8a8a8;
+          border: solid 1px black;
           cursor: pointer;
           width: 14px;
           height: 14px;
@@ -2275,6 +2287,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          background: white;
         }
 
         button.sheet-dot span.sheet-checked{
@@ -2288,101 +2301,53 @@
           background: buttontext;
         }
 
+
+
         /* Hide the "checked" section of the radio if the hidden attribute value is greater than the button value */
-        input.sheet-dot[value="0"] ~ button.sheet-gt-0 > span.sheet-checked {
+        input.sheet-dot[value="0"] ~ button.sheet-gt-0 > span.sheet-checked ,
+        input.sheet-dot[value="0"] + .sheet-exhaustion-details {
           display: none;
         }
-        input.sheet-dot[value="1"] ~ button.sheet-gt-1 > span.sheet-checked {
+        input.sheet-dot[value="1"] ~ button.sheet-gt-1 > span.sheet-checked ,
+        input.sheet-dot[value="1"] ~ li.sheet-gt-1 {
           display: none;
         }
-        input.sheet-dot[value="2"] ~ button.sheet-gt-2 > span.sheet-checked {
+        input.sheet-dot[value="2"] ~ button.sheet-gt-2 > span.sheet-checked ,
+        input.sheet-dot[value="2"] ~ li.sheet-gt-2 {
           display: none;
         }
-        input.sheet-dot[value="3"] ~ button.sheet-gt-3 > span.sheet-checked {
+        input.sheet-dot[value="3"] ~ button.sheet-gt-3 > span.sheet-checked ,
+        input.sheet-dot[value="3"] ~ li.sheet-gt-3 {
           display: none;
         }
-        input.sheet-dot[value="4"] ~ button.sheet-gt-4 > span.sheet-checked {
+        input.sheet-dot[value="4"] ~ button.sheet-gt-4 > span.sheet-checked ,
+        input.sheet-dot[value="4"] ~ li.sheet-gt-4 {
           display: none;
         }
-        input.sheet-dot[value="5"] ~ button.sheet-gt-5 > span.sheet-checked {
+        input.sheet-dot[value="5"] ~ button.sheet-gt-5 > span.sheet-checked ,
+        input.sheet-dot[value="5"] ~ li.sheet-gt-5 {
           display: none;
         }
+/* Exhaustion coloration */
+        input.sheet-dot[value="2"] ~ li.sheet-exhaustion-details-text{
+          color: #009900;
+        }
+        input.sheet-dot[value="3"] ~ li.sheet-exhaustion-details-text{
+          color: #808000;
+        }
+        input.sheet-dot[value="4"] ~ li.sheet-exhaustion-details-text{
+          color: #b26b01;
+        }
+        input.sheet-dot[value="5"] ~ li.sheet-exhaustion-details-text{
+          color: #cf4601;
+        }
+        input.sheet-dot[value="6"] ~ li.sheet-exhaustion-details-text{
+          color: #cf0101;
+        }
 
-
-
-
-
-
-.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions {
-  display: grid;
-  grid-area: conditions;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  grid-template-areas: "conditions conditions conditions conditions rations rations"
- "conditions conditions conditions conditions water water"
- "conditions conditions conditions conditions exhaustion exhaustion";
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 30px 30px 65px;
-  margin-top: 5px; }
-  .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-conditions {
-    grid-area: conditions; }
-    .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-conditions .sheet-container-header {
-      display: grid;
-      grid-column-gap: 5px;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 0;
-      padding-left: 10px;
-      padding-right: 10px; }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-conditions .sheet-container-header span {
-        text-align: center;
-        width: 100%; }
-    .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-conditions .sheet-container-body {
-      display: grid;
-      grid-column-gap: 5px;
-      grid-template-columns: repeat(4, 1fr);
-      height: 100%; }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-conditions .sheet-container-body .sheet-list-conditions {
-        display: flex;
-        justify-content: space-between; }
-  .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-rations {
-    grid-area: rations; }
-  .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-water {
-    grid-area: water; }
-  .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion {
-    grid-area: exhaustion; }
-    .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-body {
-      display: flex;
-      flex-direction: row;
-      padding-top: 0; }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-body span {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        width: 100%; }
-        .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-body span:nth-of-type(1), .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-body span:nth-of-type(2) {
-          font-size: 18px; }
-        .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-body span:nth-of-type(3) {
-          border-radius: 100%;
-          background: #eeeeee; }
-    .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-footer {
-      display: flex;
-      padding-left: 10px;
-      padding-right: 10px; }
-      .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-conditions .sheet-pc-exhaustion .sheet-container-footer span {
-        flex-grow: 1;
-        text-align: center;
-        width: 100%; }
-.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-stress {
-  grid-area: stress;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 65px 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  grid-template-areas: "pc-stress levels levels"
- "afflictions afflictions afflictions";
-  min-height: 85px;
-  margin-bottom: 5px; }
+.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-exhaustion .sheet-container-body .sheet-exhaustion-details ul li{
+  font-size: 13px;
+}
 
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks {
   display: grid;
@@ -2916,12 +2881,15 @@
   grid-area: memories;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 30px) auto;
+  grid-template-rows: max-content max-content max-content;
+  align-self: flex-start;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   grid-template-areas: "memories notes"
  "memories notes"
- "memories notes"; }
+ "memories notes";
+ min-height: 452px;
+}
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-features .sheet-container-well-features {
   grid-area: features;
   display: grid;
@@ -3010,7 +2978,9 @@
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-features .sheet-pc-flaws {
   grid-area: flaws; }
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-features .sheet-pc-memories {
-  grid-area: memories; }
+  grid-area: memories;
+  min-height: 432px;
+ }
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-features .sheet-pc-memories .repitem + .repitem {
     margin-top: 5px;
     padding-top: 5px;
@@ -3135,6 +3105,8 @@
   overflow-wrap: break-word;
   flex-direction: column;
 }
+
+
 
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-pc-psibox .repitem:first-of-type {
     padding-top: 10px;
@@ -3261,11 +3233,39 @@
       justify-content: center; }
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics {
   display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  /* grid-row-gap: 10px; */
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-auto-flow: column; }
+  /* grid-template-rows: auto auto auto; */
+  grid-template-areas: "left center right";
+  /* grid-auto-flow: column;  */
+}
+
+.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-psionics-left {
+  display: grid;
+  grid-area: left;
+  grid-row-gap: 15px;
+  grid-template-rows: max-content max-content max-content;
+  align-self: flex-start;
+}
+
+.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-psionics-center {
+  display: grid;
+  grid-area: center;
+  grid-row-gap: 15px;
+  grid-template-rows: max-content max-content max-content;
+  align-self: flex-start;
+}
+
+.charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-psionics-right {
+  display: grid;
+  grid-area: right;
+  grid-row-gap: 15px;
+  grid-template-rows: max-content max-content max-content;
+  align-self: flex-start;
+}
+
+
   .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-psionics .sheet-container-well-psionics .sheet-container-psionics .sheet-pc-psionics-name {
     font-size: 15px;
 
@@ -3290,13 +3290,14 @@
   display: grid;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "class multiclass custom"
- "class psionics custom"
+  grid-template-areas: "class multiclass skill"
+ "class psionics skill"
  "general attribute skill"
- "general save skill"
- "pergasha save skill";
+ "general save none";
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto auto 1fr; }
+  grid-template-rows: auto auto auto auto 1fr;
+  align-self: flex-start;
+}
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-options .sheet-pc-option-class {
   grid-area: class; }
 .charsheet .sheet-pergasha .sheet-section-pc .sheet-tab-options .sheet-pc-option-gdd {
